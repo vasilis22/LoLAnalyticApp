@@ -1,14 +1,22 @@
 {
   "patch_version": "13.10.1",
   "total_matches_analyzed": 60341,
-  "last_updated": "30-05-2025",
-  "champion_statistics": {
+  "last_updated": "01-07-2025",
+  "champions": {
     "Renekton": {
-      "win_rate": 0.4979305953517988,
-      "pick_rate": 0.05205415886379079,
-      "ban_rate": 0.036873767421819324,
-      "games_played": 3141,
-      "most_used_runes": [
+      "id": "Renekton",
+      "name": "Renekton",
+      "title": "the Butcher of the Sands",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Renekton.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.4979305953517988,
+      "pickRate": 0.05205415886379079,
+      "banRate": 0.036873767421819324,
+      "gamesPlayed": 3141,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -334,7 +342,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6692,
           "count": 1106
@@ -360,7 +368,7 @@
           "count": 342
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Olaf",
           "win_rate": 0.25
@@ -404,11 +412,18 @@
       ]
     },
     "Kindred": {
-      "win_rate": 0.4998010346199761,
-      "pick_rate": 0.04164664158698066,
-      "ban_rate": 0.05236903597885351,
-      "games_played": 2513,
-      "most_used_runes": [
+      "id": "Kindred",
+      "name": "Kindred",
+      "title": "The Eternal Hunters",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Kindred.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.4998010346199761,
+      "pickRate": 0.04164664158698066,
+      "banRate": 0.05236903597885351,
+      "gamesPlayed": 2513,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -734,7 +749,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6676,
           "count": 926
@@ -760,7 +775,7 @@
           "count": 247
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Belveth",
           "win_rate": 0.3333333333333333
@@ -804,11 +819,18 @@
       ]
     },
     "Caitlyn": {
-      "win_rate": 0.5003597769382983,
-      "pick_rate": 0.18425282975091564,
-      "ban_rate": 0.18859481944283324,
-      "games_played": 11118,
-      "most_used_runes": [
+      "id": "Caitlyn",
+      "name": "Caitlyn",
+      "title": "the Sheriff of Piltover",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Caitlyn.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.5003597769382983,
+      "pickRate": 0.18425282975091564,
+      "banRate": 0.18859481944283324,
+      "gamesPlayed": 11118,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -1134,7 +1156,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3031,
           "count": 4227
@@ -1160,7 +1182,7 @@
           "count": 1926
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Velkoz",
           "win_rate": 0.25
@@ -1204,11 +1226,19 @@
       ]
     },
     "Kaisa": {
-      "win_rate": 0.4736631283797316,
-      "pick_rate": 0.16549278268507317,
-      "ban_rate": 0.015561558475994762,
-      "games_played": 9986,
-      "most_used_runes": [
+      "id": "Kaisa",
+      "name": "Kai'Sa",
+      "title": "Daughter of the Void",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Kaisa.png",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ],
+      "winRate": 0.4736631283797316,
+      "pickRate": 0.16549278268507317,
+      "banRate": 0.015561558475994762,
+      "gamesPlayed": 9986,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -1534,7 +1564,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3124,
           "count": 3524
@@ -1560,7 +1590,7 @@
           "count": 1572
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Sylas",
           "win_rate": 0.23076923076923078
@@ -1604,11 +1634,19 @@
       ]
     },
     "Renata": {
-      "win_rate": 0.516162669447341,
-      "pick_rate": 0.015893008070797632,
-      "ban_rate": 0.0029001839545251154,
-      "games_played": 959,
-      "most_used_runes": [
+      "id": "Renata",
+      "name": "Renata Glasc",
+      "title": "the Chem-Baroness",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Renata.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.516162669447341,
+      "pickRate": 0.015893008070797632,
+      "banRate": 0.0029001839545251154,
+      "gamesPlayed": 959,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -1934,7 +1972,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 326
@@ -1960,7 +1998,7 @@
           "count": 133
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Poppy",
           "win_rate": 0.3125
@@ -2004,11 +2042,19 @@
       ]
     },
     "Malphite": {
-      "win_rate": 0.5070654733867169,
-      "pick_rate": 0.07036674897664938,
-      "ban_rate": 0.07316749805273363,
-      "games_played": 4246,
-      "most_used_runes": [
+      "id": "Malphite",
+      "name": "Malphite",
+      "title": "Shard of the Monolith",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Malphite.png",
+      "roles": [
+        "Tank",
+        "Mage"
+      ],
+      "winRate": 0.5070654733867169,
+      "pickRate": 0.07036674897664938,
+      "banRate": 0.07316749805273363,
+      "gamesPlayed": 4246,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -2334,7 +2380,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3075,
           "count": 954
@@ -2360,7 +2406,7 @@
           "count": 586
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "MasterYi",
           "win_rate": 0.09090909090909091
@@ -2404,11 +2450,19 @@
       ]
     },
     "Shyvana": {
-      "win_rate": 0.4964964964964965,
-      "pick_rate": 0.016555907260403374,
-      "ban_rate": 0.003745380421272435,
-      "games_played": 999,
-      "most_used_runes": [
+      "id": "Shyvana",
+      "name": "Shyvana",
+      "title": "the Half-Dragon",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Shyvana.png",
+      "roles": [
+        "Fighter",
+        "Mage"
+      ],
+      "winRate": 0.4964964964964965,
+      "pickRate": 0.016555907260403374,
+      "banRate": 0.003745380421272435,
+      "gamesPlayed": 999,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -2734,7 +2788,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3161,
           "count": 352
@@ -2760,7 +2814,7 @@
           "count": 94
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Fiddlesticks",
           "win_rate": 0.3333333333333333
@@ -2804,11 +2858,19 @@
       ]
     },
     "Katarina": {
-      "win_rate": 0.4887191947240542,
-      "pick_rate": 0.047745314131353474,
-      "ban_rate": 0.04259127293216884,
-      "games_played": 2881,
-      "most_used_runes": [
+      "id": "Katarina",
+      "name": "Katarina",
+      "title": "the Sinister Blade",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Katarina.png",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ],
+      "winRate": 0.4887191947240542,
+      "pickRate": 0.047745314131353474,
+      "banRate": 0.04259127293216884,
+      "gamesPlayed": 2881,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -3134,7 +3196,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3100,
           "count": 974
@@ -3160,7 +3222,7 @@
           "count": 416
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Karma",
           "win_rate": 0.18181818181818182
@@ -3204,11 +3266,18 @@
       ]
     },
     "Sivir": {
-      "win_rate": 0.5172707889125799,
-      "pick_rate": 0.03886246499063655,
-      "ban_rate": 0.007093021328781425,
-      "games_played": 2345,
-      "most_used_runes": [
+      "id": "Sivir",
+      "name": "Sivir",
+      "title": "the Battle Mistress",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Sivir.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.5172707889125799,
+      "pickRate": 0.03886246499063655,
+      "banRate": 0.007093021328781425,
+      "gamesPlayed": 2345,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -3534,7 +3603,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6675,
           "count": 845
@@ -3560,7 +3629,7 @@
           "count": 465
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Seraphine",
           "win_rate": 0.2
@@ -3604,11 +3673,19 @@
       ]
     },
     "Xerath": {
-      "win_rate": 0.500100908173562,
-      "pick_rate": 0.08211663711241113,
-      "ban_rate": 0.10550040602575364,
-      "games_played": 4955,
-      "most_used_runes": [
+      "id": "Xerath",
+      "name": "Xerath",
+      "title": "the Magus Ascendant",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Xerath.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.500100908173562,
+      "pickRate": 0.08211663711241113,
+      "banRate": 0.10550040602575364,
+      "gamesPlayed": 4955,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -3934,7 +4011,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6655,
           "count": 2139
@@ -3960,7 +4037,7 @@
           "count": 872
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Talon",
           "win_rate": 0.21052631578947367
@@ -4004,11 +4081,19 @@
       ]
     },
     "Darius": {
-      "win_rate": 0.5117986997351313,
-      "pick_rate": 0.13765101672163205,
-      "ban_rate": 0.3155565867320727,
-      "games_played": 8306,
-      "most_used_runes": [
+      "id": "Darius",
+      "name": "Darius",
+      "title": "the Hand of Noxus",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Darius.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5117986997351313,
+      "pickRate": 0.13765101672163205,
+      "banRate": 0.3155565867320727,
+      "gamesPlayed": 8306,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -4334,7 +4419,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3742,
           "count": 2523
@@ -4360,7 +4445,7 @@
           "count": 959
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Malzahar",
           "win_rate": 0.1
@@ -4404,11 +4489,19 @@
       ]
     },
     "MonkeyKing": {
-      "win_rate": 0.5154160982264666,
-      "pick_rate": 0.06073813824762599,
-      "ban_rate": 0.03659203526623689,
-      "games_played": 3665,
-      "most_used_runes": [
+      "id": "MonkeyKing",
+      "name": "Wukong",
+      "title": "the Monkey King",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/MonkeyKing.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5154160982264666,
+      "pickRate": 0.06073813824762599,
+      "banRate": 0.03659203526623689,
+      "gamesPlayed": 3665,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -4734,7 +4827,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 1495
@@ -4760,7 +4853,7 @@
           "count": 357
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Trundle",
           "win_rate": 0.3076923076923077
@@ -4804,11 +4897,18 @@
       ]
     },
     "Vex": {
-      "win_rate": 0.5209903121636168,
-      "pick_rate": 0.030791667357186657,
-      "ban_rate": 0.0343878954607978,
-      "games_played": 1858,
-      "most_used_runes": [
+      "id": "Vex",
+      "name": "Vex",
+      "title": "the Gloomist",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Vex.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5209903121636168,
+      "pickRate": 0.030791667357186657,
+      "banRate": 0.0343878954607978,
+      "gamesPlayed": 1858,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -5134,7 +5234,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6655,
           "count": 842
@@ -5160,7 +5260,7 @@
           "count": 319
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Kassadin",
           "win_rate": 0.3076923076923077
@@ -5204,11 +5304,19 @@
       ]
     },
     "Morgana": {
-      "win_rate": 0.5026096033402923,
-      "pick_rate": 0.06350574236422996,
-      "ban_rate": 0.1864072521171343,
-      "games_played": 3832,
-      "most_used_runes": [
+      "id": "Morgana",
+      "name": "Morgana",
+      "title": "the Fallen",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Morgana.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5026096033402923,
+      "pickRate": 0.06350574236422996,
+      "banRate": 0.1864072521171343,
+      "gamesPlayed": 3832,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -5534,7 +5642,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3871,
           "count": 1319
@@ -5560,7 +5668,7 @@
           "count": 430
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Chogath",
           "win_rate": 0.15384615384615385
@@ -5604,11 +5712,19 @@
       ]
     },
     "Trundle": {
-      "win_rate": 0.5073529411764706,
-      "pick_rate": 0.031554001425233257,
-      "ban_rate": 0.011882467973682902,
-      "games_played": 1904,
-      "most_used_runes": [
+      "id": "Trundle",
+      "name": "Trundle",
+      "title": "the Troll King",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Trundle.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5073529411764706,
+      "pickRate": 0.031554001425233257,
+      "banRate": 0.011882467973682902,
+      "gamesPlayed": 1904,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -5934,7 +6050,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 591
@@ -5960,7 +6076,7 @@
           "count": 202
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Irelia",
           "win_rate": 0.3125
@@ -6004,11 +6120,19 @@
       ]
     },
     "Warwick": {
-      "win_rate": 0.5213143872113677,
-      "pick_rate": 0.0746424487496064,
-      "ban_rate": 0.10926235892676621,
-      "games_played": 4504,
-      "most_used_runes": [
+      "id": "Warwick",
+      "name": "Warwick",
+      "title": "the Uncaged Wrath of Zaun",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Warwick.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5213143872113677,
+      "pickRate": 0.0746424487496064,
+      "banRate": 0.10926235892676621,
+      "gamesPlayed": 4504,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -6334,7 +6458,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3153,
           "count": 1886
@@ -6360,7 +6484,7 @@
           "count": 424
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Kennen",
           "win_rate": 0.3
@@ -6404,11 +6528,18 @@
       ]
     },
     "Cassiopeia": {
-      "win_rate": 0.5080745341614907,
-      "pick_rate": 0.026681692381631063,
-      "ban_rate": 0.028140070598763695,
-      "games_played": 1610,
-      "most_used_runes": [
+      "id": "Cassiopeia",
+      "name": "Cassiopeia",
+      "title": "the Serpent's Embrace",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Cassiopeia.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5080745341614907,
+      "pickRate": 0.026681692381631063,
+      "banRate": 0.028140070598763695,
+      "gamesPlayed": 1610,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -6734,7 +6865,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3040,
           "count": 757
@@ -6760,7 +6891,7 @@
           "count": 149
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Urgot",
           "win_rate": 0.25
@@ -6804,11 +6935,18 @@
       ]
     },
     "Jinx": {
-      "win_rate": 0.5156777996070727,
-      "pick_rate": 0.21088480469332627,
-      "ban_rate": 0.07455958635090569,
-      "games_played": 12725,
-      "most_used_runes": [
+      "id": "Jinx",
+      "name": "Jinx",
+      "title": "the Loose Cannon",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Jinx.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.5156777996070727,
+      "pickRate": 0.21088480469332627,
+      "banRate": 0.07455958635090569,
+      "gamesPlayed": 12725,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -7134,7 +7272,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3032,
           "count": 4942
@@ -7160,7 +7298,7 @@
           "count": 1831
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Velkoz",
           "win_rate": 0.07692307692307693
@@ -7204,11 +7342,18 @@
       ]
     },
     "AurelionSol": {
-      "win_rate": 0.5463794135248354,
-      "pick_rate": 0.027692613645779816,
-      "ban_rate": 0.01257851212276893,
-      "games_played": 1671,
-      "most_used_runes": [
+      "id": "AurelionSol",
+      "name": "Aurelion Sol",
+      "title": "The Star Forger",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/AurelionSol.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5463794135248354,
+      "pickRate": 0.027692613645779816,
+      "banRate": 0.01257851212276893,
+      "gamesPlayed": 1671,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -7534,7 +7679,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3116,
           "count": 817
@@ -7560,7 +7705,7 @@
           "count": 265
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Anivia",
           "win_rate": 0.35714285714285715
@@ -7604,11 +7749,19 @@
       ]
     },
     "Yorick": {
-      "win_rate": 0.5233333333333333,
-      "pick_rate": 0.04971743922043055,
-      "ban_rate": 0.07861984388724085,
-      "games_played": 3000,
-      "most_used_runes": [
+      "id": "Yorick",
+      "name": "Yorick",
+      "title": "Shepherd of Souls",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Yorick.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5233333333333333,
+      "pickRate": 0.04971743922043055,
+      "banRate": 0.07861984388724085,
+      "gamesPlayed": 3000,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -7934,7 +8087,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 768
@@ -7960,7 +8113,7 @@
           "count": 328
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Varus",
           "win_rate": 0.3
@@ -8004,11 +8157,19 @@
       ]
     },
     "Zac": {
-      "win_rate": 0.5157810627247303,
-      "pick_rate": 0.04148091678957923,
-      "ban_rate": 0.020417295039856814,
-      "games_played": 2503,
-      "most_used_runes": [
+      "id": "Zac",
+      "name": "Zac",
+      "title": "the Secret Weapon",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Zac.png",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ],
+      "winRate": 0.5157810627247303,
+      "pickRate": 0.04148091678957923,
+      "banRate": 0.020417295039856814,
+      "gamesPlayed": 2503,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -8334,7 +8495,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3068,
           "count": 916
@@ -8360,7 +8521,7 @@
           "count": 254
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Qiyana",
           "win_rate": 0.3
@@ -8404,11 +8565,18 @@
       ]
     },
     "Sejuani": {
-      "win_rate": 0.4859459459459459,
-      "pick_rate": 0.030659087519265507,
-      "ban_rate": 0.0033973583467294213,
-      "games_played": 1850,
-      "most_used_runes": [
+      "id": "Sejuani",
+      "name": "Sejuani",
+      "title": "Fury of the North",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Sejuani.png",
+      "roles": [
+        "Tank"
+      ],
+      "winRate": 0.4859459459459459,
+      "pickRate": 0.030659087519265507,
+      "banRate": 0.0033973583467294213,
+      "gamesPlayed": 1850,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -8734,7 +8902,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3084,
           "count": 523
@@ -8760,7 +8928,7 @@
           "count": 216
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "RekSai",
           "win_rate": 0.3
@@ -8804,11 +8972,19 @@
       ]
     },
     "Pyke": {
-      "win_rate": 0.4859204095880847,
-      "pick_rate": 0.0712119454433967,
-      "ban_rate": 0.2165028753252349,
-      "games_played": 4297,
-      "most_used_runes": [
+      "id": "Pyke",
+      "name": "Pyke",
+      "title": "the Bloodharbor Ripper",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Pyke.png",
+      "roles": [
+        "Support",
+        "Assassin"
+      ],
+      "winRate": 0.4859204095880847,
+      "pickRate": 0.0712119454433967,
+      "banRate": 0.2165028753252349,
+      "gamesPlayed": 4297,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -9134,7 +9310,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3179,
           "count": 1708
@@ -9160,7 +9336,7 @@
           "count": 646
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Fiddlesticks",
           "win_rate": 0.2222222222222222
@@ -9204,11 +9380,19 @@
       ]
     },
     "Rumble": {
-      "win_rate": 0.47780020181634714,
-      "pick_rate": 0.032846654844964455,
-      "ban_rate": 0.011700170696541324,
-      "games_played": 1982,
-      "most_used_runes": [
+      "id": "Rumble",
+      "name": "Rumble",
+      "title": "the Mechanized Menace",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Rumble.png",
+      "roles": [
+        "Fighter",
+        "Mage"
+      ],
+      "winRate": 0.47780020181634714,
+      "pickRate": 0.032846654844964455,
+      "banRate": 0.011700170696541324,
+      "gamesPlayed": 1982,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -9534,7 +9718,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 884
@@ -9560,7 +9744,7 @@
           "count": 261
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Varus",
           "win_rate": 0.16666666666666666
@@ -9604,11 +9788,19 @@
       ]
     },
     "Ekko": {
-      "win_rate": 0.4887741935483871,
-      "pick_rate": 0.06421835899305613,
-      "ban_rate": 0.01337399115029582,
-      "games_played": 3875,
-      "most_used_runes": [
+      "id": "Ekko",
+      "name": "Ekko",
+      "title": "the Boy Who Shattered Time",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Ekko.png",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ],
+      "winRate": 0.4887741935483871,
+      "pickRate": 0.06421835899305613,
+      "banRate": 0.01337399115029582,
+      "gamesPlayed": 3875,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -9934,7 +10126,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3100,
           "count": 1526
@@ -9960,7 +10152,7 @@
           "count": 569
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Morgana",
           "win_rate": 0.2
@@ -10004,11 +10196,19 @@
       ]
     },
     "Swain": {
-      "win_rate": 0.5065452475811042,
-      "pick_rate": 0.05823569380686432,
-      "ban_rate": 0.025471901360600586,
-      "games_played": 3514,
-      "most_used_runes": [
+      "id": "Swain",
+      "name": "Swain",
+      "title": "the Noxian Grand General",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Swain.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5065452475811042,
+      "pickRate": 0.05823569380686432,
+      "banRate": 0.025471901360600586,
+      "gamesPlayed": 3514,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -10334,7 +10534,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3116,
           "count": 1296
@@ -10360,7 +10560,7 @@
           "count": 334
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Jayce",
           "win_rate": 0.14285714285714285
@@ -10404,11 +10604,19 @@
       ]
     },
     "Senna": {
-      "win_rate": 0.5016722408026756,
-      "pick_rate": 0.054506885865332026,
-      "ban_rate": 0.011716743176281467,
-      "games_played": 3289,
-      "most_used_runes": [
+      "id": "Senna",
+      "name": "Senna",
+      "title": "the Redeemer",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Senna.png",
+      "roles": [
+        "Support",
+        "Marksman"
+      ],
+      "winRate": 0.5016722408026756,
+      "pickRate": 0.054506885865332026,
+      "banRate": 0.011716743176281467,
+      "gamesPlayed": 3289,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -10734,7 +10942,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3877,
           "count": 1211
@@ -10760,7 +10968,7 @@
           "count": 301
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "MissFortune",
           "win_rate": 0.35294117647058826
@@ -10804,11 +11012,19 @@
       ]
     },
     "Gragas": {
-      "win_rate": 0.4926079243051449,
-      "pick_rate": 0.056048126481165375,
-      "ban_rate": 0.01774912580169371,
-      "games_played": 3382,
-      "most_used_runes": [
+      "id": "Gragas",
+      "name": "Gragas",
+      "title": "the Rabble Rouser",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Gragas.png",
+      "roles": [
+        "Fighter",
+        "Mage"
+      ],
+      "winRate": 0.4926079243051449,
+      "pickRate": 0.056048126481165375,
+      "banRate": 0.01774912580169371,
+      "gamesPlayed": 3382,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -11134,7 +11350,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 4629,
           "count": 850
@@ -11160,7 +11376,7 @@
           "count": 425
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Nunu",
           "win_rate": 0.25
@@ -11204,11 +11420,19 @@
       ]
     },
     "Nunu": {
-      "win_rate": 0.5032080659945004,
-      "pick_rate": 0.03616115079299315,
-      "ban_rate": 0.014318622495483999,
-      "games_played": 2182,
-      "most_used_runes": [
+      "id": "Nunu",
+      "name": "Nunu & Willump",
+      "title": "the Boy and His Yeti",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Nunu.png",
+      "roles": [
+        "Tank",
+        "Mage"
+      ],
+      "winRate": 0.5032080659945004,
+      "pickRate": 0.03616115079299315,
+      "banRate": 0.014318622495483999,
+      "gamesPlayed": 2182,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -11534,7 +11758,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 604
@@ -11560,7 +11784,7 @@
           "count": 189
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Teemo",
           "win_rate": 0.26666666666666666
@@ -11604,11 +11828,19 @@
       ]
     },
     "Kassadin": {
-      "win_rate": 0.5065359477124183,
-      "pick_rate": 0.01521353640145175,
-      "ban_rate": 0.010606387033691851,
-      "games_played": 918,
-      "most_used_runes": [
+      "id": "Kassadin",
+      "name": "Kassadin",
+      "title": "the Void Walker",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Kassadin.png",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ],
+      "winRate": 0.5065359477124183,
+      "pickRate": 0.01521353640145175,
+      "banRate": 0.010606387033691851,
+      "gamesPlayed": 918,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -11934,7 +12166,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3040,
           "count": 398
@@ -11960,7 +12192,7 @@
           "count": 116
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Chogath",
           "win_rate": 0.2857142857142857
@@ -12004,11 +12236,19 @@
       ]
     },
     "Corki": {
-      "win_rate": 0.4903677758318739,
-      "pick_rate": 0.05677731558973169,
-      "ban_rate": 0.04199466366152367,
-      "games_played": 3426,
-      "most_used_runes": [
+      "id": "Corki",
+      "name": "Corki",
+      "title": "the Daring Bombardier",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Corki.png",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ],
+      "winRate": 0.4903677758318739,
+      "pickRate": 0.05677731558973169,
+      "banRate": 0.04199466366152367,
+      "gamesPlayed": 3426,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -12334,7 +12574,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 1576
@@ -12360,7 +12600,7 @@
           "count": 477
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Vex",
           "win_rate": 0.18181818181818182
@@ -12404,11 +12644,19 @@
       ]
     },
     "Rell": {
-      "win_rate": 0.5001618646811266,
-      "pick_rate": 0.05119238991730333,
-      "ban_rate": 0.028819542268109576,
-      "games_played": 3089,
-      "most_used_runes": [
+      "id": "Rell",
+      "name": "Rell",
+      "title": "the Iron Maiden",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Rell.png",
+      "roles": [
+        "Tank",
+        "Support"
+      ],
+      "winRate": 0.5001618646811266,
+      "pickRate": 0.05119238991730333,
+      "banRate": 0.028819542268109576,
+      "gamesPlayed": 3089,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -12734,7 +12982,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 1029
@@ -12760,7 +13008,7 @@
           "count": 328
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Anivia",
           "win_rate": 0.2
@@ -12804,11 +13052,19 @@
       ]
     },
     "Chogath": {
-      "win_rate": 0.5199718045112782,
-      "pick_rate": 0.07053247377405081,
-      "ban_rate": 0.035216519447804975,
-      "games_played": 4256,
-      "most_used_runes": [
+      "id": "Chogath",
+      "name": "Cho'Gath",
+      "title": "the Terror of the Void",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Chogath.png",
+      "roles": [
+        "Tank",
+        "Mage"
+      ],
+      "winRate": 0.5199718045112782,
+      "pickRate": 0.07053247377405081,
+      "banRate": 0.035216519447804975,
+      "gamesPlayed": 4256,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -13134,7 +13390,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3084,
           "count": 1007
@@ -13160,7 +13416,7 @@
           "count": 536
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Kennen",
           "win_rate": 0.26666666666666666
@@ -13204,11 +13460,19 @@
       ]
     },
     "Taliyah": {
-      "win_rate": 0.4997550220480157,
-      "pick_rate": 0.03382443114963292,
-      "ban_rate": 0.008634261944614773,
-      "games_played": 2041,
-      "most_used_runes": [
+      "id": "Taliyah",
+      "name": "Taliyah",
+      "title": "the Stoneweaver",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Taliyah.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.4997550220480157,
+      "pickRate": 0.03382443114963292,
+      "banRate": 0.008634261944614773,
+      "gamesPlayed": 2041,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -13534,7 +13798,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 553
@@ -13560,7 +13824,7 @@
           "count": 260
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Ryze",
           "win_rate": 0.29411764705882354
@@ -13604,11 +13868,18 @@
       ]
     },
     "Veigar": {
-      "win_rate": 0.5041297032731722,
-      "pick_rate": 0.05417543627052916,
-      "ban_rate": 0.020947614391541407,
-      "games_played": 3269,
-      "most_used_runes": [
+      "id": "Veigar",
+      "name": "Veigar",
+      "title": "the Tiny Master of Evil",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Veigar.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5041297032731722,
+      "pickRate": 0.05417543627052916,
+      "banRate": 0.020947614391541407,
+      "gamesPlayed": 3269,
+      "mostUsedRunes": [
         {
           "id": [
             8300,
@@ -13934,7 +14205,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3040,
           "count": 927
@@ -13960,7 +14231,7 @@
           "count": 536
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Brand",
           "win_rate": 0.23076923076923078
@@ -14004,11 +14275,18 @@
       ]
     },
     "Kalista": {
-      "win_rate": 0.4848116646415553,
-      "pick_rate": 0.02727830165227623,
-      "ban_rate": 0.013208266352894384,
-      "games_played": 1646,
-      "most_used_runes": [
+      "id": "Kalista",
+      "name": "Kalista",
+      "title": "the Spear of Vengeance",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Kalista.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.4848116646415553,
+      "pickRate": 0.02727830165227623,
+      "banRate": 0.013208266352894384,
+      "gamesPlayed": 1646,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -14334,7 +14612,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3153,
           "count": 753
@@ -14360,7 +14638,7 @@
           "count": 311
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Malphite",
           "win_rate": 0.36363636363636365
@@ -14404,11 +14682,19 @@
       ]
     },
     "Braum": {
-      "win_rate": 0.5023696682464455,
-      "pick_rate": 0.04895510515238395,
-      "ban_rate": 0.03485192489352182,
-      "games_played": 2954,
-      "most_used_runes": [
+      "id": "Braum",
+      "name": "Braum",
+      "title": "the Heart of the Freljord",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Braum.png",
+      "roles": [
+        "Tank",
+        "Support"
+      ],
+      "winRate": 0.5023696682464455,
+      "pickRate": 0.04895510515238395,
+      "banRate": 0.03485192489352182,
+      "gamesPlayed": 2954,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -14734,7 +15020,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 1262
@@ -14760,7 +15046,7 @@
           "count": 392
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Hwei",
           "win_rate": 0.2727272727272727
@@ -14804,11 +15090,18 @@
       ]
     },
     "Viktor": {
-      "win_rate": 0.5023602033405955,
-      "pick_rate": 0.0912812184087105,
-      "ban_rate": 0.11045557746805655,
-      "games_played": 5508,
-      "most_used_runes": [
+      "id": "Viktor",
+      "name": "Viktor",
+      "title": "the Herald of the Arcane",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Viktor.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5023602033405955,
+      "pickRate": 0.0912812184087105,
+      "banRate": 0.11045557746805655,
+      "gamesPlayed": 5508,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -15134,7 +15427,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 2503,
           "count": 1455
@@ -15160,7 +15453,7 @@
           "count": 922
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Heimerdinger",
           "win_rate": 0.3181818181818182
@@ -15204,11 +15497,19 @@
       ]
     },
     "Lucian": {
-      "win_rate": 0.502106149957877,
-      "pick_rate": 0.059014600354651066,
-      "ban_rate": 0.00815366003215061,
-      "games_played": 3561,
-      "most_used_runes": [
+      "id": "Lucian",
+      "name": "Lucian",
+      "title": "the Purifier",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Lucian.png",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ],
+      "winRate": 0.502106149957877,
+      "pickRate": 0.059014600354651066,
+      "banRate": 0.00815366003215061,
+      "gamesPlayed": 3561,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -15534,7 +15835,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3508,
           "count": 1235
@@ -15560,7 +15861,7 @@
           "count": 441
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "KogMaw",
           "win_rate": 0.34285714285714286
@@ -15604,11 +15905,19 @@
       ]
     },
     "Ambessa": {
-      "win_rate": 0.47182753552180307,
-      "pick_rate": 0.06764886229926584,
-      "ban_rate": 0.19671533451550355,
-      "games_played": 4082,
-      "most_used_runes": [
+      "id": "Ambessa",
+      "name": "Ambessa",
+      "title": "Matriarch of War",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Ambessa.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.47182753552180307,
+      "pickRate": 0.06764886229926584,
+      "banRate": 0.19671533451550355,
+      "gamesPlayed": 4082,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -15934,7 +16243,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6692,
           "count": 1679
@@ -15960,7 +16269,7 @@
           "count": 470
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Vayne",
           "win_rate": 0.20833333333333334
@@ -16004,11 +16313,19 @@
       ]
     },
     "Nocturne": {
-      "win_rate": 0.522708674304419,
-      "pick_rate": 0.08100628096982151,
-      "ban_rate": 0.1531297127989261,
-      "games_played": 4888,
-      "most_used_runes": [
+      "id": "Nocturne",
+      "name": "Nocturne",
+      "title": "the Eternal Nightmare",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Nocturne.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.522708674304419,
+      "pickRate": 0.08100628096982151,
+      "banRate": 0.1531297127989261,
+      "gamesPlayed": 4888,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -16334,7 +16651,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6631,
           "count": 1893
@@ -16360,7 +16677,7 @@
           "count": 492
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Poppy",
           "win_rate": 0.3157894736842105
@@ -16404,11 +16721,18 @@
       ]
     },
     "Akali": {
-      "win_rate": 0.4944940785372948,
-      "pick_rate": 0.07976334498931074,
-      "ban_rate": 0.08920965844119255,
-      "games_played": 4813,
-      "most_used_runes": [
+      "id": "Akali",
+      "name": "Akali",
+      "title": "the Rogue Assassin",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Akali.png",
+      "roles": [
+        "Assassin"
+      ],
+      "winRate": 0.4944940785372948,
+      "pickRate": 0.07976334498931074,
+      "banRate": 0.08920965844119255,
+      "gamesPlayed": 4813,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -16734,7 +17058,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 4646,
           "count": 1502
@@ -16760,7 +17084,7 @@
           "count": 686
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Renekton",
           "win_rate": 0.2413793103448276
@@ -16804,11 +17128,19 @@
       ]
     },
     "Ashe": {
-      "win_rate": 0.49242424242424243,
-      "pick_rate": 0.12469133756483983,
-      "ban_rate": 0.06287598813410451,
-      "games_played": 7524,
-      "most_used_runes": [
+      "id": "Ashe",
+      "name": "Ashe",
+      "title": "the Frost Archer",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Ashe.png",
+      "roles": [
+        "Marksman",
+        "Support"
+      ],
+      "winRate": 0.49242424242424243,
+      "pickRate": 0.12469133756483983,
+      "banRate": 0.06287598813410451,
+      "gamesPlayed": 7524,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -17134,7 +17466,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6672,
           "count": 2105
@@ -17160,7 +17492,7 @@
           "count": 1023
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Cassiopeia",
           "win_rate": 0.1
@@ -17204,11 +17536,19 @@
       ]
     },
     "Seraphine": {
-      "win_rate": 0.4833046471600688,
-      "pick_rate": 0.048143053645116916,
-      "ban_rate": 0.011799605574982185,
-      "games_played": 2905,
-      "most_used_runes": [
+      "id": "Seraphine",
+      "name": "Seraphine",
+      "title": "the Starry-Eyed Songstress",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Seraphine.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.4833046471600688,
+      "pickRate": 0.048143053645116916,
+      "banRate": 0.011799605574982185,
+      "gamesPlayed": 2905,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -17534,7 +17874,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3158,
           "count": 669
@@ -17560,7 +17900,7 @@
           "count": 355
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Taric",
           "win_rate": 0.2727272727272727
@@ -17604,11 +17944,19 @@
       ]
     },
     "Briar": {
-      "win_rate": 0.5199063231850117,
-      "pick_rate": 0.03538224424520641,
-      "ban_rate": 0.041712931505941235,
-      "games_played": 2135,
-      "most_used_runes": [
+      "id": "Briar",
+      "name": "Briar",
+      "title": "the Restrained Hunger",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Briar.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.5199063231850117,
+      "pickRate": 0.03538224424520641,
+      "banRate": 0.041712931505941235,
+      "gamesPlayed": 2135,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -17934,7 +18282,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3071,
           "count": 736
@@ -17960,7 +18308,7 @@
           "count": 227
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Gragas",
           "win_rate": 0.25
@@ -18004,11 +18352,19 @@
       ]
     },
     "Zilean": {
-      "win_rate": 0.5200276243093923,
-      "pick_rate": 0.023996950663727815,
-      "ban_rate": 0.008866276660976781,
-      "games_played": 1448,
-      "most_used_runes": [
+      "id": "Zilean",
+      "name": "Zilean",
+      "title": "the Chronokeeper",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Zilean.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.5200276243093923,
+      "pickRate": 0.023996950663727815,
+      "banRate": 0.008866276660976781,
+      "gamesPlayed": 1448,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -18334,7 +18690,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 2065,
           "count": 384
@@ -18360,7 +18716,7 @@
           "count": 185
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Poppy",
           "win_rate": 0.2857142857142857
@@ -18404,11 +18760,19 @@
       ]
     },
     "Lillia": {
-      "win_rate": 0.49741138988450817,
-      "pick_rate": 0.04161349662750037,
-      "ban_rate": 0.03099053711406838,
-      "games_played": 2511,
-      "most_used_runes": [
+      "id": "Lillia",
+      "name": "Lillia",
+      "title": "the Bashful Bloom",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Lillia.png",
+      "roles": [
+        "Fighter",
+        "Mage"
+      ],
+      "winRate": 0.49741138988450817,
+      "pickRate": 0.04161349662750037,
+      "banRate": 0.03099053711406838,
+      "gamesPlayed": 2511,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -18734,7 +19098,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 1186
@@ -18760,7 +19124,7 @@
           "count": 253
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Gwen",
           "win_rate": 0.2857142857142857
@@ -18804,11 +19168,18 @@
       ]
     },
     "Anivia": {
-      "win_rate": 0.5066991473812423,
-      "pick_rate": 0.027212011733315656,
-      "ban_rate": 0.019886975688172222,
-      "games_played": 1642,
-      "most_used_runes": [
+      "id": "Anivia",
+      "name": "Anivia",
+      "title": "the Cryophoenix",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Anivia.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5066991473812423,
+      "pickRate": 0.027212011733315656,
+      "banRate": 0.019886975688172222,
+      "gamesPlayed": 1642,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -19134,7 +19505,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6657,
           "count": 596
@@ -19160,7 +19531,7 @@
           "count": 241
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Annie",
           "win_rate": 0.3
@@ -19204,11 +19575,19 @@
       ]
     },
     "Sona": {
-      "win_rate": 0.5260586319218241,
-      "pick_rate": 0.02035100512089624,
-      "ban_rate": 0.0015743855753136342,
-      "games_played": 1228,
-      "most_used_runes": [
+      "id": "Sona",
+      "name": "Sona",
+      "title": "Maven of the Strings",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Sona.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.5260586319218241,
+      "pickRate": 0.02035100512089624,
+      "banRate": 0.0015743855753136342,
+      "gamesPlayed": 1228,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -19534,7 +19913,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6617,
           "count": 356
@@ -19560,7 +19939,7 @@
           "count": 153
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Pantheon",
           "win_rate": 0.2631578947368421
@@ -19604,11 +19983,19 @@
       ]
     },
     "Sett": {
-      "win_rate": 0.5044010715652507,
-      "pick_rate": 0.08660777912199003,
-      "ban_rate": 0.029896753451218908,
-      "games_played": 5226,
-      "most_used_runes": [
+      "id": "Sett",
+      "name": "Sett",
+      "title": "the Boss",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Sett.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5044010715652507,
+      "pickRate": 0.08660777912199003,
+      "banRate": 0.029896753451218908,
+      "gamesPlayed": 5226,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -19934,7 +20321,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6631,
           "count": 2098
@@ -19960,7 +20347,7 @@
           "count": 753
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Morgana",
           "win_rate": 0.09090909090909091
@@ -20004,11 +20391,18 @@
       ]
     },
     "Graves": {
-      "win_rate": 0.5065387968613775,
-      "pick_rate": 0.09504317130972308,
-      "ban_rate": 0.08519911834407783,
-      "games_played": 5735,
-      "most_used_runes": [
+      "id": "Graves",
+      "name": "Graves",
+      "title": "the Outlaw",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Graves.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.5065387968613775,
+      "pickRate": 0.09504317130972308,
+      "banRate": 0.08519911834407783,
+      "gamesPlayed": 5735,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -20334,7 +20728,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6676,
           "count": 2663
@@ -20360,7 +20754,7 @@
           "count": 646
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Mordekaiser",
           "win_rate": 0.2
@@ -20404,11 +20798,19 @@
       ]
     },
     "Vladimir": {
-      "win_rate": 0.4860544217687075,
-      "pick_rate": 0.048723090436021944,
-      "ban_rate": 0.02934986161979417,
-      "games_played": 2940,
-      "most_used_runes": [
+      "id": "Vladimir",
+      "name": "Vladimir",
+      "title": "the Crimson Reaper",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Vladimir.png",
+      "roles": [
+        "Mage",
+        "Fighter"
+      ],
+      "winRate": 0.4860544217687075,
+      "pickRate": 0.048723090436021944,
+      "banRate": 0.02934986161979417,
+      "gamesPlayed": 2940,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -20734,7 +21136,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 4629,
           "count": 1129
@@ -20760,7 +21162,7 @@
           "count": 393
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Heimerdinger",
           "win_rate": 0.16666666666666666
@@ -20804,11 +21206,19 @@
       ]
     },
     "Soraka": {
-      "win_rate": 0.5051115241635687,
-      "pick_rate": 0.035663976400788854,
-      "ban_rate": 0.012661374521469648,
-      "games_played": 2152,
-      "most_used_runes": [
+      "id": "Soraka",
+      "name": "Soraka",
+      "title": "the Starchild",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Soraka.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.5051115241635687,
+      "pickRate": 0.035663976400788854,
+      "banRate": 0.012661374521469648,
+      "gamesPlayed": 2152,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -21134,7 +21544,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6617,
           "count": 941
@@ -21160,7 +21570,7 @@
           "count": 264
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Shaco",
           "win_rate": 0.25
@@ -21204,11 +21614,19 @@
       ]
     },
     "TahmKench": {
-      "win_rate": 0.4936215450035436,
-      "pick_rate": 0.04676753782668501,
-      "ban_rate": 0.0627599807759235,
-      "games_played": 2822,
-      "most_used_runes": [
+      "id": "TahmKench",
+      "name": "Tahm Kench",
+      "title": "The River King",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/TahmKench.png",
+      "roles": [
+        "Tank",
+        "Support"
+      ],
+      "winRate": 0.4936215450035436,
+      "pickRate": 0.04676753782668501,
+      "banRate": 0.0627599807759235,
+      "gamesPlayed": 2822,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -21534,7 +21952,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3084,
           "count": 1164
@@ -21560,7 +21978,7 @@
           "count": 271
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Gwen",
           "win_rate": 0.30434782608695654
@@ -21604,11 +22022,18 @@
       ]
     },
     "Malzahar": {
-      "win_rate": 0.5250761983929066,
-      "pick_rate": 0.05981007938217796,
-      "ban_rate": 0.08118857824696309,
-      "games_played": 3609,
-      "most_used_runes": [
+      "id": "Malzahar",
+      "name": "Malzahar",
+      "title": "the Prophet of the Void",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Malzahar.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5250761983929066,
+      "pickRate": 0.05981007938217796,
+      "banRate": 0.08118857824696309,
+      "gamesPlayed": 3609,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -21934,7 +22359,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 1518
@@ -21960,7 +22385,7 @@
           "count": 613
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Caitlyn",
           "win_rate": 0.3333333333333333
@@ -22004,11 +22429,19 @@
       ]
     },
     "Varus": {
-      "win_rate": 0.4944390243902439,
-      "pick_rate": 0.08493395866823553,
-      "ban_rate": 0.016274175104820935,
-      "games_played": 5125,
-      "most_used_runes": [
+      "id": "Varus",
+      "name": "Varus",
+      "title": "the Arrow of Retribution",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Varus.png",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ],
+      "winRate": 0.4944390243902439,
+      "pickRate": 0.08493395866823553,
+      "banRate": 0.016274175104820935,
+      "gamesPlayed": 5125,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -22334,7 +22767,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 1055,
           "count": 1218
@@ -22360,7 +22793,7 @@
           "count": 681
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Sylas",
           "win_rate": 0.23076923076923078
@@ -22404,11 +22837,19 @@
       ]
     },
     "Amumu": {
-      "win_rate": 0.5235042735042735,
-      "pick_rate": 0.05429144362871016,
-      "ban_rate": 0.04965114930146998,
-      "games_played": 3276,
-      "most_used_runes": [
+      "id": "Amumu",
+      "name": "Amumu",
+      "title": "the Sad Mummy",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Amumu.png",
+      "roles": [
+        "Tank",
+        "Support"
+      ],
+      "winRate": 0.5235042735042735,
+      "pickRate": 0.05429144362871016,
+      "banRate": 0.04965114930146998,
+      "gamesPlayed": 3276,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -22734,7 +23175,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 1369
@@ -22760,7 +23201,7 @@
           "count": 375
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Morgana",
           "win_rate": 0.3333333333333333
@@ -22804,11 +23245,18 @@
       ]
     },
     "Talon": {
-      "win_rate": 0.49845413947097217,
-      "pick_rate": 0.04824248852355778,
-      "ban_rate": 0.01912464162012562,
-      "games_played": 2911,
-      "most_used_runes": [
+      "id": "Talon",
+      "name": "Talon",
+      "title": "the Blade's Shadow",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Talon.png",
+      "roles": [
+        "Assassin"
+      ],
+      "winRate": 0.49845413947097217,
+      "pickRate": 0.04824248852355778,
+      "banRate": 0.01912464162012562,
+      "gamesPlayed": 2911,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -23134,7 +23582,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3142,
           "count": 1255
@@ -23160,7 +23608,7 @@
           "count": 384
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Neeko",
           "win_rate": 0.2727272727272727
@@ -23204,11 +23652,19 @@
       ]
     },
     "KSante": {
-      "win_rate": 0.4713740458015267,
-      "pick_rate": 0.05210387630301122,
-      "ban_rate": 0.04862365555758108,
-      "games_played": 3144,
-      "most_used_runes": [
+      "id": "KSante",
+      "name": "K'Sante",
+      "title": "the Pride of Nazumah",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/KSante.png",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ],
+      "winRate": 0.4713740458015267,
+      "pickRate": 0.05210387630301122,
+      "banRate": 0.04862365555758108,
+      "gamesPlayed": 3144,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -23534,7 +23990,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6662,
           "count": 1236
@@ -23560,7 +24016,7 @@
           "count": 430
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Ryze",
           "win_rate": 0.25
@@ -23604,11 +24060,19 @@
       ]
     },
     "Fizz": {
-      "win_rate": 0.48221153846153847,
-      "pick_rate": 0.03447075785949852,
-      "ban_rate": 0.049767156659650987,
-      "games_played": 2080,
-      "most_used_runes": [
+      "id": "Fizz",
+      "name": "Fizz",
+      "title": "the Tidal Trickster",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Fizz.png",
+      "roles": [
+        "Assassin",
+        "Fighter"
+      ],
+      "winRate": 0.48221153846153847,
+      "pickRate": 0.03447075785949852,
+      "banRate": 0.049767156659650987,
+      "gamesPlayed": 2080,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -23934,7 +24398,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3100,
           "count": 800
@@ -23960,7 +24424,7 @@
           "count": 281
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Brand",
           "win_rate": 0.08333333333333333
@@ -24004,11 +24468,19 @@
       ]
     },
     "Ezreal": {
-      "win_rate": 0.48601282983929633,
-      "pick_rate": 0.2505924661507101,
-      "ban_rate": 0.10699192920236655,
-      "games_played": 15121,
-      "most_used_runes": [
+      "id": "Ezreal",
+      "name": "Ezreal",
+      "title": "the Prodigal Explorer",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Ezreal.png",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ],
+      "winRate": 0.48601282983929633,
+      "pickRate": 0.2505924661507101,
+      "banRate": 0.10699192920236655,
+      "gamesPlayed": 15121,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -24334,7 +24806,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 7124
@@ -24360,7 +24832,7 @@
           "count": 2588
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Zyra",
           "win_rate": 0.16666666666666666
@@ -24404,11 +24876,19 @@
       ]
     },
     "Zyra": {
-      "win_rate": 0.5177175612298072,
-      "pick_rate": 0.06360517724267083,
-      "ban_rate": 0.062362241262160056,
-      "games_played": 3838,
-      "most_used_runes": [
+      "id": "Zyra",
+      "name": "Zyra",
+      "title": "Rise of the Thorns",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Zyra.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5177175612298072,
+      "pickRate": 0.06360517724267083,
+      "banRate": 0.062362241262160056,
+      "gamesPlayed": 3838,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -24734,7 +25214,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 1742
@@ -24760,7 +25240,7 @@
           "count": 498
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Evelynn",
           "win_rate": 0.2857142857142857
@@ -24804,11 +25284,19 @@
       ]
     },
     "XinZhao": {
-      "win_rate": 0.5056179775280899,
-      "pick_rate": 0.05162327439054706,
-      "ban_rate": 0.010738966871613,
-      "games_played": 3115,
-      "most_used_runes": [
+      "id": "XinZhao",
+      "name": "Xin Zhao",
+      "title": "the Seneschal of Demacia",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/XinZhao.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5056179775280899,
+      "pickRate": 0.05162327439054706,
+      "banRate": 0.010738966871613,
+      "gamesPlayed": 3115,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -25134,7 +25622,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6610,
           "count": 1162
@@ -25160,7 +25648,7 @@
           "count": 347
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Nasus",
           "win_rate": 0.2
@@ -25204,11 +25692,18 @@
       ]
     },
     "Lissandra": {
-      "win_rate": 0.49099099099099097,
-      "pick_rate": 0.025753633516183025,
-      "ban_rate": 0.009761190566944532,
-      "games_played": 1554,
-      "most_used_runes": [
+      "id": "Lissandra",
+      "name": "Lissandra",
+      "title": "the Ice Witch",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Lissandra.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.49099099099099097,
+      "pickRate": 0.025753633516183025,
+      "banRate": 0.009761190566944532,
+      "gamesPlayed": 1554,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -25534,7 +26029,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3118,
           "count": 518
@@ -25560,7 +26055,7 @@
           "count": 211
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Taliyah",
           "win_rate": 0.25
@@ -25604,11 +26099,19 @@
       ]
     },
     "Karma": {
-      "win_rate": 0.5154243542435424,
-      "pick_rate": 0.11227855023947234,
-      "ban_rate": 0.10798627798677517,
-      "games_played": 6775,
-      "most_used_runes": [
+      "id": "Karma",
+      "name": "Karma",
+      "title": "the Enlightened One",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Karma.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5154243542435424,
+      "pickRate": 0.11227855023947234,
+      "banRate": 0.10798627798677517,
+      "gamesPlayed": 6775,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -25934,7 +26437,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3118,
           "count": 1867
@@ -25960,7 +26463,7 @@
           "count": 986
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Taliyah",
           "win_rate": 0.3
@@ -26004,11 +26507,19 @@
       ]
     },
     "LeeSin": {
-      "win_rate": 0.4843837144450641,
-      "pick_rate": 0.17828673704446396,
-      "ban_rate": 0.1571236804163007,
-      "games_played": 10758,
-      "most_used_runes": [
+      "id": "LeeSin",
+      "name": "Lee Sin",
+      "title": "the Blind Monk",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/LeeSin.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.4843837144450641,
+      "pickRate": 0.17828673704446396,
+      "banRate": 0.1571236804163007,
+      "gamesPlayed": 10758,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -26334,7 +26845,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6692,
           "count": 4258
@@ -26360,7 +26871,7 @@
           "count": 1071
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Twitch",
           "win_rate": 0.2
@@ -26404,11 +26915,19 @@
       ]
     },
     "Ahri": {
-      "win_rate": 0.5039508340649693,
-      "pick_rate": 0.09438027212011733,
-      "ban_rate": 0.036625180225717174,
-      "games_played": 5695,
-      "most_used_runes": [
+      "id": "Ahri",
+      "name": "Ahri",
+      "title": "the Nine-Tailed Fox",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Ahri.png",
+      "roles": [
+        "Mage",
+        "Assassin"
+      ],
+      "winRate": 0.5039508340649693,
+      "pickRate": 0.09438027212011733,
+      "banRate": 0.036625180225717174,
+      "gamesPlayed": 5695,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -26734,7 +27253,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3118,
           "count": 2149
@@ -26760,7 +27279,7 @@
           "count": 836
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Nautilus",
           "win_rate": 0.2
@@ -26804,11 +27323,19 @@
       ]
     },
     "Quinn": {
-      "win_rate": 0.4992721979621543,
-      "pick_rate": 0.022770587162957195,
-      "ban_rate": 0.010755539351353142,
-      "games_played": 1374,
-      "most_used_runes": [
+      "id": "Quinn",
+      "name": "Quinn",
+      "title": "Demacia's Wings",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Quinn.png",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ],
+      "winRate": 0.4992721979621543,
+      "pickRate": 0.022770587162957195,
+      "banRate": 0.010755539351353142,
+      "gamesPlayed": 1374,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -27134,7 +27661,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6676,
           "count": 412
@@ -27160,7 +27687,7 @@
           "count": 231
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Swain",
           "win_rate": 0.16666666666666666
@@ -27204,11 +27731,19 @@
       ]
     },
     "Nautilus": {
-      "win_rate": 0.49578324062443924,
-      "pick_rate": 0.09235842959181982,
-      "ban_rate": 0.11551018378880032,
-      "games_played": 5573,
-      "most_used_runes": [
+      "id": "Nautilus",
+      "name": "Nautilus",
+      "title": "the Titan of the Depths",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Nautilus.png",
+      "roles": [
+        "Tank",
+        "Support"
+      ],
+      "winRate": 0.49578324062443924,
+      "pickRate": 0.09235842959181982,
+      "banRate": 0.11551018378880032,
+      "gamesPlayed": 5573,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -27534,7 +28069,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 2155
@@ -27560,7 +28095,7 @@
           "count": 766
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Garen",
           "win_rate": 0.16666666666666666
@@ -27604,11 +28139,19 @@
       ]
     },
     "Teemo": {
-      "win_rate": 0.5235463719365689,
-      "pick_rate": 0.06897466067847732,
-      "ban_rate": 0.13228153328582556,
-      "games_played": 4162,
-      "most_used_runes": [
+      "id": "Teemo",
+      "name": "Teemo",
+      "title": "the Swift Scout",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Teemo.png",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ],
+      "winRate": 0.5235463719365689,
+      "pickRate": 0.06897466067847732,
+      "banRate": 0.13228153328582556,
+      "gamesPlayed": 4162,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -27934,7 +28477,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 1756
@@ -27960,7 +28503,7 @@
           "count": 536
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Seraphine",
           "win_rate": 0.2857142857142857
@@ -28004,11 +28547,19 @@
       ]
     },
     "JarvanIV": {
-      "win_rate": 0.4919575113808801,
-      "pick_rate": 0.05460632074377289,
-      "ban_rate": 0.011534445899139888,
-      "games_played": 3295,
-      "most_used_runes": [
+      "id": "JarvanIV",
+      "name": "Jarvan IV",
+      "title": "the Exemplar of Demacia",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/JarvanIV.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.4919575113808801,
+      "pickRate": 0.05460632074377289,
+      "banRate": 0.011534445899139888,
+      "gamesPlayed": 3295,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -28334,7 +28885,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6610,
           "count": 1103
@@ -28360,7 +28911,7 @@
           "count": 356
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Yorick",
           "win_rate": 0.125
@@ -28404,11 +28955,19 @@
       ]
     },
     "MissFortune": {
-      "win_rate": 0.5117365269461078,
-      "pick_rate": 0.13838020583019836,
-      "ban_rate": 0.10813543030443645,
-      "games_played": 8350,
-      "most_used_runes": [
+      "id": "MissFortune",
+      "name": "Miss Fortune",
+      "title": "the Bounty Hunter",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/MissFortune.png",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ],
+      "winRate": 0.5117365269461078,
+      "pickRate": 0.13838020583019836,
+      "banRate": 0.10813543030443645,
+      "gamesPlayed": 8350,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -28734,7 +29293,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6676,
           "count": 2547
@@ -28760,7 +29319,7 @@
           "count": 1344
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Neeko",
           "win_rate": 0.1
@@ -28804,11 +29363,19 @@
       ]
     },
     "Poppy": {
-      "win_rate": 0.5241691842900302,
-      "pick_rate": 0.05485490793987504,
-      "ban_rate": 0.06266054589748264,
-      "games_played": 3310,
-      "most_used_runes": [
+      "id": "Poppy",
+      "name": "Poppy",
+      "title": "Keeper of the Hammer",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Poppy.png",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ],
+      "winRate": 0.5241691842900302,
+      "pickRate": 0.05485490793987504,
+      "banRate": 0.06266054589748264,
+      "gamesPlayed": 3310,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -29134,7 +29701,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3742,
           "count": 830
@@ -29160,7 +29727,7 @@
           "count": 342
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Yone",
           "win_rate": 0.2777777777777778
@@ -29204,11 +29771,19 @@
       ]
     },
     "Mordekaiser": {
-      "win_rate": 0.5188419117647058,
-      "pick_rate": 0.07212343182910459,
-      "ban_rate": 0.1150461543560763,
-      "games_played": 4352,
-      "most_used_runes": [
+      "id": "Mordekaiser",
+      "name": "Mordekaiser",
+      "title": "the Iron Revenant",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Mordekaiser.png",
+      "roles": [
+        "Fighter",
+        "Mage"
+      ],
+      "winRate": 0.5188419117647058,
+      "pickRate": 0.07212343182910459,
+      "banRate": 0.1150461543560763,
+      "gamesPlayed": 4352,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -29534,7 +30109,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3116,
           "count": 1795
@@ -29560,7 +30135,7 @@
           "count": 546
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Sylas",
           "win_rate": 0.3225806451612903
@@ -29604,11 +30179,19 @@
       ]
     },
     "Jhin": {
-      "win_rate": 0.4926462072958888,
-      "pick_rate": 0.14310336255613929,
-      "ban_rate": 0.02336719643360236,
-      "games_played": 8635,
-      "most_used_runes": [
+      "id": "Jhin",
+      "name": "Jhin",
+      "title": "the Virtuoso",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Jhin.png",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ],
+      "winRate": 0.4926462072958888,
+      "pickRate": 0.14310336255613929,
+      "banRate": 0.02336719643360236,
+      "gamesPlayed": 8635,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -29934,7 +30517,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6676,
           "count": 3696
@@ -29960,7 +30543,7 @@
           "count": 1394
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Yone",
           "win_rate": 0.13333333333333333
@@ -30004,11 +30587,19 @@
       ]
     },
     "Sion": {
-      "win_rate": 0.5046979865771812,
-      "pick_rate": 0.04938598962562768,
-      "ban_rate": 0.009214298735519795,
-      "games_played": 2980,
-      "most_used_runes": [
+      "id": "Sion",
+      "name": "Sion",
+      "title": "The Undead Juggernaut",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Sion.png",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ],
+      "winRate": 0.5046979865771812,
+      "pickRate": 0.04938598962562768,
+      "banRate": 0.009214298735519795,
+      "gamesPlayed": 2980,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -30334,7 +30925,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3084,
           "count": 754
@@ -30360,7 +30951,7 @@
           "count": 366
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Zac",
           "win_rate": 0.2727272727272727
@@ -30404,11 +30995,19 @@
       ]
     },
     "Taric": {
-      "win_rate": 0.5375494071146245,
-      "pick_rate": 0.01257851212276893,
-      "ban_rate": 0.0031819161101075554,
-      "games_played": 759,
-      "most_used_runes": [
+      "id": "Taric",
+      "name": "Taric",
+      "title": "the Shield of Valoran",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Taric.png",
+      "roles": [
+        "Support",
+        "Tank"
+      ],
+      "winRate": 0.5375494071146245,
+      "pickRate": 0.01257851212276893,
+      "banRate": 0.0031819161101075554,
+      "gamesPlayed": 759,
+      "mostUsedRunes": [
         {
           "id": [
             8300,
@@ -30734,7 +31333,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 261
@@ -30760,7 +31359,7 @@
           "count": 105
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Leona",
           "win_rate": 0.36363636363636365
@@ -30804,11 +31403,19 @@
       ]
     },
     "Heimerdinger": {
-      "win_rate": 0.5406091370558376,
-      "pick_rate": 0.026118228070466185,
-      "ban_rate": 0.02671483734111135,
-      "games_played": 1576,
-      "most_used_runes": [
+      "id": "Heimerdinger",
+      "name": "Heimerdinger",
+      "title": "the Revered Inventor",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Heimerdinger.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5406091370558376,
+      "pickRate": 0.026118228070466185,
+      "banRate": 0.02671483734111135,
+      "gamesPlayed": 1576,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -31134,7 +31741,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 550
@@ -31160,7 +31767,7 @@
           "count": 318
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Hwei",
           "win_rate": 0.2727272727272727
@@ -31204,11 +31811,19 @@
       ]
     },
     "Brand": {
-      "win_rate": 0.5163822525597269,
-      "pick_rate": 0.04855736563862051,
-      "ban_rate": 0.04496113753500936,
-      "games_played": 2930,
-      "most_used_runes": [
+      "id": "Brand",
+      "name": "Brand",
+      "title": "the Burning Vengeance",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Brand.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5163822525597269,
+      "pickRate": 0.04855736563862051,
+      "banRate": 0.04496113753500936,
+      "gamesPlayed": 2930,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -31534,7 +32149,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 1173
@@ -31560,7 +32175,7 @@
           "count": 443
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Janna",
           "win_rate": 0.21052631578947367
@@ -31604,11 +32219,19 @@
       ]
     },
     "Hwei": {
-      "win_rate": 0.5045843520782396,
-      "pick_rate": 0.05422515370974959,
-      "ban_rate": 0.042740425249830134,
-      "games_played": 3272,
-      "most_used_runes": [
+      "id": "Hwei",
+      "name": "Hwei",
+      "title": "the Visionary",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Hwei.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5045843520782396,
+      "pickRate": 0.05422515370974959,
+      "banRate": 0.042740425249830134,
+      "gamesPlayed": 3272,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -31934,7 +32557,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 2503,
           "count": 1136
@@ -31960,7 +32583,7 @@
           "count": 434
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Seraphine",
           "win_rate": 0.23076923076923078
@@ -32004,11 +32627,18 @@
       ]
     },
     "Qiyana": {
-      "win_rate": 0.4941094941094941,
-      "pick_rate": 0.023914088265027098,
-      "ban_rate": 0.006993586450340565,
-      "games_played": 1443,
-      "most_used_runes": [
+      "id": "Qiyana",
+      "name": "Qiyana",
+      "title": "Empress of the Elements",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Qiyana.png",
+      "roles": [
+        "Assassin"
+      ],
+      "winRate": 0.4941094941094941,
+      "pickRate": 0.023914088265027098,
+      "banRate": 0.006993586450340565,
+      "gamesPlayed": 1443,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -32334,7 +32964,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6697,
           "count": 452
@@ -32360,7 +32990,7 @@
           "count": 210
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Xerath",
           "win_rate": 0.07142857142857142
@@ -32404,11 +33034,19 @@
       ]
     },
     "Lux": {
-      "win_rate": 0.5092316196793809,
-      "pick_rate": 0.1498980792495981,
-      "ban_rate": 0.12260320511758174,
-      "games_played": 9045,
-      "most_used_runes": [
+      "id": "Lux",
+      "name": "Lux",
+      "title": "the Lady of Luminosity",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Lux.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5092316196793809,
+      "pickRate": 0.1498980792495981,
+      "banRate": 0.12260320511758174,
+      "gamesPlayed": 9045,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -32734,7 +33372,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6655,
           "count": 3249
@@ -32760,7 +33398,7 @@
           "count": 1370
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "LeeSin",
           "win_rate": 0.3333333333333333
@@ -32804,11 +33442,19 @@
       ]
     },
     "Yone": {
-      "win_rate": 0.479233593391464,
-      "pick_rate": 0.1444457334150909,
-      "ban_rate": 0.09237500207155996,
-      "games_played": 8716,
-      "most_used_runes": [
+      "id": "Yone",
+      "name": "Yone",
+      "title": "the Unforgotten",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Yone.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.479233593391464,
+      "pickRate": 0.1444457334150909,
+      "banRate": 0.09237500207155996,
+      "gamesPlayed": 8716,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -33134,7 +33780,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3153,
           "count": 3801
@@ -33160,7 +33806,7 @@
           "count": 953
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Jinx",
           "win_rate": 0.2
@@ -33204,11 +33850,18 @@
       ]
     },
     "Karthus": {
-      "win_rate": 0.4708860759493671,
-      "pick_rate": 0.026184517989426757,
-      "ban_rate": 0.041845511343862385,
-      "games_played": 1580,
-      "most_used_runes": [
+      "id": "Karthus",
+      "name": "Karthus",
+      "title": "the Deathsinger",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Karthus.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.4708860759493671,
+      "pickRate": 0.026184517989426757,
+      "banRate": 0.041845511343862385,
+      "gamesPlayed": 1580,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -33534,7 +34187,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 2503,
           "count": 591
@@ -33560,7 +34213,7 @@
           "count": 240
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Nunu",
           "win_rate": 0.2857142857142857
@@ -33604,11 +34257,19 @@
       ]
     },
     "Leona": {
-      "win_rate": 0.5021367521367521,
-      "pick_rate": 0.06204736414709733,
-      "ban_rate": 0.0605889859299647,
-      "games_played": 3744,
-      "most_used_runes": [
+      "id": "Leona",
+      "name": "Leona",
+      "title": "the Radiant Dawn",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Leona.png",
+      "roles": [
+        "Tank",
+        "Support"
+      ],
+      "winRate": 0.5021367521367521,
+      "pickRate": 0.06204736414709733,
+      "banRate": 0.0605889859299647,
+      "gamesPlayed": 3744,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -33934,7 +34595,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 1436
@@ -33960,7 +34621,7 @@
           "count": 505
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Leblanc",
           "win_rate": 0.25
@@ -34004,11 +34665,18 @@
       ]
     },
     "Shaco": {
-      "win_rate": 0.5022586109542632,
-      "pick_rate": 0.05869972323958834,
-      "ban_rate": 0.2748545764902802,
-      "games_played": 3542,
-      "most_used_runes": [
+      "id": "Shaco",
+      "name": "Shaco",
+      "title": "the Demon Jester",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Shaco.png",
+      "roles": [
+        "Assassin"
+      ],
+      "winRate": 0.5022586109542632,
+      "pickRate": 0.05869972323958834,
+      "banRate": 0.2748545764902802,
+      "gamesPlayed": 3542,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -34334,7 +35002,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 2503,
           "count": 650
@@ -34360,7 +35028,7 @@
           "count": 358
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Garen",
           "win_rate": 0.21428571428571427
@@ -34404,11 +35072,19 @@
       ]
     },
     "Maokai": {
-      "win_rate": 0.5123809523809524,
-      "pick_rate": 0.03480220745430139,
-      "ban_rate": 0.006148389983593245,
-      "games_played": 2100,
-      "most_used_runes": [
+      "id": "Maokai",
+      "name": "Maokai",
+      "title": "the Twisted Treant",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Maokai.png",
+      "roles": [
+        "Tank",
+        "Support"
+      ],
+      "winRate": 0.5123809523809524,
+      "pickRate": 0.03480220745430139,
+      "banRate": 0.006148389983593245,
+      "gamesPlayed": 2100,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -34734,7 +35410,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 2502,
           "count": 466
@@ -34760,7 +35436,7 @@
           "count": 228
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Riven",
           "win_rate": 0.2
@@ -34804,11 +35480,19 @@
       ]
     },
     "Kayle": {
-      "win_rate": 0.5170212765957447,
-      "pick_rate": 0.038945327389337266,
-      "ban_rate": 0.018544604829220598,
-      "games_played": 2350,
-      "most_used_runes": [
+      "id": "Kayle",
+      "name": "Kayle",
+      "title": "the Righteous",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Kayle.png",
+      "roles": [
+        "Mage",
+        "Marksman"
+      ],
+      "winRate": 0.5170212765957447,
+      "pickRate": 0.038945327389337266,
+      "banRate": 0.018544604829220598,
+      "gamesPlayed": 2350,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -35134,7 +35818,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3115,
           "count": 1067
@@ -35160,7 +35844,7 @@
           "count": 330
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Galio",
           "win_rate": 0.15384615384615385
@@ -35204,11 +35888,19 @@
       ]
     },
     "Lulu": {
-      "win_rate": 0.5105614230127848,
-      "pick_rate": 0.11925556421007276,
-      "ban_rate": 0.18571120796804827,
-      "games_played": 7196,
-      "most_used_runes": [
+      "id": "Lulu",
+      "name": "Lulu",
+      "title": "the Fae Sorceress",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Lulu.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.5105614230127848,
+      "pickRate": 0.11925556421007276,
+      "banRate": 0.18571120796804827,
+      "gamesPlayed": 7196,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -35534,7 +36226,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3870,
           "count": 2958
@@ -35560,7 +36252,7 @@
           "count": 1185
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Fiddlesticks",
           "win_rate": 0.3225806451612903
@@ -35604,11 +36296,19 @@
       ]
     },
     "Tryndamere": {
-      "win_rate": 0.488663967611336,
-      "pick_rate": 0.040934024958154486,
-      "ban_rate": 0.02948244145771532,
-      "games_played": 2470,
-      "most_used_runes": [
+      "id": "Tryndamere",
+      "name": "Tryndamere",
+      "title": "the Barbarian King",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Tryndamere.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.488663967611336,
+      "pickRate": 0.040934024958154486,
+      "banRate": 0.02948244145771532,
+      "gamesPlayed": 2470,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -35934,7 +36634,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3074,
           "count": 573
@@ -35960,7 +36660,7 @@
           "count": 334
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "LeeSin",
           "win_rate": 0.2777777777777778
@@ -36004,11 +36704,18 @@
       ]
     },
     "Zoe": {
-      "win_rate": 0.496938294865756,
-      "pick_rate": 0.03518337448832469,
-      "ban_rate": 0.02328433403490164,
-      "games_played": 2123,
-      "most_used_runes": [
+      "id": "Zoe",
+      "name": "Zoe",
+      "title": "the Aspect of Twilight",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Zoe.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.496938294865756,
+      "pickRate": 0.03518337448832469,
+      "banRate": 0.02328433403490164,
+      "gamesPlayed": 2123,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -36334,7 +37041,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6655,
           "count": 844
@@ -36360,7 +37067,7 @@
           "count": 305
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Senna",
           "win_rate": 0.25
@@ -36404,11 +37111,18 @@
       ]
     },
     "Kennen": {
-      "win_rate": 0.5214233841684822,
-      "pick_rate": 0.022820304602177623,
-      "ban_rate": 0.010556669594471421,
-      "games_played": 1377,
-      "most_used_runes": [
+      "id": "Kennen",
+      "name": "Kennen",
+      "title": "the Heart of the Tempest",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Kennen.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5214233841684822,
+      "pickRate": 0.022820304602177623,
+      "banRate": 0.010556669594471421,
+      "gamesPlayed": 1377,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -36734,7 +37448,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3152,
           "count": 475
@@ -36760,7 +37474,7 @@
           "count": 214
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Malphite",
           "win_rate": 0.15
@@ -36804,11 +37518,19 @@
       ]
     },
     "Twitch": {
-      "win_rate": 0.49983803045027536,
-      "pick_rate": 0.051159244957823036,
-      "ban_rate": 0.05967749954425681,
-      "games_played": 3087,
-      "most_used_runes": [
+      "id": "Twitch",
+      "name": "Twitch",
+      "title": "the Plague Rat",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Twitch.png",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ],
+      "winRate": 0.49983803045027536,
+      "pickRate": 0.051159244957823036,
+      "banRate": 0.05967749954425681,
+      "gamesPlayed": 3087,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -37134,7 +37856,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3085,
           "count": 1079
@@ -37160,7 +37882,7 @@
           "count": 610
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Seraphine",
           "win_rate": 0.26666666666666666
@@ -37204,11 +37926,18 @@
       ]
     },
     "Aatrox": {
-      "win_rate": 0.4993218040013564,
-      "pick_rate": 0.09774448550736646,
-      "ban_rate": 0.12243748032018031,
-      "games_played": 5898,
-      "most_used_runes": [
+      "id": "Aatrox",
+      "name": "Aatrox",
+      "title": "the Darkin Blade",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Aatrox.png",
+      "roles": [
+        "Fighter"
+      ],
+      "winRate": 0.4993218040013564,
+      "pickRate": 0.09774448550736646,
+      "banRate": 0.12243748032018031,
+      "gamesPlayed": 5898,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -37534,7 +38263,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6610,
           "count": 1697
@@ -37560,7 +38289,7 @@
           "count": 882
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Ryze",
           "win_rate": 0.3181818181818182
@@ -37604,11 +38333,18 @@
       ]
     },
     "Khazix": {
-      "win_rate": 0.493631669535284,
-      "pick_rate": 0.048143053645116916,
-      "ban_rate": 0.035531396562867704,
-      "games_played": 2905,
-      "most_used_runes": [
+      "id": "Khazix",
+      "name": "Kha'Zix",
+      "title": "the Voidreaver",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Khazix.png",
+      "roles": [
+        "Assassin"
+      ],
+      "winRate": 0.493631669535284,
+      "pickRate": 0.048143053645116916,
+      "banRate": 0.035531396562867704,
+      "gamesPlayed": 2905,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -37934,7 +38670,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3142,
           "count": 1144
@@ -37960,7 +38696,7 @@
           "count": 451
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Taliyah",
           "win_rate": 0.36363636363636365
@@ -38004,11 +38740,19 @@
       ]
     },
     "Nami": {
-      "win_rate": 0.5189213686834353,
-      "pick_rate": 0.07313435309325335,
-      "ban_rate": 0.008849704181236638,
-      "games_played": 4413,
-      "most_used_runes": [
+      "id": "Nami",
+      "name": "Nami",
+      "title": "the Tidecaller",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Nami.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.5189213686834353,
+      "pickRate": 0.07313435309325335,
+      "banRate": 0.008849704181236638,
+      "gamesPlayed": 4413,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -38334,7 +39078,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 4005,
           "count": 1878
@@ -38360,7 +39104,7 @@
           "count": 632
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Anivia",
           "win_rate": 0.3
@@ -38404,11 +39148,19 @@
       ]
     },
     "Galio": {
-      "win_rate": 0.5092820398121226,
-      "pick_rate": 0.07409555691818166,
-      "ban_rate": 0.04540859448799324,
-      "games_played": 4471,
-      "most_used_runes": [
+      "id": "Galio",
+      "name": "Galio",
+      "title": "the Colossus",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Galio.png",
+      "roles": [
+        "Tank",
+        "Mage"
+      ],
+      "winRate": 0.5092820398121226,
+      "pickRate": 0.07409555691818166,
+      "banRate": 0.04540859448799324,
+      "gamesPlayed": 4471,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -38734,7 +39486,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6664,
           "count": 1484
@@ -38760,7 +39512,7 @@
           "count": 406
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Tryndamere",
           "win_rate": 0.26666666666666666
@@ -38804,11 +39556,19 @@
       ]
     },
     "Yasuo": {
-      "win_rate": 0.49288744696780634,
-      "pick_rate": 0.13281185263751016,
-      "ban_rate": 0.21391756848577254,
-      "games_played": 8014,
-      "most_used_runes": [
+      "id": "Yasuo",
+      "name": "Yasuo",
+      "title": "the Unforgiven",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Yasuo.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.49288744696780634,
+      "pickRate": 0.13281185263751016,
+      "banRate": 0.21391756848577254,
+      "gamesPlayed": 8014,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -39134,7 +39894,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3153,
           "count": 3206
@@ -39160,7 +39920,7 @@
           "count": 1132
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Karma",
           "win_rate": 0.26666666666666666
@@ -39204,11 +39964,18 @@
       ]
     },
     "Ryze": {
-      "win_rate": 0.4846382556987116,
-      "pick_rate": 0.03344326411560962,
-      "ban_rate": 0.003264778508808273,
-      "games_played": 2018,
-      "most_used_runes": [
+      "id": "Ryze",
+      "name": "Ryze",
+      "title": "the Rune Mage",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Ryze.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.4846382556987116,
+      "pickRate": 0.03344326411560962,
+      "banRate": 0.003264778508808273,
+      "gamesPlayed": 2018,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -39534,7 +40301,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3040,
           "count": 902
@@ -39560,7 +40327,7 @@
           "count": 230
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Jayce",
           "win_rate": 0.2962962962962963
@@ -39604,11 +40371,19 @@
       ]
     },
     "Sylas": {
-      "win_rate": 0.49087698646262506,
-      "pick_rate": 0.14078321539251917,
-      "ban_rate": 0.12089623970434696,
-      "games_played": 8495,
-      "most_used_runes": [
+      "id": "Sylas",
+      "name": "Sylas",
+      "title": "the Unshackled",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Sylas.png",
+      "roles": [
+        "Mage",
+        "Assassin"
+      ],
+      "winRate": 0.49087698646262506,
+      "pickRate": 0.14078321539251917,
+      "banRate": 0.12089623970434696,
+      "gamesPlayed": 8495,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -39934,7 +40709,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3152,
           "count": 2550
@@ -39960,7 +40735,7 @@
           "count": 981
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Janna",
           "win_rate": 0.14285714285714285
@@ -40004,11 +40779,19 @@
       ]
     },
     "Camille": {
-      "win_rate": 0.5092073658927142,
-      "pick_rate": 0.04139805439087851,
-      "ban_rate": 0.016323892544041364,
-      "games_played": 2498,
-      "most_used_runes": [
+      "id": "Camille",
+      "name": "Camille",
+      "title": "the Steel Shadow",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Camille.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.5092073658927142,
+      "pickRate": 0.04139805439087851,
+      "banRate": 0.016323892544041364,
+      "gamesPlayed": 2498,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -40334,7 +41117,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 1116
@@ -40360,7 +41143,7 @@
           "count": 258
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Shen",
           "win_rate": 0.25925925925925924
@@ -40404,11 +41187,19 @@
       ]
     },
     "RekSai": {
-      "win_rate": 0.5415430267062314,
-      "pick_rate": 0.011169851344856731,
-      "ban_rate": 0.003679090502311861,
-      "games_played": 674,
-      "most_used_runes": [
+      "id": "RekSai",
+      "name": "Rek'Sai",
+      "title": "the Void Burrower",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/RekSai.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5415430267062314,
+      "pickRate": 0.011169851344856731,
+      "banRate": 0.003679090502311861,
+      "gamesPlayed": 674,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -40734,7 +41525,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6631,
           "count": 222
@@ -40760,7 +41551,7 @@
           "count": 84
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Nocturne",
           "win_rate": 0.2777777777777778
@@ -40804,11 +41595,19 @@
       ]
     },
     "Pantheon": {
-      "win_rate": 0.4973488865323436,
-      "pick_rate": 0.10939493876468737,
-      "ban_rate": 0.04186208382360253,
-      "games_played": 6601,
-      "most_used_runes": [
+      "id": "Pantheon",
+      "name": "Pantheon",
+      "title": "the Unbreakable Spear",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Pantheon.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.4973488865323436,
+      "pickRate": 0.10939493876468737,
+      "banRate": 0.04186208382360253,
+      "gamesPlayed": 6601,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -41134,7 +41933,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6610,
           "count": 1748
@@ -41160,7 +41959,7 @@
           "count": 588
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Ivern",
           "win_rate": 0.16666666666666666
@@ -41204,11 +42003,19 @@
       ]
     },
     "Viego": {
-      "win_rate": 0.4952357071213641,
-      "pick_rate": 0.1321820984073847,
-      "ban_rate": 0.10425747004524287,
-      "games_played": 7976,
-      "most_used_runes": [
+      "id": "Viego",
+      "name": "Viego",
+      "title": "The Ruined King",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Viego.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.4952357071213641,
+      "pickRate": 0.1321820984073847,
+      "banRate": 0.10425747004524287,
+      "gamesPlayed": 7976,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -41534,7 +42341,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 2610
@@ -41560,7 +42367,7 @@
           "count": 1027
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Maokai",
           "win_rate": 0.29411764705882354
@@ -41604,11 +42411,18 @@
       ]
     },
     "Aphelios": {
-      "win_rate": 0.4859851607584501,
-      "pick_rate": 0.04020483584958817,
-      "ban_rate": 0.007093021328781425,
-      "games_played": 2426,
-      "most_used_runes": [
+      "id": "Aphelios",
+      "name": "Aphelios",
+      "title": "the Weapon of the Faithful",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Aphelios.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.4859851607584501,
+      "pickRate": 0.04020483584958817,
+      "banRate": 0.007093021328781425,
+      "gamesPlayed": 2426,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -41934,7 +42748,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3031,
           "count": 944
@@ -41960,7 +42774,7 @@
           "count": 434
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Twitch",
           "win_rate": 0.36538461538461536
@@ -42004,11 +42818,19 @@
       ]
     },
     "Vayne": {
-      "win_rate": 0.510195412064571,
-      "pick_rate": 0.07802323461659569,
-      "ban_rate": 0.04167978654646095,
-      "games_played": 4708,
-      "most_used_runes": [
+      "id": "Vayne",
+      "name": "Vayne",
+      "title": "the Night Hunter",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Vayne.png",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ],
+      "winRate": 0.510195412064571,
+      "pickRate": 0.07802323461659569,
+      "banRate": 0.04167978654646095,
+      "gamesPlayed": 4708,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -42334,7 +43156,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3153,
           "count": 1905
@@ -42360,7 +43182,7 @@
           "count": 706
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Urgot",
           "win_rate": 0.25
@@ -42404,11 +43226,19 @@
       ]
     },
     "Nasus": {
-      "win_rate": 0.509698275862069,
-      "pick_rate": 0.04613778359655955,
-      "ban_rate": 0.047944183888235195,
-      "games_played": 2784,
-      "most_used_runes": [
+      "id": "Nasus",
+      "name": "Nasus",
+      "title": "the Curator of the Sands",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Nasus.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.509698275862069,
+      "pickRate": 0.04613778359655955,
+      "banRate": 0.047944183888235195,
+      "gamesPlayed": 2784,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -42734,7 +43564,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 1089
@@ -42760,7 +43590,7 @@
           "count": 376
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Sion",
           "win_rate": 0.21621621621621623
@@ -42804,11 +43634,19 @@
       ]
     },
     "KogMaw": {
-      "win_rate": 0.5049056603773585,
-      "pick_rate": 0.02195853565569016,
-      "ban_rate": 0.009148008816559222,
-      "games_played": 1325,
-      "most_used_runes": [
+      "id": "KogMaw",
+      "name": "Kog'Maw",
+      "title": "the Mouth of the Abyss",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/KogMaw.png",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ],
+      "winRate": 0.5049056603773585,
+      "pickRate": 0.02195853565569016,
+      "banRate": 0.009148008816559222,
+      "gamesPlayed": 1325,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -43134,7 +43972,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3124,
           "count": 521
@@ -43160,7 +43998,7 @@
           "count": 201
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Corki",
           "win_rate": 0.25
@@ -43204,11 +44042,19 @@
       ]
     },
     "Irelia": {
-      "win_rate": 0.48323576370409793,
-      "pick_rate": 0.06227937886345934,
-      "ban_rate": 0.11529474155217845,
-      "games_played": 3758,
-      "most_used_runes": [
+      "id": "Irelia",
+      "name": "Irelia",
+      "title": "the Blade Dancer",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Irelia.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.48323576370409793,
+      "pickRate": 0.06227937886345934,
+      "banRate": 0.11529474155217845,
+      "gamesPlayed": 3758,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -43534,7 +44380,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3153,
           "count": 1778
@@ -43560,7 +44406,7 @@
           "count": 529
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Taliyah",
           "win_rate": 0.07692307692307693
@@ -43604,11 +44450,19 @@
       ]
     },
     "Udyr": {
-      "win_rate": 0.4947563232572486,
-      "pick_rate": 0.026863989658772642,
-      "ban_rate": 0.01983725824895179,
-      "games_played": 1621,
-      "most_used_runes": [
+      "id": "Udyr",
+      "name": "Udyr",
+      "title": "the Spirit Walker",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Udyr.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.4947563232572486,
+      "pickRate": 0.026863989658772642,
+      "banRate": 0.01983725824895179,
+      "gamesPlayed": 1621,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -43934,7 +44788,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 407
@@ -43960,7 +44814,7 @@
           "count": 121
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Briar",
           "win_rate": 0.2692307692307692
@@ -44004,11 +44858,19 @@
       ]
     },
     "Smolder": {
-      "win_rate": 0.46602787456445993,
-      "pick_rate": 0.057075620225054274,
-      "ban_rate": 0.016290747584561078,
-      "games_played": 3444,
-      "most_used_runes": [
+      "id": "Smolder",
+      "name": "Smolder",
+      "title": "the Fiery Fledgling",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Smolder.png",
+      "roles": [
+        "Marksman",
+        "Mage"
+      ],
+      "winRate": 0.46602787456445993,
+      "pickRate": 0.057075620225054274,
+      "banRate": 0.016290747584561078,
+      "gamesPlayed": 3444,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -44334,7 +45196,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3508,
           "count": 1168
@@ -44360,7 +45222,7 @@
           "count": 506
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Malphite",
           "win_rate": 0.16666666666666666
@@ -44404,11 +45266,18 @@
       ]
     },
     "Belveth": {
-      "win_rate": 0.4959807073954984,
-      "pick_rate": 0.020616164796738536,
-      "ban_rate": 0.036360020549874875,
-      "games_played": 1244,
-      "most_used_runes": [
+      "id": "Belveth",
+      "name": "Bel'Veth",
+      "title": "the Empress of the Void",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Belveth.png",
+      "roles": [
+        "Fighter"
+      ],
+      "winRate": 0.4959807073954984,
+      "pickRate": 0.020616164796738536,
+      "banRate": 0.036360020549874875,
+      "gamesPlayed": 1244,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -44734,7 +45603,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6672,
           "count": 503
@@ -44760,7 +45629,7 @@
           "count": 143
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Jax",
           "win_rate": 0.3125
@@ -44804,11 +45673,18 @@
       ]
     },
     "Zed": {
-      "win_rate": 0.48277957860615883,
-      "pick_rate": 0.0818017599973484,
-      "ban_rate": 0.16570822492169504,
-      "games_played": 4936,
-      "most_used_runes": [
+      "id": "Zed",
+      "name": "Zed",
+      "title": "the Master of Shadows",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Zed.png",
+      "roles": [
+        "Assassin"
+      ],
+      "winRate": 0.48277957860615883,
+      "pickRate": 0.0818017599973484,
+      "banRate": 0.16570822492169504,
+      "gamesPlayed": 4936,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -45134,7 +46010,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6692,
           "count": 1793
@@ -45160,7 +46036,7 @@
           "count": 701
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Karma",
           "win_rate": 0.21428571428571427
@@ -45204,11 +46080,19 @@
       ]
     },
     "Diana": {
-      "win_rate": 0.5102841890406657,
-      "pick_rate": 0.10555012346497407,
-      "ban_rate": 0.0852654082630384,
-      "games_played": 6369,
-      "most_used_runes": [
+      "id": "Diana",
+      "name": "Diana",
+      "title": "Scorn of the Moon",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Diana.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.5102841890406657,
+      "pickRate": 0.10555012346497407,
+      "banRate": 0.0852654082630384,
+      "gamesPlayed": 6369,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -45534,7 +46418,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 1818
@@ -45560,7 +46444,7 @@
           "count": 915
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "AurelionSol",
           "win_rate": 0.3157894736842105
@@ -45604,11 +46488,18 @@
       ]
     },
     "Rakan": {
-      "win_rate": 0.48046251993620415,
-      "pick_rate": 0.04156377918827994,
-      "ban_rate": 0.003993967617374587,
-      "games_played": 2508,
-      "most_used_runes": [
+      "id": "Rakan",
+      "name": "Rakan",
+      "title": "The Charmer",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Rakan.png",
+      "roles": [
+        "Support"
+      ],
+      "winRate": 0.48046251993620415,
+      "pickRate": 0.04156377918827994,
+      "banRate": 0.003993967617374587,
+      "gamesPlayed": 2508,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -45934,7 +46825,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 760
@@ -45960,7 +46851,7 @@
           "count": 356
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Zilean",
           "win_rate": 0.3125
@@ -46004,11 +46895,18 @@
       ]
     },
     "Syndra": {
-      "win_rate": 0.5195482189400521,
-      "pick_rate": 0.05722477254271557,
-      "ban_rate": 0.04353590427735702,
-      "games_played": 3453,
-      "most_used_runes": [
+      "id": "Syndra",
+      "name": "Syndra",
+      "title": "the Dark Sovereign",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Syndra.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5195482189400521,
+      "pickRate": 0.05722477254271557,
+      "banRate": 0.04353590427735702,
+      "gamesPlayed": 3453,
+      "mostUsedRunes": [
         {
           "id": [
             8300,
@@ -46334,7 +47232,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6655,
           "count": 1118
@@ -46360,7 +47258,7 @@
           "count": 616
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Lissandra",
           "win_rate": 0.3
@@ -46404,11 +47302,19 @@
       ]
     },
     "Akshan": {
-      "win_rate": 0.5123183828174352,
-      "pick_rate": 0.02623423542864719,
-      "ban_rate": 0.028620672511227855,
-      "games_played": 1583,
-      "most_used_runes": [
+      "id": "Akshan",
+      "name": "Akshan",
+      "title": "the Rogue Sentinel",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Akshan.png",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ],
+      "winRate": 0.5123183828174352,
+      "pickRate": 0.02623423542864719,
+      "banRate": 0.028620672511227855,
+      "gamesPlayed": 1583,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -46734,7 +47640,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6676,
           "count": 655
@@ -46760,7 +47666,7 @@
           "count": 220
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Velkoz",
           "win_rate": 0.08333333333333333
@@ -46804,11 +47710,18 @@
       ]
     },
     "Draven": {
-      "win_rate": 0.4989210185584808,
-      "pick_rate": 0.03839843555791253,
-      "ban_rate": 0.14031918595979517,
-      "games_played": 2317,
-      "most_used_runes": [
+      "id": "Draven",
+      "name": "Draven",
+      "title": "the Glorious Executioner",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Draven.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.4989210185584808,
+      "pickRate": 0.03839843555791253,
+      "banRate": 0.14031918595979517,
+      "gamesPlayed": 2317,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -47134,7 +48047,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3072,
           "count": 909
@@ -47160,7 +48073,7 @@
           "count": 448
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Nilah",
           "win_rate": 0.3125
@@ -47204,11 +48117,19 @@
       ]
     },
     "Garen": {
-      "win_rate": 0.5110826939471441,
-      "pick_rate": 0.11663711241113008,
-      "ban_rate": 0.0911652110505295,
-      "games_played": 7038,
-      "most_used_runes": [
+      "id": "Garen",
+      "name": "Garen",
+      "title": "The Might of Demacia",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Garen.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5110826939471441,
+      "pickRate": 0.11663711241113008,
+      "banRate": 0.0911652110505295,
+      "gamesPlayed": 7038,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -47534,7 +48455,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6631,
           "count": 3286
@@ -47560,7 +48481,7 @@
           "count": 920
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Anivia",
           "win_rate": 0.3333333333333333
@@ -47604,11 +48525,18 @@
       ]
     },
     "Xayah": {
-      "win_rate": 0.5008650519031141,
-      "pick_rate": 0.038315573159211816,
-      "ban_rate": 0.006214679902553819,
-      "games_played": 2312,
-      "most_used_runes": [
+      "id": "Xayah",
+      "name": "Xayah",
+      "title": "the Rebel",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Xayah.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.5008650519031141,
+      "pickRate": 0.038315573159211816,
+      "banRate": 0.006214679902553819,
+      "gamesPlayed": 2312,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -47934,7 +48862,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6675,
           "count": 918
@@ -47960,7 +48888,7 @@
           "count": 381
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Ziggs",
           "win_rate": 0.3333333333333333
@@ -48004,11 +48932,19 @@
       ]
     },
     "Nilah": {
-      "win_rate": 0.5419532324621733,
-      "pick_rate": 0.024096385542168676,
-      "ban_rate": 0.041580351668020085,
-      "games_played": 1454,
-      "most_used_runes": [
+      "id": "Nilah",
+      "name": "Nilah",
+      "title": "the Joy Unbound",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Nilah.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.5419532324621733,
+      "pickRate": 0.024096385542168676,
+      "banRate": 0.041580351668020085,
+      "gamesPlayed": 1454,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -48334,7 +49270,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6676,
           "count": 704
@@ -48360,7 +49296,7 @@
           "count": 189
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Swain",
           "win_rate": 0.3333333333333333
@@ -48404,11 +49340,19 @@
       ]
     },
     "MasterYi": {
-      "win_rate": 0.5128860489882854,
-      "pick_rate": 0.07780779237997382,
-      "ban_rate": 0.1254868165923667,
-      "games_played": 4695,
-      "most_used_runes": [
+      "id": "MasterYi",
+      "name": "Master Yi",
+      "title": "the Wuju Bladesman",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/MasterYi.png",
+      "roles": [
+        "Assassin",
+        "Fighter"
+      ],
+      "winRate": 0.5128860489882854,
+      "pickRate": 0.07780779237997382,
+      "banRate": 0.1254868165923667,
+      "gamesPlayed": 4695,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -48734,7 +49678,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3153,
           "count": 2159
@@ -48760,7 +49704,7 @@
           "count": 474
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Tryndamere",
           "win_rate": 0.35294117647058826
@@ -48804,11 +49748,19 @@
       ]
     },
     "Tristana": {
-      "win_rate": 0.5046374367622259,
-      "pick_rate": 0.07861984388724085,
-      "ban_rate": 0.016738204537544953,
-      "games_played": 4744,
-      "most_used_runes": [
+      "id": "Tristana",
+      "name": "Tristana",
+      "title": "the Yordle Gunner",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Tristana.png",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ],
+      "winRate": 0.5046374367622259,
+      "pickRate": 0.07861984388724085,
+      "banRate": 0.016738204537544953,
+      "gamesPlayed": 4744,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -49134,7 +50086,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3031,
           "count": 1666
@@ -49160,7 +50112,7 @@
           "count": 1060
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Velkoz",
           "win_rate": 0.2727272727272727
@@ -49204,11 +50156,19 @@
       ]
     },
     "Neeko": {
-      "win_rate": 0.4817244611059044,
-      "pick_rate": 0.03536567176546627,
-      "ban_rate": 0.013208266352894384,
-      "games_played": 2134,
-      "most_used_runes": [
+      "id": "Neeko",
+      "name": "Neeko",
+      "title": "the Curious Chameleon",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Neeko.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.4817244611059044,
+      "pickRate": 0.03536567176546627,
+      "banRate": 0.013208266352894384,
+      "gamesPlayed": 2134,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -49534,7 +50494,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3152,
           "count": 779
@@ -49560,7 +50520,7 @@
           "count": 230
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Galio",
           "win_rate": 0.20833333333333334
@@ -49604,11 +50564,18 @@
       ]
     },
     "Jax": {
-      "win_rate": 0.4974250936329588,
-      "pick_rate": 0.07079763344989311,
-      "ban_rate": 0.053545682040403705,
-      "games_played": 4272,
-      "most_used_runes": [
+      "id": "Jax",
+      "name": "Jax",
+      "title": "Grandmaster at Arms",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Jax.png",
+      "roles": [
+        "Fighter"
+      ],
+      "winRate": 0.4974250936329588,
+      "pickRate": 0.07079763344989311,
+      "banRate": 0.053545682040403705,
+      "gamesPlayed": 4272,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -49934,7 +50901,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 1755
@@ -49960,7 +50927,7 @@
           "count": 471
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Olaf",
           "win_rate": 0.26666666666666666
@@ -50004,11 +50971,18 @@
       ]
     },
     "Shen": {
-      "win_rate": 0.5022385022385022,
-      "pick_rate": 0.04071858272153262,
-      "ban_rate": 0.004375134651397889,
-      "games_played": 2457,
-      "most_used_runes": [
+      "id": "Shen",
+      "name": "Shen",
+      "title": "the Eye of Twilight",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Shen.png",
+      "roles": [
+        "Tank"
+      ],
+      "winRate": 0.5022385022385022,
+      "pickRate": 0.04071858272153262,
+      "banRate": 0.004375134651397889,
+      "gamesPlayed": 2457,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -50334,7 +51308,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3084,
           "count": 573
@@ -50360,7 +51334,7 @@
           "count": 334
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Senna",
           "win_rate": 0.2
@@ -50404,11 +51378,18 @@
       ]
     },
     "Gwen": {
-      "win_rate": 0.5212464589235127,
-      "pick_rate": 0.040950597437894636,
-      "ban_rate": 0.0293995790590146,
-      "games_played": 2471,
-      "most_used_runes": [
+      "id": "Gwen",
+      "name": "Gwen",
+      "title": "The Hallowed Seamstress",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Gwen.png",
+      "roles": [
+        "Fighter"
+      ],
+      "winRate": 0.5212464589235127,
+      "pickRate": 0.040950597437894636,
+      "banRate": 0.0293995790590146,
+      "gamesPlayed": 2471,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -50734,7 +51715,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3115,
           "count": 1136
@@ -50760,7 +51741,7 @@
           "count": 308
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Udyr",
           "win_rate": 0.26666666666666666
@@ -50804,11 +51785,19 @@
       ]
     },
     "Olaf": {
-      "win_rate": 0.5162790697674419,
-      "pick_rate": 0.02137849886478514,
-      "ban_rate": 0.011285858703037735,
-      "games_played": 1290,
-      "most_used_runes": [
+      "id": "Olaf",
+      "name": "Olaf",
+      "title": "the Berserker",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Olaf.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5162790697674419,
+      "pickRate": 0.02137849886478514,
+      "banRate": 0.011285858703037735,
+      "gamesPlayed": 1290,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -51134,7 +52123,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6631,
           "count": 488
@@ -51160,7 +52149,7 @@
           "count": 167
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Gwen",
           "win_rate": 0.25
@@ -51204,11 +52193,19 @@
       ]
     },
     "Leblanc": {
-      "win_rate": 0.4836972778941071,
-      "pick_rate": 0.05540179977129978,
-      "ban_rate": 0.18221441474287797,
-      "games_played": 3343,
-      "most_used_runes": [
+      "id": "Leblanc",
+      "name": "LeBlanc",
+      "title": "the Deceiver",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Leblanc.png",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ],
+      "winRate": 0.4836972778941071,
+      "pickRate": 0.05540179977129978,
+      "banRate": 0.18221441474287797,
+      "gamesPlayed": 3343,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -51534,7 +52531,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6655,
           "count": 1421
@@ -51560,7 +52557,7 @@
           "count": 520
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Poppy",
           "win_rate": 0.21428571428571427
@@ -51604,11 +52601,19 @@
       ]
     },
     "Thresh": {
-      "win_rate": 0.5044139617003939,
-      "pick_rate": 0.12202316832667671,
-      "ban_rate": 0.05679388806947183,
-      "games_played": 7363,
-      "most_used_runes": [
+      "id": "Thresh",
+      "name": "Thresh",
+      "title": "the Chain Warden",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Thresh.png",
+      "roles": [
+        "Support",
+        "Tank"
+      ],
+      "winRate": 0.5044139617003939,
+      "pickRate": 0.12202316832667671,
+      "banRate": 0.05679388806947183,
+      "gamesPlayed": 7363,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -51934,7 +52939,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 3110
@@ -51960,7 +52965,7 @@
           "count": 840
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Anivia",
           "win_rate": 0.25
@@ -52004,11 +53009,19 @@
       ]
     },
     "Janna": {
-      "win_rate": 0.49264705882352944,
-      "pick_rate": 0.033807858669892776,
-      "ban_rate": 0.011865895493942758,
-      "games_played": 2040,
-      "most_used_runes": [
+      "id": "Janna",
+      "name": "Janna",
+      "title": "the Storm's Fury",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Janna.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.49264705882352944,
+      "pickRate": 0.033807858669892776,
+      "banRate": 0.011865895493942758,
+      "gamesPlayed": 2040,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -52334,7 +53347,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3870,
           "count": 663
@@ -52360,7 +53373,7 @@
           "count": 266
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Taric",
           "win_rate": 0.29411764705882354
@@ -52404,11 +53417,19 @@
       ]
     },
     "Nidalee": {
-      "win_rate": 0.4658119658119658,
-      "pick_rate": 0.046535523110322996,
-      "ban_rate": 0.029001839545251155,
-      "games_played": 2808,
-      "most_used_runes": [
+      "id": "Nidalee",
+      "name": "Nidalee",
+      "title": "the Bestial Huntress",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Nidalee.png",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ],
+      "winRate": 0.4658119658119658,
+      "pickRate": 0.046535523110322996,
+      "banRate": 0.029001839545251155,
+      "gamesPlayed": 2808,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -52734,7 +53755,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3020,
           "count": 674
@@ -52760,7 +53781,7 @@
           "count": 381
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "RekSai",
           "win_rate": 0.2727272727272727
@@ -52804,11 +53825,19 @@
       ]
     },
     "Rengar": {
-      "win_rate": 0.48360655737704916,
-      "pick_rate": 0.02426211033957011,
-      "ban_rate": 0.03142142158731211,
-      "games_played": 1464,
-      "most_used_runes": [
+      "id": "Rengar",
+      "name": "Rengar",
+      "title": "the Pridestalker",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Rengar.png",
+      "roles": [
+        "Assassin",
+        "Fighter"
+      ],
+      "winRate": 0.48360655737704916,
+      "pickRate": 0.02426211033957011,
+      "banRate": 0.03142142158731211,
+      "gamesPlayed": 1464,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -53134,7 +54163,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6698,
           "count": 378
@@ -53160,7 +54189,7 @@
           "count": 216
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Zed",
           "win_rate": 0.23076923076923078
@@ -53204,11 +54233,19 @@
       ]
     },
     "Vi": {
-      "win_rate": 0.5088617565970854,
-      "pick_rate": 0.08415505212044878,
-      "ban_rate": 0.02949901393745546,
-      "games_played": 5078,
-      "most_used_runes": [
+      "id": "Vi",
+      "name": "Vi",
+      "title": "the Piltover Enforcer",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Vi.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.5088617565970854,
+      "pickRate": 0.08415505212044878,
+      "banRate": 0.02949901393745546,
+      "gamesPlayed": 5078,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -53534,7 +54571,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6610,
           "count": 1650
@@ -53560,7 +54597,7 @@
           "count": 698
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Morgana",
           "win_rate": 0.2
@@ -53604,11 +54641,19 @@
       ]
     },
     "Hecarim": {
-      "win_rate": 0.4706365503080082,
-      "pick_rate": 0.040353988167249465,
-      "ban_rate": 0.022737442203476906,
-      "games_played": 2435,
-      "most_used_runes": [
+      "id": "Hecarim",
+      "name": "Hecarim",
+      "title": "the Shadow of War",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Hecarim.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.4706365503080082,
+      "pickRate": 0.040353988167249465,
+      "banRate": 0.022737442203476906,
+      "gamesPlayed": 2435,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -53934,7 +54979,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6692,
           "count": 968
@@ -53960,7 +55005,7 @@
           "count": 301
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "RekSai",
           "win_rate": 0.3157894736842105
@@ -54004,11 +55049,19 @@
       ]
     },
     "Singed": {
-      "win_rate": 0.5008210180623974,
-      "pick_rate": 0.020185280323494804,
-      "ban_rate": 0.004922026482822625,
-      "games_played": 1218,
-      "most_used_runes": [
+      "id": "Singed",
+      "name": "Singed",
+      "title": "the Mad Chemist",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Singed.png",
+      "roles": [
+        "Tank",
+        "Mage"
+      ],
+      "winRate": 0.5008210180623974,
+      "pickRate": 0.020185280323494804,
+      "banRate": 0.004922026482822625,
+      "gamesPlayed": 1218,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -54334,7 +55387,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 514
@@ -54360,7 +55413,7 @@
           "count": 143
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Kayle",
           "win_rate": 0.19047619047619047
@@ -54404,11 +55457,19 @@
       ]
     },
     "Kayn": {
-      "win_rate": 0.49052819255627367,
-      "pick_rate": 0.07436071659402396,
-      "ban_rate": 0.053164515006380406,
-      "games_played": 4487,
-      "most_used_runes": [
+      "id": "Kayn",
+      "name": "Kayn",
+      "title": "the Shadow Reaper",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Kayn.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.49052819255627367,
+      "pickRate": 0.07436071659402396,
+      "banRate": 0.053164515006380406,
+      "gamesPlayed": 4487,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -54734,7 +55795,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6692,
           "count": 1040
@@ -54760,7 +55821,7 @@
           "count": 514
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Olaf",
           "win_rate": 0.2
@@ -54804,11 +55865,19 @@
       ]
     },
     "Samira": {
-      "win_rate": 0.5024232633279483,
-      "pick_rate": 0.04103345983659535,
-      "ban_rate": 0.04315473724333372,
-      "games_played": 2476,
-      "most_used_runes": [
+      "id": "Samira",
+      "name": "Samira",
+      "title": "the Desert Rose",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Samira.png",
+      "roles": [
+        "Marksman",
+        "Assassin"
+      ],
+      "winRate": 0.5024232633279483,
+      "pickRate": 0.04103345983659535,
+      "banRate": 0.04315473724333372,
+      "gamesPlayed": 2476,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -55134,7 +56203,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6676,
           "count": 1204
@@ -55160,7 +56229,7 @@
           "count": 392
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Lux",
           "win_rate": 0.2727272727272727
@@ -55204,11 +56273,19 @@
       ]
     },
     "Gnar": {
-      "win_rate": 0.4882198952879581,
-      "pick_rate": 0.037984123564408945,
-      "ban_rate": 0.012926534197311945,
-      "games_played": 2292,
-      "most_used_runes": [
+      "id": "Gnar",
+      "name": "Gnar",
+      "title": "the Missing Link",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Gnar.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.4882198952879581,
+      "pickRate": 0.037984123564408945,
+      "banRate": 0.012926534197311945,
+      "gamesPlayed": 2292,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -55534,7 +56611,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 984
@@ -55560,7 +56637,7 @@
           "count": 270
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Quinn",
           "win_rate": 0.3181818181818182
@@ -55604,11 +56681,19 @@
       ]
     },
     "Volibear": {
-      "win_rate": 0.5043191056910569,
-      "pick_rate": 0.06522928025720488,
-      "ban_rate": 0.03001276080939991,
-      "games_played": 3936,
-      "most_used_runes": [
+      "id": "Volibear",
+      "name": "Volibear",
+      "title": "the Relentless Storm",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Volibear.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5043191056910569,
+      "pickRate": 0.06522928025720488,
+      "banRate": 0.03001276080939991,
+      "gamesPlayed": 3936,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -55934,7 +57019,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6675,
           "count": 936
@@ -55960,7 +57045,7 @@
           "count": 394
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Gnar",
           "win_rate": 0.2702702702702703
@@ -56004,11 +57089,19 @@
       ]
     },
     "Blitzcrank": {
-      "win_rate": 0.48105625717566014,
-      "pick_rate": 0.05773851941466002,
-      "ban_rate": 0.2029300144180574,
-      "games_played": 3484,
-      "most_used_runes": [
+      "id": "Blitzcrank",
+      "name": "Blitzcrank",
+      "title": "the Great Steam Golem",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Blitzcrank.png",
+      "roles": [
+        "Tank",
+        "Support"
+      ],
+      "winRate": 0.48105625717566014,
+      "pickRate": 0.05773851941466002,
+      "banRate": 0.2029300144180574,
+      "gamesPlayed": 3484,
+      "mostUsedRunes": [
         {
           "id": [
             8300,
@@ -56334,7 +57427,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 1137
@@ -56360,7 +57453,7 @@
           "count": 425
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Galio",
           "win_rate": 0.2
@@ -56404,11 +57497,19 @@
       ]
     },
     "Orianna": {
-      "win_rate": 0.49032523672293127,
-      "pick_rate": 0.04025455328880861,
-      "ban_rate": 0.007755920518387166,
-      "games_played": 2429,
-      "most_used_runes": [
+      "id": "Orianna",
+      "name": "Orianna",
+      "title": "the Lady of Clockwork",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Orianna.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.49032523672293127,
+      "pickRate": 0.04025455328880861,
+      "banRate": 0.007755920518387166,
+      "gamesPlayed": 2429,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -56734,7 +57835,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6655,
           "count": 712
@@ -56760,7 +57861,7 @@
           "count": 359
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "AurelionSol",
           "win_rate": 0.22857142857142856
@@ -56804,11 +57905,19 @@
       ]
     },
     "Velkoz": {
-      "win_rate": 0.4844124700239808,
-      "pick_rate": 0.04146434430983908,
-      "ban_rate": 0.01196533037238362,
-      "games_played": 2502,
-      "most_used_runes": [
+      "id": "Velkoz",
+      "name": "Vel'Koz",
+      "title": "the Eye of the Void",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Velkoz.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.4844124700239808,
+      "pickRate": 0.04146434430983908,
+      "banRate": 0.01196533037238362,
+      "gamesPlayed": 2502,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -57134,7 +58243,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3871,
           "count": 709
@@ -57160,7 +58269,7 @@
           "count": 351
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Annie",
           "win_rate": 0.2727272727272727
@@ -57204,11 +58313,19 @@
       ]
     },
     "Aurora": {
-      "win_rate": 0.4881565396498455,
-      "pick_rate": 0.06436751131071743,
-      "ban_rate": 0.09010457234716031,
-      "games_played": 3884,
-      "most_used_runes": [
+      "id": "Aurora",
+      "name": "Aurora",
+      "title": "the Witch Between Worlds",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Aurora.png",
+      "roles": [
+        "Mage",
+        "Assassin"
+      ],
+      "winRate": 0.4881565396498455,
+      "pickRate": 0.06436751131071743,
+      "banRate": 0.09010457234716031,
+      "gamesPlayed": 3884,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -57534,7 +58651,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6655,
           "count": 1302
@@ -57560,7 +58677,7 @@
           "count": 556
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Nasus",
           "win_rate": 0.1
@@ -57604,11 +58721,19 @@
       ]
     },
     "Naafiri": {
-      "win_rate": 0.5012468827930174,
-      "pick_rate": 0.01993669312739265,
-      "ban_rate": 0.011932185412903333,
-      "games_played": 1203,
-      "most_used_runes": [
+      "id": "Naafiri",
+      "name": "Naafiri",
+      "title": "the Hound of a Hundred Bites",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Naafiri.png",
+      "roles": [
+        "Assassin",
+        "Fighter"
+      ],
+      "winRate": 0.5012468827930174,
+      "pickRate": 0.01993669312739265,
+      "banRate": 0.011932185412903333,
+      "gamesPlayed": 1203,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -57934,7 +59059,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6692,
           "count": 378
@@ -57960,7 +59085,7 @@
           "count": 154
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Hwei",
           "win_rate": 0.2727272727272727
@@ -58004,11 +59129,19 @@
       ]
     },
     "Urgot": {
-      "win_rate": 0.5314585319351763,
-      "pick_rate": 0.0347690624948211,
-      "ban_rate": 0.017069654132347824,
-      "games_played": 2098,
-      "most_used_runes": [
+      "id": "Urgot",
+      "name": "Urgot",
+      "title": "the Dreadnought",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Urgot.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.5314585319351763,
+      "pickRate": 0.0347690624948211,
+      "banRate": 0.017069654132347824,
+      "gamesPlayed": 2098,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -58334,7 +59467,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3071,
           "count": 1025
@@ -58360,7 +59493,7 @@
           "count": 240
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Yorick",
           "win_rate": 0.36
@@ -58404,11 +59537,19 @@
       ]
     },
     "TwistedFate": {
-      "win_rate": 0.4753058450385138,
-      "pick_rate": 0.036575462786496746,
-      "ban_rate": 0.002916756434265259,
-      "games_played": 2207,
-      "most_used_runes": [
+      "id": "TwistedFate",
+      "name": "Twisted Fate",
+      "title": "the Card Master",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/TwistedFate.png",
+      "roles": [
+        "Mage",
+        "Marksman"
+      ],
+      "winRate": 0.4753058450385138,
+      "pickRate": 0.036575462786496746,
+      "banRate": 0.002916756434265259,
+      "gamesPlayed": 2207,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -58734,7 +59875,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3100,
           "count": 721
@@ -58760,7 +59901,7 @@
           "count": 216
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Cassiopeia",
           "win_rate": 0.16666666666666666
@@ -58804,11 +59945,18 @@
       ]
     },
     "Ziggs": {
-      "win_rate": 0.5033152501506932,
-      "pick_rate": 0.027493743888898095,
-      "ban_rate": 0.0063804046999552545,
-      "games_played": 1659,
-      "most_used_runes": [
+      "id": "Ziggs",
+      "name": "Ziggs",
+      "title": "the Hexplosives Expert",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Ziggs.png",
+      "roles": [
+        "Mage"
+      ],
+      "winRate": 0.5033152501506932,
+      "pickRate": 0.027493743888898095,
+      "banRate": 0.0063804046999552545,
+      "gamesPlayed": 1659,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -59134,7 +60282,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6655,
           "count": 616
@@ -59160,7 +60308,7 @@
           "count": 279
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Draven",
           "win_rate": 0.25
@@ -59204,11 +60352,19 @@
       ]
     },
     "Yuumi": {
-      "win_rate": 0.4915339903967652,
-      "pick_rate": 0.0655773023317479,
-      "ban_rate": 0.09721416615568187,
-      "games_played": 3957,
-      "most_used_runes": [
+      "id": "Yuumi",
+      "name": "Yuumi",
+      "title": "the Magical Cat",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Yuumi.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.4915339903967652,
+      "pickRate": 0.0655773023317479,
+      "banRate": 0.09721416615568187,
+      "gamesPlayed": 3957,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -59534,7 +60690,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3870,
           "count": 1684
@@ -59560,7 +60716,7 @@
           "count": 538
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Shen",
           "win_rate": 0.3
@@ -59604,11 +60760,18 @@
       ]
     },
     "Kled": {
-      "win_rate": 0.4958382877526754,
-      "pick_rate": 0.0139374554614607,
-      "ban_rate": 0.007076448849041282,
-      "games_played": 841,
-      "most_used_runes": [
+      "id": "Kled",
+      "name": "Kled",
+      "title": "the Cantankerous Cavalier",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Kled.png",
+      "roles": [
+        "Fighter"
+      ],
+      "winRate": 0.4958382877526754,
+      "pickRate": 0.0139374554614607,
+      "banRate": 0.007076448849041282,
+      "gamesPlayed": 841,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -59934,7 +61097,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6698,
           "count": 225
@@ -59960,7 +61123,7 @@
           "count": 104
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Darius",
           "win_rate": 0.23076923076923078
@@ -60004,11 +61167,19 @@
       ]
     },
     "Jayce": {
-      "win_rate": 0.5059248845149629,
-      "pick_rate": 0.08251437662617457,
-      "ban_rate": 0.07286919341741105,
-      "games_played": 4979,
-      "most_used_runes": [
+      "id": "Jayce",
+      "name": "Jayce",
+      "title": "the Defender of Tomorrow",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Jayce.png",
+      "roles": [
+        "Marksman",
+        "Fighter"
+      ],
+      "winRate": 0.5059248845149629,
+      "pickRate": 0.08251437662617457,
+      "banRate": 0.07286919341741105,
+      "gamesPlayed": 4979,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -60334,7 +61505,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3042,
           "count": 1627
@@ -60360,7 +61531,7 @@
           "count": 553
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Rengar",
           "win_rate": 0.18181818181818182
@@ -60404,11 +61575,19 @@
       ]
     },
     "Elise": {
-      "win_rate": 0.5032577534532187,
-      "pick_rate": 0.06358860476293068,
-      "ban_rate": 0.12207288576589716,
-      "games_played": 3837,
-      "most_used_runes": [
+      "id": "Elise",
+      "name": "Elise",
+      "title": "the Spider Queen",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Elise.png",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ],
+      "winRate": 0.5032577534532187,
+      "pickRate": 0.06358860476293068,
+      "banRate": 0.12207288576589716,
+      "gamesPlayed": 3837,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -60734,7 +61913,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 4646,
           "count": 1578
@@ -60760,7 +61939,7 @@
           "count": 542
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Yorick",
           "win_rate": 0.08333333333333333
@@ -60804,11 +61983,19 @@
       ]
     },
     "Bard": {
-      "win_rate": 0.48932847475273294,
-      "pick_rate": 0.0318357335808157,
-      "ban_rate": 0.006579274456836977,
-      "games_played": 1921,
-      "most_used_runes": [
+      "id": "Bard",
+      "name": "Bard",
+      "title": "the Wandering Caretaker",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Bard.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.48932847475273294,
+      "pickRate": 0.0318357335808157,
+      "banRate": 0.006579274456836977,
+      "gamesPlayed": 1921,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -61134,7 +62321,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3742,
           "count": 603
@@ -61160,7 +62347,7 @@
           "count": 228
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Taric",
           "win_rate": 0.2
@@ -61204,11 +62391,19 @@
       ]
     },
     "Fiora": {
-      "win_rate": 0.5218536071616641,
-      "pick_rate": 0.03147113902653254,
-      "ban_rate": 0.04053628544439104,
-      "games_played": 1899,
-      "most_used_runes": [
+      "id": "Fiora",
+      "name": "Fiora",
+      "title": "the Grand Duelist",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Fiora.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.5218536071616641,
+      "pickRate": 0.03147113902653254,
+      "banRate": 0.04053628544439104,
+      "gamesPlayed": 1899,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -61534,7 +62729,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3074,
           "count": 936
@@ -61560,7 +62755,7 @@
           "count": 254
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Karma",
           "win_rate": 0.2727272727272727
@@ -61604,11 +62799,18 @@
       ]
     },
     "Ornn": {
-      "win_rate": 0.5113314447592068,
-      "pick_rate": 0.03510051208962397,
-      "ban_rate": 0.0053197659965860695,
-      "games_played": 2118,
-      "most_used_runes": [
+      "id": "Ornn",
+      "name": "Ornn",
+      "title": "The Fire below the Mountain",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Ornn.png",
+      "roles": [
+        "Tank"
+      ],
+      "winRate": 0.5113314447592068,
+      "pickRate": 0.03510051208962397,
+      "banRate": 0.0053197659965860695,
+      "gamesPlayed": 2118,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -61934,7 +63136,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3075,
           "count": 578
@@ -61960,7 +63162,7 @@
           "count": 377
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Varus",
           "win_rate": 0.3
@@ -62004,11 +63206,19 @@
       ]
     },
     "Milio": {
-      "win_rate": 0.5079819893573475,
-      "pick_rate": 0.040486568005170614,
-      "ban_rate": 0.014384912414444574,
-      "games_played": 2443,
-      "most_used_runes": [
+      "id": "Milio",
+      "name": "Milio",
+      "title": "The Gentle Flame",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Milio.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.5079819893573475,
+      "pickRate": 0.040486568005170614,
+      "banRate": 0.014384912414444574,
+      "gamesPlayed": 2443,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -62334,7 +63544,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3870,
           "count": 1097
@@ -62360,7 +63570,7 @@
           "count": 323
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Shaco",
           "win_rate": 0.16666666666666666
@@ -62404,11 +63614,19 @@
       ]
     },
     "DrMundo": {
-      "win_rate": 0.49175694771549694,
-      "pick_rate": 0.03518337448832469,
-      "ban_rate": 0.022853449561657913,
-      "games_played": 2123,
-      "most_used_runes": [
+      "id": "DrMundo",
+      "name": "Dr. Mundo",
+      "title": "the Madman of Zaun",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/DrMundo.png",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ],
+      "winRate": 0.49175694771549694,
+      "pickRate": 0.03518337448832469,
+      "banRate": 0.022853449561657913,
+      "gamesPlayed": 2123,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -62734,7 +63952,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3084,
           "count": 980
@@ -62760,7 +63978,7 @@
           "count": 349
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Viego",
           "win_rate": 0.25
@@ -62804,11 +64022,19 @@
       ]
     },
     "Riven": {
-      "win_rate": 0.4863654863654864,
-      "pick_rate": 0.04071858272153262,
-      "ban_rate": 0.019886975688172222,
-      "games_played": 2457,
-      "most_used_runes": [
+      "id": "Riven",
+      "name": "Riven",
+      "title": "the Exile",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Riven.png",
+      "roles": [
+        "Fighter",
+        "Assassin"
+      ],
+      "winRate": 0.4863654863654864,
+      "pickRate": 0.04071858272153262,
+      "banRate": 0.019886975688172222,
+      "gamesPlayed": 2457,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -63134,7 +64360,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6692,
           "count": 1005
@@ -63160,7 +64386,7 @@
           "count": 456
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Kled",
           "win_rate": 0.2727272727272727
@@ -63204,11 +64430,18 @@
       ]
     },
     "Gangplank": {
-      "win_rate": 0.4965769055225924,
-      "pick_rate": 0.036310303110654446,
-      "ban_rate": 0.015279826320412323,
-      "games_played": 2191,
-      "most_used_runes": [
+      "id": "Gangplank",
+      "name": "Gangplank",
+      "title": "the Saltwater Scourge",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Gangplank.png",
+      "roles": [
+        "Fighter"
+      ],
+      "winRate": 0.4965769055225924,
+      "pickRate": 0.036310303110654446,
+      "banRate": 0.015279826320412323,
+      "gamesPlayed": 2191,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -63534,7 +64767,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3078,
           "count": 919
@@ -63560,7 +64793,7 @@
           "count": 281
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Kennen",
           "win_rate": 0.25
@@ -63604,11 +64837,19 @@
       ]
     },
     "Annie": {
-      "win_rate": 0.5119651921682379,
-      "pick_rate": 0.022853449561657913,
-      "ban_rate": 0.008021080194229462,
-      "games_played": 1379,
-      "most_used_runes": [
+      "id": "Annie",
+      "name": "Annie",
+      "title": "the Dark Child",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Annie.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5119651921682379,
+      "pickRate": 0.022853449561657913,
+      "banRate": 0.008021080194229462,
+      "gamesPlayed": 1379,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -63934,7 +65175,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3118,
           "count": 605
@@ -63960,7 +65201,7 @@
           "count": 199
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Chogath",
           "win_rate": 0.2857142857142857
@@ -64004,11 +65245,19 @@
       ]
     },
     "Illaoi": {
-      "win_rate": 0.47027663331371394,
-      "pick_rate": 0.028156643078503837,
-      "ban_rate": 0.0805422515370975,
-      "games_played": 1699,
-      "most_used_runes": [
+      "id": "Illaoi",
+      "name": "Illaoi",
+      "title": "the Kraken Priestess",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Illaoi.png",
+      "roles": [
+        "Fighter",
+        "Tank"
+      ],
+      "winRate": 0.47027663331371394,
+      "pickRate": 0.028156643078503837,
+      "banRate": 0.0805422515370975,
+      "gamesPlayed": 1699,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -64334,7 +65583,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6662,
           "count": 581
@@ -64360,7 +65609,7 @@
           "count": 200
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Kayle",
           "win_rate": 0.32
@@ -64404,11 +65653,19 @@
       ]
     },
     "Ivern": {
-      "win_rate": 0.4896103896103896,
-      "pick_rate": 0.012760809399910509,
-      "ban_rate": 0.0053860559155466435,
-      "games_played": 770,
-      "most_used_runes": [
+      "id": "Ivern",
+      "name": "Ivern",
+      "title": "the Green Father",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Ivern.png",
+      "roles": [
+        "Support",
+        "Mage"
+      ],
+      "winRate": 0.4896103896103896,
+      "pickRate": 0.012760809399910509,
+      "banRate": 0.0053860559155466435,
+      "gamesPlayed": 770,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -64734,7 +65991,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6617,
           "count": 226
@@ -64760,7 +66017,7 @@
           "count": 84
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Udyr",
           "win_rate": 0.26666666666666666
@@ -64804,11 +66061,19 @@
       ]
     },
     "Fiddlesticks": {
-      "win_rate": 0.5194739504299444,
-      "pick_rate": 0.032763792446263734,
-      "ban_rate": 0.02016870784375466,
-      "games_played": 1977,
-      "most_used_runes": [
+      "id": "Fiddlesticks",
+      "name": "Fiddlesticks",
+      "title": "the Ancient Fear",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Fiddlesticks.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.5194739504299444,
+      "pickRate": 0.032763792446263734,
+      "banRate": 0.02016870784375466,
+      "gamesPlayed": 1977,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -65134,7 +66399,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 639
@@ -65160,7 +66425,7 @@
           "count": 302
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "TahmKench",
           "win_rate": 0.25
@@ -65204,11 +66469,18 @@
       ]
     },
     "Zeri": {
-      "win_rate": 0.4937424303593056,
-      "pick_rate": 0.04105003231633549,
-      "ban_rate": 0.004325417212177458,
-      "games_played": 2477,
-      "most_used_runes": [
+      "id": "Zeri",
+      "name": "Zeri",
+      "title": "The Spark of Zaun",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Zeri.png",
+      "roles": [
+        "Marksman"
+      ],
+      "winRate": 0.4937424303593056,
+      "pickRate": 0.04105003231633549,
+      "banRate": 0.004325417212177458,
+      "gamesPlayed": 2477,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -65534,7 +66806,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3085,
           "count": 1026
@@ -65560,7 +66832,7 @@
           "count": 346
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Samira",
           "win_rate": 0.3333333333333333
@@ -65604,11 +66876,19 @@
       ]
     },
     "Skarner": {
-      "win_rate": 0.4633093525179856,
-      "pick_rate": 0.02303574683879949,
-      "ban_rate": 0.060970152963988,
-      "games_played": 1390,
-      "most_used_runes": [
+      "id": "Skarner",
+      "name": "Skarner",
+      "title": "the Primordial Sovereign",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Skarner.png",
+      "roles": [
+        "Tank",
+        "Fighter"
+      ],
+      "winRate": 0.4633093525179856,
+      "pickRate": 0.02303574683879949,
+      "banRate": 0.060970152963988,
+      "gamesPlayed": 1390,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -65934,7 +67214,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3084,
           "count": 570
@@ -65960,7 +67240,7 @@
           "count": 129
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Zac",
           "win_rate": 0.23809523809523808
@@ -66004,11 +67284,19 @@
       ]
     },
     "Alistar": {
-      "win_rate": 0.5033583563808771,
-      "pick_rate": 0.04194494622230324,
-      "ban_rate": 0.015760428232876485,
-      "games_played": 2531,
-      "most_used_runes": [
+      "id": "Alistar",
+      "name": "Alistar",
+      "title": "the Minotaur",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Alistar.png",
+      "roles": [
+        "Tank",
+        "Support"
+      ],
+      "winRate": 0.5033583563808771,
+      "pickRate": 0.04194494622230324,
+      "banRate": 0.015760428232876485,
+      "gamesPlayed": 2531,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -66334,7 +67622,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3190,
           "count": 828
@@ -66360,7 +67648,7 @@
           "count": 267
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Leblanc",
           "win_rate": 0.25
@@ -66404,11 +67692,18 @@
       ]
     },
     "Rammus": {
-      "win_rate": 0.4706457925636008,
-      "pick_rate": 0.016937074294426674,
-      "ban_rate": 0.02840523027460599,
-      "games_played": 1022,
-      "most_used_runes": [
+      "id": "Rammus",
+      "name": "Rammus",
+      "title": "the Armordillo",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Rammus.png",
+      "roles": [
+        "Tank"
+      ],
+      "winRate": 0.4706457925636008,
+      "pickRate": 0.016937074294426674,
+      "banRate": 0.02840523027460599,
+      "gamesPlayed": 1022,
+      "mostUsedRunes": [
         {
           "id": [
             8400,
@@ -66734,7 +68029,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3075,
           "count": 459
@@ -66760,7 +68055,7 @@
           "count": 117
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Kayn",
           "win_rate": 0.23076923076923078
@@ -66804,11 +68099,19 @@
       ]
     },
     "Evelynn": {
-      "win_rate": 0.4913728432108027,
-      "pick_rate": 0.02209111549361131,
-      "ban_rate": 0.02663197494241063,
-      "games_played": 1333,
-      "most_used_runes": [
+      "id": "Evelynn",
+      "name": "Evelynn",
+      "title": "Agony's Embrace",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Evelynn.png",
+      "roles": [
+        "Assassin",
+        "Mage"
+      ],
+      "winRate": 0.4913728432108027,
+      "pickRate": 0.02209111549361131,
+      "banRate": 0.02663197494241063,
+      "gamesPlayed": 1333,
+      "mostUsedRunes": [
         {
           "id": [
             8100,
@@ -67134,7 +68437,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3100,
           "count": 588
@@ -67160,7 +68463,7 @@
           "count": 207
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Yorick",
           "win_rate": 0.15384615384615385
@@ -67204,11 +68507,19 @@
       ]
     },
     "Azir": {
-      "win_rate": 0.4643888354186718,
-      "pick_rate": 0.03443761290001823,
-      "ban_rate": 0.006761571733978555,
-      "games_played": 2078,
-      "most_used_runes": [
+      "id": "Azir",
+      "name": "Azir",
+      "title": "the Emperor of the Sands",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Azir.png",
+      "roles": [
+        "Mage",
+        "Marksman"
+      ],
+      "winRate": 0.4643888354186718,
+      "pickRate": 0.03443761290001823,
+      "banRate": 0.006761571733978555,
+      "gamesPlayed": 2078,
+      "mostUsedRunes": [
         {
           "id": [
             8000,
@@ -67534,7 +68845,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 3115,
           "count": 823
@@ -67560,7 +68871,7 @@
           "count": 283
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Anivia",
           "win_rate": 0.29411764705882354
@@ -67604,11 +68915,19 @@
       ]
     },
     "Mel": {
-      "win_rate": 0.4758094300135418,
-      "pick_rate": 0.1346182529291858,
-      "ban_rate": 0.7044629687940206,
-      "games_played": 8123,
-      "most_used_runes": [
+      "id": "Mel",
+      "name": "Mel",
+      "title": "the Soul's Reflection",
+      "image": "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/Mel.png",
+      "roles": [
+        "Mage",
+        "Support"
+      ],
+      "winRate": 0.4758094300135418,
+      "pickRate": 0.1346182529291858,
+      "banRate": 0.7044629687940206,
+      "gamesPlayed": 8123,
+      "mostUsedRunes": [
         {
           "id": [
             8200,
@@ -67934,7 +69253,7 @@
           }
         }
       ],
-      "most_bought_items": [
+      "mostBoughtItems": [
         {
           "id": 6653,
           "count": 2094
@@ -67960,7 +69279,7 @@
           "count": 1055
         }
       ],
-      "worst_matchups": [
+      "worstMatchups": [
         {
           "champion": "Yorick",
           "win_rate": 0.18181818181818182

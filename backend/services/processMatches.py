@@ -213,8 +213,8 @@ class ChampionStatsProcessor:
 
 def main():
     processor = ChampionStatsProcessor()
-    processor.process_all_regions("d:/test/matches")
-    processor.save_stats("d:/test/tierlist.json") #To be changed to dinamic patch version
+    processor.process_all_regions("d:/LoLAnalyticApp/matches")
+    processor.save_stats("d:/LoLAnalyticApp/backend/tierlist.json") #To be changed to dinamic patch version
 
 if __name__ == "__main__":
     main()
