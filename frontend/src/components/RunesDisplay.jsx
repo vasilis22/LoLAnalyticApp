@@ -64,6 +64,13 @@ export default function RunesDisplay({ playerRunes }) {
         setSecondaryTree(secondary);
     }, [runesData, playerRunes]);
 
+    if (!primaryTree && !secondaryTree) {
+        return <div className="text-center text-gray-500">No runes data available.</div>;
+    }
+
+    console.log("Primary Tree:", primaryTree);
+    console.log("Secondary Tree:", secondaryTree);
+
     return (
         <div className="flex gap-4">
             <div className="flex flex-col items-center gap-2">
@@ -85,10 +92,10 @@ export default function RunesDisplay({ playerRunes }) {
                     {primaryTree?.runes.map((rune, index) => (
                         <img
                             key={index}
-                            src={rune.icon}
-                            alt={rune.name}
+                            src={rune?.icon}
+                            alt={rune?.name}
                             className="w-8 h-8 rounded-full"
-                            title={rune.name}
+                            title={rune?.name}
                         />
                     ))}
                 </div>
@@ -114,10 +121,10 @@ export default function RunesDisplay({ playerRunes }) {
                         {secondaryTree?.runes.map((rune, index) => (
                             <img
                                 key={index}
-                                src={rune.icon}
-                                alt={rune.name}
+                                src={rune?.icon}
+                                alt={rune?.name}
                                 className="w-8 h-8 rounded-full"
-                                title={rune.name}
+                                title={rune?.name}
                             />
                         ))}
                     </div>

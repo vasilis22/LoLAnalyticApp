@@ -10,7 +10,7 @@ export default function MatchDetails({ match, player }) {
     useEffect(() => {
         async function fetchTimeline() {
             try {
-                const response = await fetch(`http://localhost:8000/timeline/${match.gameId}`);
+                const response = await fetch(`http://localhost:8000/timeline/${match.match_id}`);
                 const data = await response.json();
 
                 if (!response.ok) {
@@ -24,7 +24,9 @@ export default function MatchDetails({ match, player }) {
         }
 
         fetchTimeline();
-    }, [match.gameId]);
+    }, [match.match_id]);
+
+    console.log("Timeline Data", timelineData);
 
     const tabs = [
         { id: 'overview', label: 'Overview' },

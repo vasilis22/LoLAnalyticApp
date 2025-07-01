@@ -26,11 +26,15 @@ export default function ChampionTierList() {
         fetchChampionData();
     }, []);
 
-    console.log('champions', champions);
+    console.log(champions);
 
     if (error) return <div className="text-red-500">{error}</div>;
 
+    if (!champions) return null;
+
     const sortedChampions = Object.values(champions).sort((a, b) => b[sortBy] - a[sortBy]);
+
+    console.log("Sorted Champions:", sortedChampions);
 
     return (
         <div className="bg-gray-600 min-h-screen text-white">

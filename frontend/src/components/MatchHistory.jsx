@@ -31,8 +31,6 @@ const QUEUE_TYPES = {
 export default function MatchHistory({ matches }) {
     const [expandedMatches, setExpandedMatches] = useState(new Set());
 
-    if (!matches || matches.length === 0) return null;
-
     function toggleMatch(matchId) {
         const newSet = new Set(expandedMatches);
         if (newSet.has(matchId)) {
@@ -44,27 +42,33 @@ export default function MatchHistory({ matches }) {
         setExpandedMatches(newSet);
     }
 
+    if (!matches || matches.length === 0) {
+        return <div className="text-center text-gray-500">No matches found.</div>;
+    }
+
+    console.log("Participants", matches[0].match_data["info"]["participants"][matches[0].player_index]);
+
     return (
         <div className="mt-8 flex flex-col gap-4 max-w-5xl mx-auto">
             {matches.map((match) => {
-                const player = match.participants[match.playerIndex];
+                const player = match.match_data["info"]["participants"][match.player_index];
                 const isWin = player.win;
-                const gameDurationMinutes = Math.floor(match.gameDuration / 60);
-                const gameDurationSeconds = match.gameDuration % 60;
-                const isExpanded = expandedMatches.has(match.gameId);
+                const gameDurationMinutes = Math.floor(match.game_duration / 60);
+                const gameDurationSeconds = match.game_duration % 60;
+                const isExpanded = expandedMatches.has(match.match_id);
 
-                const team1 = match.participants.slice(0, 5);
-                const team2 = match.participants.slice(5, 10);
+                const team1 = match.match_data["info"]["participants"].slice(0, 5);
+                const team2 = match.match_data["info"]["participants"].slice(5, 10);
 
                 return (
-                    <div key={match.gameId} className="flex flex-col">
+                    <div key={match.match_id} className="flex flex-col">
                         <div
-                            onClick={() => toggleMatch(match.gameId)}
+                            onClick={() => toggleMatch(match.match_id)}
                             className={`p-4 rounded-lg ${isWin ? 'bg-green-800/50' : 'bg-red-800/50'} flex items-start gap-6 cursor-pointer hover:brightness-110 transition-all`}
                         >
                             <div className="flex flex-col items-start min-w-[200px]">
                                 <span className="text-lg font-semibold text-white">
-                                    {QUEUE_TYPES[match.queueId] || "Custom Game"}
+                                    {QUEUE_TYPES[match.queue_id] || "Custom Game"}
                                 </span>
                                 <span className={`text-lg ${isWin ? 'text-green-400' : 'text-red-400'}`}>
                                     {isWin ? 'Victory' : 'Defeat'}
@@ -121,7 +125,7 @@ export default function MatchHistory({ matches }) {
                                                 alt={teammate.championName}
                                                 className="w-6 h-6 rounded-full"
                                             />
-                                            <span className={`text-sm ${teammate.puuid === match.participants[match.playerIndex].puuid ? 'text-yellow-400 font-bold' : 'text-gray-300'}`}>
+                                            <span className={`text-sm ${teammate.puuid === match.puuid ? 'text-yellow-400 font-bold' : 'text-gray-300'}`}>
                                                 {teammate.riotIdGameName}
                                             </span>
                                         </div>
@@ -136,7 +140,7 @@ export default function MatchHistory({ matches }) {
                                                 alt={teammate.championName}
                                                 className="w-6 h-6 rounded-full"
                                             />
-                                            <span className={`text-sm ${teammate.puuid === match.participants[match.playerIndex].puuid ? 'text-yellow-400 font-bold' : 'text-gray-300'}`}>
+                                            <span className={`text-sm ${teammate.puuid === match.puuid ? 'text-yellow-400 font-bold' : 'text-gray-300'}`}>
                                                 {teammate.riotIdGameName}
                                             </span>
                                         </div>

@@ -1,3 +1,4 @@
 frontend/node_modules/
-backend/test/
+backend/LoLAnalytic/
 matches/
+__pycache__/

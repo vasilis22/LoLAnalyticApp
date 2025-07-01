@@ -25,14 +25,25 @@ function getRankIcon(tier) {
     return icons[tier];
 };
 
-export default function SummonerDisplay({ summonerData }) {
+export default function SummonerDisplay({ summonerData, onUpdate}) {
     if (!summonerData) return null;
 
     return (
         <div className="mt-8 p-6 bg-gray-700 rounded-lg shadow-xl max-w-4xl mx-auto text-white">
+            <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-600">
+                <h2 className="text-2xl font-bold">
+                    {summonerData.game_name}#{summonerData.tagline}
+                </h2>
+                <button
+                    onClick={onUpdate}
+                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm transition-colors"
+                >
+                    Update
+                </button>
+            </div>
+
             <div className="flex items-center gap-8">
                 <div className="flex flex-col items-center min-w-[200px]">
-                    <h2 className="text-2xl font-bold mb-4">{summonerData.game_name}#{summonerData.tagline}</h2>
                     <img 
                         src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/profileicon/${summonerData.profile_icon_id}.png`}
                         alt="Summoner Icon"
