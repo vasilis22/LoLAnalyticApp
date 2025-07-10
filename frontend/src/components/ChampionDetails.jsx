@@ -38,8 +38,10 @@ export default function ChampionDetails() {
         );
     }
 
+    console.log('Champion Data:', championData);
+
     return (
-        <div className="container mx-auto p-6">
+        <div className="container mx-auto p-6 max-w-7xl">
             <div className="bg-gray-800 rounded-lg shadow-xl">
                 <div className="p-6 border-b border-gray-700">
                     <h1 className="text-3xl font-bold text-white">{championData.name}</h1>
@@ -84,20 +86,94 @@ export default function ChampionDetails() {
                 </div>
 
                 <div className="border-t border-gray-700 p-6">
-                    <h2 className="text-xl font-bold text-white mb-4">Item Build</h2>
-                    <div className="flex gap-4">
-                        {championData.mostBoughtItems.map((item, index) => (
-                            <div key={index} className="flex flex-col items-center">
-                                <img 
-                                    src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${item.id}.png`}
-                                    alt={`Item ${item.id}`}
-                                    className="w-12 h-12 rounded border-2 border-gray-600"
-                                />
-                                <span className="text-sm text-gray-400 mt-1">
-                                    {((item.count / championData.gamesPlayed) * 100).toFixed(1)}% 
-                                </span>
+                    <h2 className="text-xl font-bold text-white mb-6">Recommended Build</h2>
+                    
+                    <div className="space-y-6">
+                        <div className="container items-start flex gap-6">
+                            <div>
+                                <h3 className="text-lg font-semibold text-white mb-3">Starter Item</h3>
+                                <div className="flex gap-4">
+                                    {championData.mostPickedStarter ? (
+                                        <div className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
+                                            <img 
+                                                src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${championData.mostPickedStarter.id}.png`}
+                                                alt={`Starter Item ${championData.mostPickedStarter.id}`}
+                                                className="w-12 h-12 rounded"
+                                            />
+                                            <span className="text-sm text-gray-400 mt-1">
+                                                {((championData.mostPickedStarter.count / championData.gamesPlayed) * 100).toFixed(1)}%
+                                            </span>
+                                        </div>
+                                    ) : (
+                                        <div className="text-gray-400 text-sm">No data available</div>
+                                    )}
+                                </div>
                             </div>
-                        ))}
+
+                            <div>
+                                <h3 className="text-lg font-semibold text-white mb-3">Core Items</h3>
+                                <div className="flex gap-4">
+                                    {championData.coreItems && championData.coreItems.length > 0 ? (
+                                        championData.coreItems.map((item, index) => (
+                                            <div key={index} className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
+                                                <img 
+                                                    src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${item.id}.png`}
+                                                    alt={`Core Item ${item.id}`}
+                                                    className="w-12 h-12 rounded"
+                                                />
+                                                <span className="text-sm text-gray-400 mt-1">
+                                                    {((item.count / championData.gamesPlayed) * 100).toFixed(1)}%
+                                                </span>
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <div className="text-gray-400 text-sm">No data available</div>
+                                    )}
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 className="text-lg font-semibold text-white mb-3">Boots</h3>
+                                <div className="flex gap-4">
+                                    {championData.mostPickedBoot ? (
+                                        <div className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
+                                            <img 
+                                                src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${championData.mostPickedBoot.id}.png`}
+                                                alt={`Boot ${championData.mostPickedBoot.id}`}
+                                                className="w-12 h-12 rounded"
+                                            />
+                                            <span className="text-sm text-gray-400 mt-1">
+                                                {((championData.mostPickedBoot.count / championData.gamesPlayed) * 100).toFixed(1)}%
+                                            </span>
+                                        </div>
+                                    ) : (
+                                        <div className="text-gray-400 text-sm">No data available</div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 className="text-lg font-semibold text-white mb-3">Other Build Options</h3>
+                            <div className="flex flex-wrap gap-4">
+                                {championData.itemOptions && championData.itemOptions.length > 0 ? (
+                                    championData.itemOptions.map((item, index) => (
+                                        <div key={index} className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
+                                            <img 
+                                                src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${item.id}.png`}
+                                                alt={`Option Item ${item.id}`}
+                                                className="w-12 h-12 rounded"
+                                            />
+                                            <span className="text-sm text-gray-400 mt-1">
+                                                {((item.count / championData.gamesPlayed) * 100).toFixed(1)}%
+                                            </span>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <div className="text-gray-400 text-sm">No data available</div>
+                                )}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -31,7 +31,7 @@ def get_match_history(summoner_region: str, puuid: str, update: bool = False):
         account_region = REGION_MAPPING[summoner_region]
         headers = get_riot_headers()
 
-        matchlist_url = f"https://{account_region}.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start=0&count=80"
+        matchlist_url = f"https://{account_region}.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start=0&count=20"
         matchlist_response = requests.get(matchlist_url, headers=headers)
 
         if matchlist_response.status_code != 200:

@@ -9,14 +9,16 @@ from services.database_con import get_db_connection
 @dataclass
 class ChampionStats:
     runes: dict
-    items: Dict
+    items: Dict  
+    boots: Dict  
+    starter_items: Dict  
     matchups: Dict
     games_played: int = 0
     wins: int = 0
     banned: int = 0
 
 class ChampionStatsProcessor:
-    def __init__(self):
+    def __init__(self,starter_items: dict = None, boot_items: dict = None, endgame_items: dict = None):
         self.champion_stats = {}
         self.total_matches = 0
         self.champion_name_mapping = {
@@ -24,6 +26,10 @@ class ChampionStatsProcessor:
             "Wukong": "MonkeyKing",
         }
         self.champion_id_to_name = {}
+        
+        self.starter_items = starter_items
+        self.boot_items = boot_items
+        self.endgame_items = endgame_items
 
     def normalize_champion_name(self, name: str) -> str:
         return self.champion_name_mapping.get(name, name)
@@ -36,6 +42,8 @@ class ChampionStatsProcessor:
                 self.champion_stats[champ_name] = ChampionStats(
                     runes={},
                     items={},
+                    boots={},
+                    starter_items={},
                     matchups={}
                 )
         
@@ -98,10 +106,21 @@ class ChampionStatsProcessor:
                 for i in range(0, 6):
                     item = participant[f"item{i}"]
                     if item > 0:
-                        if item not in stats.items:
-                            stats.items[item] = 1
-                        else:
-                            stats.items[item] += 1
+                        if item in self.boot_items:
+                            if item not in stats.boots:
+                                stats.boots[item] = 1
+                            else:
+                                stats.boots[item] += 1
+                        elif item in self.starter_items:
+                            if item not in stats.starter_items:
+                                stats.starter_items[item] = 1
+                            else:
+                                stats.starter_items[item] += 1
+                        elif item in self.endgame_items:
+                            if item not in stats.items:
+                                stats.items[item] = 1
+                            else:
+                                stats.items[item] += 1
 
             for enemy in participants:
                 if enemy["teamId"] != participant["teamId"]:
@@ -137,11 +156,27 @@ class ChampionStatsProcessor:
                 reverse=True
             )[:4]
 
-            top_items = sorted(
+            all_items = sorted(
                 stats.items.items(),
                 key=lambda x: x[1],
                 reverse=True
-            )[:6]
+            )
+            
+            core_items = all_items[:2]
+            
+            option_items = all_items[2:8]
+            
+            most_picked_boot = sorted(
+                stats.boots.items(),
+                key=lambda x: x[1],
+                reverse=True
+            )[:1]
+            
+            most_picked_starter = sorted(
+                stats.starter_items.items(),
+                key=lambda x: x[1],
+                reverse=True
+            )[:1]
 
             worst_matchups = {}
             for enemy_champ, matchup in stats.matchups.items():
@@ -165,7 +200,10 @@ class ChampionStatsProcessor:
                 "banRate": ban_rate,
                 "gamesPlayed": stats.games_played,
                 "mostUsedRunes": [{"id": key, "rune_trees": data} for key, data in top_runes],
-                "mostBoughtItems": [{"id": id, "count": count} for id, count in top_items],
+                "mostPickedStarter": {"id": most_picked_starter[0][0], "count": most_picked_starter[0][1]} if most_picked_starter else None,
+                "mostPickedBoot": {"id": most_picked_boot[0][0], "count": most_picked_boot[0][1]} if most_picked_boot else None,
+                "coreItems": [{"id": id, "count": count} for id, count in core_items],
+                "itemOptions": [{"id": id, "count": count} for id, count in option_items],
                 "worstMatchups": [{"champion": champ, "win_rate": wr} for champ, wr in worst_matchups]
             }
 
@@ -198,6 +236,8 @@ class ChampionStatsProcessor:
                     cursor.execute("""
                         INSERT INTO tierlist (patch, tierlist_data)
                         VALUES (%s, %s)
+                        ON CONFLICT (patch) DO UPDATE
+                        SET tierlist_data = EXCLUDED.tierlist_data
                     """, (patch, json.dumps(stats)))
                 
                 with conn.cursor() as cursor:

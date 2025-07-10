@@ -8,6 +8,7 @@ from services.validator import check_duration, get_match_patch_version, is_patch
 from services.patchtrack import update_patch_tracking
 from services.getnextdivisiontier import get_next_division_tier
 from services.processMatches import ChampionStatsProcessor
+from services.createItemLists import create_item_lists
 
 def fetch_tierlist_matches(patch_version):
     conn = get_db_connection()
@@ -126,7 +127,8 @@ def fetch_tierlist_matches(patch_version):
         
         print(f"Completed: {matches_tracked} matches collected for patch {patch_version}")
 
-        processor = ChampionStatsProcessor()
+        starter, boots, completed_items = create_item_lists()
+        processor = ChampionStatsProcessor(starter, boots, completed_items)
 
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
             cur.execute("""
