@@ -1,13 +1,15 @@
 import { useLocation } from 'react-router-dom';
 import RunesDisplay from './RunesDisplay';
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { fetchLatestVersion } from '../utils/version';
 
 
 export default function ChampionDetails() {
     const location = useLocation();
     const [championData, setChampionData] = useState(location.state?.championData || null);
     const { championId } = useParams();
+    const [version, setVersion] = useState('15.13.1');
 
     async function fetchChampionData(championId) {
         try {
@@ -38,7 +40,13 @@ export default function ChampionDetails() {
         );
     }
 
-    console.log('Champion Data:', championData);
+    useEffect(() => {
+        async function fetchVersion() {
+            const latestVersion = await fetchLatestVersion();
+            setVersion(latestVersion);
+        }
+        fetchVersion();
+    }, []);
 
     return (
         <div className="container mx-auto p-6 max-w-7xl">
@@ -96,7 +104,7 @@ export default function ChampionDetails() {
                                     {championData.mostPickedStarter ? (
                                         <div className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
                                             <img 
-                                                src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${championData.mostPickedStarter.id}.png`}
+                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${championData.mostPickedStarter.id}.png`}
                                                 alt={`Starter Item ${championData.mostPickedStarter.id}`}
                                                 className="w-12 h-12 rounded"
                                             />
@@ -117,7 +125,7 @@ export default function ChampionDetails() {
                                         championData.coreItems.map((item, index) => (
                                             <div key={index} className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
                                                 <img 
-                                                    src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${item.id}.png`}
+                                                    src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item.id}.png`}
                                                     alt={`Core Item ${item.id}`}
                                                     className="w-12 h-12 rounded"
                                                 />
@@ -138,7 +146,7 @@ export default function ChampionDetails() {
                                     {championData.mostPickedBoot ? (
                                         <div className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
                                             <img 
-                                                src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${championData.mostPickedBoot.id}.png`}
+                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${championData.mostPickedBoot.id}.png`}
                                                 alt={`Boot ${championData.mostPickedBoot.id}`}
                                                 className="w-12 h-12 rounded"
                                             />
@@ -160,7 +168,7 @@ export default function ChampionDetails() {
                                     championData.itemOptions.map((item, index) => (
                                         <div key={index} className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
                                             <img 
-                                                src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${item.id}.png`}
+                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item.id}.png`}
                                                 alt={`Option Item ${item.id}`}
                                                 className="w-12 h-12 rounded"
                                             />

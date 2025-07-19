@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { use, useEffect } from "react";
 import { useState } from "react";
+import { fetchLatestVersion } from '../utils/version';
 
 const STAT_SHARD_ICONS = {
     5001: 'StatModsHealthPlusIcon',
@@ -16,11 +17,20 @@ export default function RunesDisplay({ playerRunes }) {
     const [secondaryTree, setSecondaryTree] = useState(null);
     const [runesData, setRunesData] = useState(null);
     const statPerksArray = Object.values(playerRunes.statPerks).reverse();
+    const [version, setVersion] = useState('15.13.1');
+
+    useEffect(() => {
+        async function fetchVersion() {
+            const latestVersion = await fetchLatestVersion();
+            setVersion(latestVersion);
+        }
+        fetchVersion();
+    }, []);
 
     useEffect(() => {
         async function fetchRunesData() {
             try {
-                const response = await fetch('https://ddragon.leagueoflegends.com/cdn/15.7.1/data/en_US/runesReforged.json');
+                const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/runesReforged.json`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch runes data');
                 }

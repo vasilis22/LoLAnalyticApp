@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { fetchLatestVersion } from '../utils/version';
 
 export default function ChampionTierList() {
     const [champions, setChampions] = useState({});
     const [error, setError] = useState(null);
     const [sortBy, setSortBy] = useState('winRate');
     const [roleFilter, setRoleFilter] = useState('All');
+    const [version, setVersion] = useState('15.13.1');
+    const [sortedChampions, setSortedChampions] = useState([]);
 
     useEffect(() => {
         async function fetchChampionData() {
@@ -26,9 +29,20 @@ export default function ChampionTierList() {
         fetchChampionData();
     }, []);
 
-    if (error) return <div className="text-red-500">{error}</div>;
+    useEffect(() => {
+        async function fetchVersion() {
+            const latestVersion = await fetchLatestVersion();
+            setVersion(latestVersion);
+        }
+        fetchVersion();
+    }, []);
 
-    const sortedChampions = Object.values(champions).sort((a, b) => b[sortBy] - a[sortBy]);
+    useEffect(() => {
+        const sorted = Object.values(champions).sort((a, b) => b[sortBy] - a[sortBy]);
+        setSortedChampions(sorted);
+    }, [champions, sortBy]);
+
+    if (error) return <div className="text-red-500">{error}</div>;
 
     return (
         <div className="bg-gray-600 min-h-screen text-white">
@@ -86,7 +100,7 @@ export default function ChampionTierList() {
                                             .map((matchup, index) => (
                                                 <div key={index} className="flex flex-col items-center">
                                                     <img 
-                                                        src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/champion/${matchup.champion}.png`}
+                                                        src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${matchup.champion}.png`}
                                                         alt={matchup.champion}
                                                         className="w-12 h-12"
                                                     />

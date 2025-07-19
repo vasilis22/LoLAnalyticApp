@@ -1,14 +1,28 @@
 import { useState, useEffect } from 'react';
 import RunesDisplay from './RunesDisplay.jsx';
+import { fetchLatestVersion } from '../utils/version';
+
+const ABILITIES = [
+    'Q', 'W', 'E', 'R'
+];
 
 export default function Overview({ player, timelineData }) {
     const [championData, setChampionData] = useState(null);
     const [abilitySequence, setAbilitySequence] = useState(null);
+    const [version, setVersion] = useState('15.13.1');
+
+    useEffect(() => {
+        async function fetchVersion() {
+            const latestVersion = await fetchLatestVersion();
+            setVersion(latestVersion);
+        }
+        fetchVersion();
+    }, []);
 
     useEffect(() => {
         async function fetchData() {
             try {
-                const championResponse = await fetch(`https://ddragon.leagueoflegends.com/cdn/15.7.1/data/en_US/champion/${player.championName}.json`);
+                const championResponse = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${player.championName}.json`);
                 const championData = await championResponse.json();
 
                 setChampionData(championData.data[player.championName]);
@@ -35,8 +49,6 @@ export default function Overview({ player, timelineData }) {
 
     if (!championData || !abilitySequence) return null;
 
-    const abilities = ['Q', 'W', 'E', 'R'];
-
     return (
         <div>
             <h3 className="text-xl font-bold mb-4">Match Overview</h3>
@@ -45,10 +57,10 @@ export default function Overview({ player, timelineData }) {
                 <div className="flex flex-col items-center gap-4">
                     <h4 className="text-lg font-semibold text-blue-400">Abilities</h4>
                     <div className="flex flex-col gap-1">
-                        {abilities.map((key, index) => (
+                        {ABILITIES.map((key, index) => (
                             <div key={key} className="flex items-center gap-1">
                                 <img
-                                    src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/spell/${championData.spells[index].image.full}`}
+                                    src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${championData.spells[index].image.full}`}
                                     alt={`Ability ${key}`}
                                     className="w-8 h-8"
                                 />

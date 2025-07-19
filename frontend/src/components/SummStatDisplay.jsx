@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function SummStatDisplay({ summStatData }) {
     const [selectedSeason, setSelectedSeason] = useState('');
     const [availableSeasons, setAvailableSeasons] = useState([]);
     const [currentSeasonData, setCurrentSeasonData] = useState(null);
+    const [mostPlayedNormal, setMostPlayedNormal] = useState([]);
+    const [bestPerformingNormal, setBestPerformingNormal] = useState([]);
+    const [bestPerformingRanked, setBestPerformingRanked] = useState([]);
 
     useEffect(() => {
         if (summStatData && summStatData.length > 0) {
@@ -54,13 +57,16 @@ export default function SummStatDisplay({ summStatData }) {
             .slice(0, limit);
     };
 
+    useEffect(() => {
+        if (!currentSeasonData) return;
+        setMostPlayedNormal(getMostPlayedChampions('normal', 3));
+        setBestPerformingNormal(getBestPerformingChampions('normal', 3));
+        setBestPerformingRanked(getBestPerformingChampions('420', 3));
+    }, [currentSeasonData]);
+
     if (!summStatData || summStatData.length === 0) {
         return <div className="text-center text-gray-500">No stats found.</div>;
     }
-
-    const mostPlayedNormal = getMostPlayedChampions('normal', 3);
-    const bestPerformingNormal = getBestPerformingChampions('normal', 3);
-    const bestPerformingRanked = getBestPerformingChampions('420', 3);
 
     return (
         <div className="mt-8 max-w-4xl mx-auto">

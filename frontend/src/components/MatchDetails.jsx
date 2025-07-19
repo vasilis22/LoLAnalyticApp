@@ -53,7 +53,7 @@ export default function MatchDetails({ match, player }) {
             ) : (
                 <div className="text-white">
                     {activeTab === 'overview' && <Overview match={match} player={player} timelineData={timelineData} />}
-                    {activeTab === 'Charts' && <Charts timelineData={timelineData} player={player} />}
+                    {activeTab === 'Charts' && <Charts match={match.match_data} timelineData={timelineData} player={player} />}
                 </div>
             )}
         </div>

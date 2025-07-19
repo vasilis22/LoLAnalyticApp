@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MatchDetails from './MatchDetails';
+import { fetchLatestVersion } from '../utils/version';
 
 const QUEUE_TYPES = {
     0: "Custom Game",
@@ -30,6 +31,15 @@ const QUEUE_TYPES = {
 
 export default function MatchHistory({ matches, puuid }) {
     const [expandedMatches, setExpandedMatches] = useState(new Set());
+    const [version, setVersion] = useState('15.13.1');
+
+    useEffect(() => {
+        async function fetchVersion() {
+            const latestVersion = await fetchLatestVersion();
+            setVersion(latestVersion);
+        }
+        fetchVersion();
+    }, []);
 
     function toggleMatch(matchId) {
         const newSet = new Set(expandedMatches);
@@ -79,7 +89,7 @@ export default function MatchHistory({ matches, puuid }) {
                             <div className="flex items-center gap-6">
                                 <div className="flex flex-col items-center gap-1">
                                     <img
-                                        src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/champion/${player.championName}.png`}
+                                        src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${player.championName}.png`}
                                         alt={player.championName}
                                         className="w-16 h-16 rounded-lg"
                                     />
@@ -94,7 +104,7 @@ export default function MatchHistory({ matches, puuid }) {
                                             <div key={index} className="w-8 h-8 bg-gray-900 rounded">
                                                 {player[`item${index}`] !== 0 && (
                                                     <img
-                                                        src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${player[`item${index}`]}.png`}
+                                                        src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${player[`item${index}`]}.png`}
                                                         alt={`Item ${index + 1}`}
                                                         className="w-full h-full rounded"
                                                     />
@@ -105,7 +115,7 @@ export default function MatchHistory({ matches, puuid }) {
                                     <div className="w-8 h-8 bg-gray-900 rounded col-span-2">
                                             {player.item6 !== 0 && (
                                                 <img
-                                                    src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/${player.item6}.png`}
+                                                    src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${player.item6}.png`}
                                                     alt="Trinket"
                                                     className="w-full h-full rounded"
                                                 />
@@ -119,7 +129,7 @@ export default function MatchHistory({ matches, puuid }) {
                                     {team1.map((teammate, index) => (
                                         <div key={index} className="flex items-center gap-2">
                                             <img
-                                                src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/champion/${teammate.championName}.png`}
+                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${teammate.championName}.png`}
                                                 alt={teammate.championName}
                                                 className="w-6 h-6 rounded-full"
                                             />
@@ -134,7 +144,7 @@ export default function MatchHistory({ matches, puuid }) {
                                     {team2.map((teammate, index) => (
                                         <div key={index} className="flex items-center gap-2">
                                             <img
-                                                src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/champion/${teammate.championName}.png`}
+                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${teammate.championName}.png`}
                                                 alt={teammate.championName}
                                                 className="w-6 h-6 rounded-full"
                                             />

@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react';
+import { fetchLatestVersion } from '../utils/version';
+
 import IronIcon from '../assets/Ranked Emblems Latest/Rank=Iron.png';
 import BronzeIcon from '../assets/Ranked Emblems Latest/Rank=Bronze.png';
 import SilverIcon from '../assets/Ranked Emblems Latest/Rank=Silver.png';
@@ -26,6 +29,16 @@ function getRankIcon(tier) {
 };
 
 export default function SummonerDisplay({ summonerData, onUpdate}) {
+    const [version, setVersion] = useState('15.13.1');
+
+    useEffect(() => {
+        const fetchVersion = async () => {
+            const latestVersion = await fetchLatestVersion();
+            setVersion(latestVersion);
+        };
+        fetchVersion();
+    }, []);
+
     if (!summonerData) return null;
 
     return (
@@ -45,7 +58,7 @@ export default function SummonerDisplay({ summonerData, onUpdate}) {
             <div className="flex items-center gap-8">
                 <div className="flex flex-col items-center min-w-[200px]">
                     <img 
-                        src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/profileicon/${summonerData.profile_icon_id}.png`}
+                        src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/profileicon/${summonerData.profile_icon_id}.png`}
                         alt="Summoner Icon"
                         className="w-24 h-24 rounded-full border-4 border-gray-600"
                     />
