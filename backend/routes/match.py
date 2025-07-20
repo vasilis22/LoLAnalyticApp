@@ -8,8 +8,8 @@ from services.riot_api_services import get_riot_headers
 
 router = APIRouter()
 
-@router.get("/match/{summoner_region}/{puuid}")
-def get_match_history(summoner_region: str, puuid: str, update: bool = False):
+@router.get("/match/{summoner_region}/{puuid}/{count}")
+def get_match_history(summoner_region: str, puuid: str, count: int, update: bool = False):
     try:
         if not update:
             with get_db_connection() as conn:
@@ -20,8 +20,8 @@ def get_match_history(summoner_region: str, puuid: str, update: bool = False):
                         JOIN player_matches pm ON m.match_id = pm.match_id
                         WHERE pm.puuid = %s
                         ORDER BY m.created_at DESC
-                        LIMIT 10
-                    """, (puuid,))
+                        LIMIT %s
+                    """, (puuid, count))
                     matches = cur.fetchall()
                     return matches if matches else []
 
@@ -117,8 +117,8 @@ def get_match_history(summoner_region: str, puuid: str, update: bool = False):
                     JOIN player_matches pm ON m.match_id = pm.match_id
                     WHERE pm.puuid = %s
                     ORDER BY m.created_at DESC
-                    LIMIT 10
-                """, (puuid,))
+                    LIMIT %s
+                """, (puuid, count))
                 matches = cur.fetchall()
                 return matches
                     

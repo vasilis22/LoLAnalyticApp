@@ -12,7 +12,7 @@ def manual_patch_check():
     else:
         return {"message": f"No new patch detected. Current patch: {patch}"}
     
-@router.get("/fetchgames")
-def fetch_games(background_tasks: BackgroundTasks):
-    background_tasks.add_task(fetch_tierlist_matches, "15.13")
+@router.get("/fetchgames/{patch}")
+def fetch_games(patch: str, background_tasks: BackgroundTasks):
+    background_tasks.add_task(fetch_tierlist_matches, patch)
     return {"message": "Match fetching started in the background."}

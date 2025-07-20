@@ -29,7 +29,7 @@ const QUEUE_TYPES = {
     700: "Clash",
 };
 
-export default function MatchHistory({ matches, puuid }) {
+export default function MatchHistory({ matches, puuid, onIncrement }) {
     const [expandedMatches, setExpandedMatches] = useState(new Set());
     const [version, setVersion] = useState('15.13.1');
 
@@ -56,63 +56,66 @@ export default function MatchHistory({ matches, puuid }) {
         return <div className="text-center text-gray-500">No matches found.</div>;
     }
 
+    console.log("Matches:", matches);
+
     return (
-        <div className="mt-8 flex flex-col gap-4 max-w-5xl mx-auto">
-            {matches.map((match) => {
-                const player = match.match_data["info"]["participants"][match.player_index];
-                const isWin = player.win;
-                const gameDurationMinutes = Math.floor(match.game_duration / 60);
-                const gameDurationSeconds = match.game_duration % 60;
-                const isExpanded = expandedMatches.has(match.match_id);
+        <div>
+            <div className="mt-8 flex flex-col gap-4 max-w-5xl mx-auto">
+                {matches.map((match) => {
+                    const player = match.match_data["info"]["participants"][match.player_index];
+                    const isWin = player.win;
+                    const gameDurationMinutes = Math.floor(match.game_duration / 60);
+                    const gameDurationSeconds = match.game_duration % 60;
+                    const isExpanded = expandedMatches.has(match.match_id);
 
-                const team1 = match.match_data["info"]["participants"].slice(0, 5);
-                const team2 = match.match_data["info"]["participants"].slice(5, 10);
+                    const team1 = match.match_data["info"]["participants"].slice(0, 5);
+                    const team2 = match.match_data["info"]["participants"].slice(5, 10);
 
-                return (
-                    <div key={match.match_id} className="flex flex-col">
-                        <div
-                            onClick={() => toggleMatch(match.match_id)}
-                            className={`p-4 rounded-lg ${isWin ? 'bg-green-800/50' : 'bg-red-800/50'} flex items-start gap-6 cursor-pointer hover:brightness-110 transition-all`}
-                        >
-                            <div className="flex flex-col items-start min-w-[200px]">
-                                <span className="text-lg font-semibold text-white">
-                                    {QUEUE_TYPES[match.queue_id] || "Custom Game"}
-                                </span>
-                                <span className={`text-lg ${isWin ? 'text-green-400' : 'text-red-400'}`}>
-                                    {isWin ? 'Victory' : 'Defeat'}
-                                </span>
-                                <span className="text-gray-300">
-                                    {gameDurationMinutes}:{gameDurationSeconds.toString().padStart(2, '0')}
-                                </span>
-                            </div>
-
-                            <div className="flex items-center gap-6">
-                                <div className="flex flex-col items-center gap-1">
-                                    <img
-                                        src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${player.championName}.png`}
-                                        alt={player.championName}
-                                        className="w-16 h-16 rounded-lg"
-                                    />
-                                    <span className="text-white font-semibold">
-                                        {player.kills} / {player.deaths} / {player.assists}
+                    return (
+                        <div key={match.match_id} className="flex flex-col">
+                            <div
+                                onClick={() => toggleMatch(match.match_id)}
+                                className={`p-4 rounded-lg ${isWin ? 'bg-green-800/50' : 'bg-red-800/50'} flex items-start gap-6 cursor-pointer hover:brightness-110 transition-all`}
+                            >
+                                <div className="flex flex-col items-start min-w-[200px]">
+                                    <span className="text-lg font-semibold text-white">
+                                        {QUEUE_TYPES[match.queue_id] || "Custom Game"}
+                                    </span>
+                                    <span className={`text-lg ${isWin ? 'text-green-400' : 'text-red-400'}`}>
+                                        {isWin ? 'Victory' : 'Defeat'}
+                                    </span>
+                                    <span className="text-gray-300">
+                                        {gameDurationMinutes}:{gameDurationSeconds.toString().padStart(2, '0')}
                                     </span>
                                 </div>
 
-                                <div className="flex flex-row items-center gap-2">
-                                    <div className="grid grid-cols-3 gap-1">
-                                        {[...Array(6)].map((_, index) => (
-                                            <div key={index} className="w-8 h-8 bg-gray-900 rounded">
-                                                {player[`item${index}`] !== 0 && (
-                                                    <img
-                                                        src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${player[`item${index}`]}.png`}
-                                                        alt={`Item ${index + 1}`}
-                                                        className="w-full h-full rounded"
-                                                    />
-                                                )}
-                                            </div>
-                                        ))}
+                                <div className="flex items-center gap-6">
+                                    <div className="flex flex-col items-center gap-1">
+                                        <img
+                                            src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${player.championName}.png`}
+                                            alt={player.championName}
+                                            className="w-16 h-16 rounded-lg"
+                                        />
+                                        <span className="text-white font-semibold">
+                                            {player.kills} / {player.deaths} / {player.assists}
+                                        </span>
                                     </div>
-                                    <div className="w-8 h-8 bg-gray-900 rounded col-span-2">
+
+                                    <div className="flex flex-row items-center gap-2">
+                                        <div className="grid grid-cols-3 gap-1">
+                                            {[...Array(6)].map((_, index) => (
+                                                <div key={index} className="w-8 h-8 bg-gray-900 rounded">
+                                                    {player[`item${index}`] !== 0 && (
+                                                        <img
+                                                            src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${player[`item${index}`]}.png`}
+                                                            alt={`Item ${index + 1}`}
+                                                            className="w-full h-full rounded"
+                                                        />
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className="w-8 h-8 bg-gray-900 rounded col-span-2">
                                             {player.item6 !== 0 && (
                                                 <img
                                                     src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${player.item6}.png`}
@@ -121,46 +124,55 @@ export default function MatchHistory({ matches, puuid }) {
                                                 />
                                             )}
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-8">
+                                    <div className="flex flex-col gap-1">
+                                        {team1.map((teammate, index) => (
+                                            <div key={index} className="flex items-center gap-2">
+                                                <img
+                                                    src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${teammate.championName}.png`}
+                                                    alt={teammate.championName}
+                                                    className="w-6 h-6 rounded-full"
+                                                />
+                                                <span className={`text-sm ${teammate.puuid === puuid ? 'text-yellow-400 font-bold' : 'text-gray-300'}`}>
+                                                    {teammate.riotIdGameName}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="flex flex-col gap-1">
+                                        {team2.map((teammate, index) => (
+                                            <div key={index} className="flex items-center gap-2">
+                                                <img
+                                                    src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${teammate.championName}.png`}
+                                                    alt={teammate.championName}
+                                                    className="w-6 h-6 rounded-full"
+                                                />
+                                                <span className={`text-sm ${teammate.puuid === puuid ? 'text-yellow-400 font-bold' : 'text-gray-300'}`}>
+                                                    {teammate.riotIdGameName}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="flex gap-8">
-                                <div className="flex flex-col gap-1">
-                                    {team1.map((teammate, index) => (
-                                        <div key={index} className="flex items-center gap-2">
-                                            <img
-                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${teammate.championName}.png`}
-                                                alt={teammate.championName}
-                                                className="w-6 h-6 rounded-full"
-                                            />
-                                            <span className={`text-sm ${teammate.puuid === puuid ? 'text-yellow-400 font-bold' : 'text-gray-300'}`}>
-                                                {teammate.riotIdGameName}
-                                            </span>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <div className="flex flex-col gap-1">
-                                    {team2.map((teammate, index) => (
-                                        <div key={index} className="flex items-center gap-2">
-                                            <img
-                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${teammate.championName}.png`}
-                                                alt={teammate.championName}
-                                                className="w-6 h-6 rounded-full"
-                                            />
-                                            <span className={`text-sm ${teammate.puuid === puuid ? 'text-yellow-400 font-bold' : 'text-gray-300'}`}>
-                                                {teammate.riotIdGameName}
-                                            </span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
+                            {isExpanded && <MatchDetails match={match} player={player} />}
                         </div>
-
-                        {isExpanded && <MatchDetails match={match} player={player} />}
-                    </div>
-                );
-            })}
+                    );
+                })}
+            </div>
+            <div className="flex justify-center">
+                <button
+                    onClick={onIncrement}
+                    className="mt-4 mb-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                >
+                    Load More Matches
+                </button>
+            </div>
         </div>
     );
 }
