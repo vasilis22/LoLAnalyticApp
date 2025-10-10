@@ -10,6 +10,22 @@ export default function ChampionTierList() {
     const [version, setVersion] = useState('15.13.1');
     const [sortedChampions, setSortedChampions] = useState([]);
 
+    const getWinRateColor = (winRate) => {
+        const percentage = winRate * 100;
+        if (percentage < 40) return 'text-red-500';
+        if (percentage < 45) return 'text-yellow-500';
+        if (percentage <= 50) return 'text-green-500';
+        return 'text-gray-400';
+    };
+
+    const getWinRateBorder = (winrate) => {
+        const percentage = winrate * 100;
+        if (percentage < 40) return 'hover:border-red-500';
+        if (percentage < 45) return 'hover:border-yellow-500';
+        if (percentage <= 50) return 'hover:border-green-500';
+        return 'hover:border-gray-400';
+    }
+
     useEffect(() => {
         async function fetchChampionData() {
             try {
@@ -98,16 +114,20 @@ export default function ChampionTierList() {
                                         {champion.worstMatchups
                                             .filter (matchup => matchup.win_rate < 0.5)
                                             .map((matchup, index) => (
-                                                <div key={index} className="flex flex-col items-center">
+                                                <Link
+                                                    key={index}
+                                                    to={`/champions/${matchup.champion}`}
+                                                    className="flex flex-col items-center hover:opacity-80 transition-opacity"
+                                                >
                                                     <img 
                                                         src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${matchup.champion}.png`}
                                                         alt={matchup.champion}
-                                                        className="w-12 h-12"
+                                                        className={`w-12 h-12 rounded-lg border-2 border-transparent ${getWinRateBorder(matchup.win_rate)} transition-all`}
                                                     />
-                                                    <span className="text-sm text-red-500 mt-1">
-                                                        {(matchup.win_rate * 100).toFixed(2)}%
+                                                    <span className={`text-sm font-semibold mt-1 ${getWinRateColor(matchup.win_rate)}`}>
+                                                        {(matchup.win_rate * 100).toFixed(1)}%
                                                     </span>
-                                                </div>
+                                                </Link>
                                         ))}
                                     </div>
                                 </div>

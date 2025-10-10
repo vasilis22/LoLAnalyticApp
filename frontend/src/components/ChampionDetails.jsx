@@ -25,6 +25,14 @@ export default function ChampionDetails() {
         }
     }
 
+        useEffect(() => {
+        async function fetchVersion() {
+            const latestVersion = await fetchLatestVersion();
+            setVersion(latestVersion);
+        }
+        fetchVersion();
+    }, []);
+
     if (!championData) {
         fetchChampionData(championId);
     }
@@ -39,14 +47,6 @@ export default function ChampionDetails() {
             </div>
         );
     }
-
-    useEffect(() => {
-        async function fetchVersion() {
-            const latestVersion = await fetchLatestVersion();
-            setVersion(latestVersion);
-        }
-        fetchVersion();
-    }, []);
 
     return (
         <div className="container mx-auto p-6 max-w-7xl">
