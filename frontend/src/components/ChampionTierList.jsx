@@ -9,6 +9,7 @@ export default function ChampionTierList() {
     const [roleFilter, setRoleFilter] = useState('All');
     const [version, setVersion] = useState('15.13.1');
     const [sortedChampions, setSortedChampions] = useState([]);
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
     const getWinRateColor = (winRate) => {
         const percentage = winRate * 100;
@@ -29,7 +30,7 @@ export default function ChampionTierList() {
     useEffect(() => {
         async function fetchChampionData() {
             try {
-                const response = await fetch('http://localhost:8000/champions/statistics');
+                const response = await fetch(`${API_URL}/champions/statistics`);
                 const data = await response.json();
                 
                 if (!response.ok) {
@@ -58,16 +59,16 @@ export default function ChampionTierList() {
         setSortedChampions(sorted);
     }, [champions, sortBy]);
 
-    if (error) return <div className="text-red-500">{error}</div>;
+    if (error) return <div className="text-red-500 p-4">{error}</div>;
 
     return (
         <div className="bg-gray-600 min-h-screen text-white">
-            <div className="container mx-auto p-4">
-                <div className="mb-4 flex gap-4">
+            <div className="container mx-auto p-3 sm:p-4">
+                <div className="mb-4 flex flex-col sm:flex-row gap-2 sm:gap-4">
                     <select 
                         value={sortBy} 
                         onChange={(e) => setSortBy(e.target.value)}
-                        className="bg-gray-700 text-white rounded p-2"
+                        className="bg-gray-700 text-white rounded p-2 text-sm sm:text-base w-full sm:w-auto"
                     >
                         <option value="winRate">Win Rate</option>
                         <option value="pickRate">Pick Rate</option>
@@ -77,7 +78,7 @@ export default function ChampionTierList() {
                     <select 
                         value={roleFilter} 
                         onChange={(e) => setRoleFilter(e.target.value)}
-                        className="bg-gray-700 text-white rounded p-2"
+                        className="bg-gray-700 text-white rounded p-2 text-sm sm:text-base w-full sm:w-auto"
                     >
                         <option value="All">All Roles</option>
                         <option value="Fighter">Fighter</option>
@@ -89,7 +90,7 @@ export default function ChampionTierList() {
                     </select>
                 </div>
 
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-1 gap-3 sm:gap-4">
                     {sortedChampions
                         .filter(champ => roleFilter === 'All' || champ.roles.includes(roleFilter))
                         .map(champion => (
@@ -97,34 +98,35 @@ export default function ChampionTierList() {
                                 to={`/champions/${champion.id}`}
                                 state={{ championData: champion}}
                                 key={champion.id} 
-                                className="bg-gray-800 p-4 rounded-lg flex items-center gap-4"
+                                className="bg-gray-800 p-3 sm:p-4 rounded-lg flex flex-col sm:flex-row items-center gap-3 sm:gap-4"
                             >
                                 <img 
                                     src={champion.image} 
                                     alt={champion.name} 
-                                    className="w-16 h-16"
+                                    className="w-14 h-14 sm:w-16 sm:h-16"
                                 />
-                                <div className="flex-1 max-w-xs">
-                                    <h3 className="text-xl font-bold text-white">{champion.name}</h3>
-                                    <p className="text-gray-400">{champion.title}</p>
+                                <div className="flex-1 max-w-xs text-center sm:text-left">
+                                    <h3 className="text-lg sm:text-xl font-bold text-white">{champion.name}</h3>
+                                    <p className="text-sm sm:text-base text-gray-400 truncate">{champion.title}</p>
                                 </div>
                                 
-                                <div className="flex-1">
-                                    <div className="flex gap-4 justify-center">
+                                <div className="flex-1 w-full sm:w-auto">
+                                    <h1 className="text-sm sm:text-base font-semibold text-white mb-2 text-center">Countered By</h1>
+                                    <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
                                         {champion.worstMatchups
                                             .filter (matchup => matchup.win_rate < 0.5)
                                             .map((matchup, index) => (
                                                 <Link
                                                     key={index}
                                                     to={`/champions/${matchup.champion}`}
-                                                    className="flex flex-col items-center hover:opacity-80 transition-opacity"
+                                                    className="flex flex-col items-center hover:opacity-80 transition-opacity flex-shrink-0"
                                                 >
                                                     <img 
                                                         src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${matchup.champion}.png`}
                                                         alt={matchup.champion}
-                                                        className={`w-12 h-12 rounded-lg border-2 border-transparent ${getWinRateBorder(matchup.win_rate)} transition-all`}
+                                                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 border-transparent ${getWinRateBorder(matchup.win_rate)} transition-all`}
                                                     />
-                                                    <span className={`text-sm font-semibold mt-1 ${getWinRateColor(matchup.win_rate)}`}>
+                                                    <span className={`text-xs sm:text-sm font-semibold mt-1 ${getWinRateColor(matchup.win_rate)}`}>
                                                         {(matchup.win_rate * 100).toFixed(1)}%
                                                     </span>
                                                 </Link>
@@ -132,18 +134,18 @@ export default function ChampionTierList() {
                                     </div>
                                 </div>
 
-                                <div className="flex gap-8">
+                                <div className="flex gap-4 sm:gap-8 w-full sm:w-auto justify-around sm:justify-start">
                                     <div className="text-center">
-                                        <p className="text-gray-400">Win Rate</p>
-                                        <p className="text-white">{(champion.winRate * 100).toFixed(1)}%</p>
+                                        <p className="text-xs sm:text-sm text-gray-400">Win Rate</p>
+                                        <p className="text-sm sm:text-base text-white font-semibold">{(champion.winRate * 100).toFixed(1)}%</p>
                                     </div>
                                     <div className="text-center">
-                                        <p className="text-gray-400">Pick Rate</p>
-                                        <p className="text-white">{(champion.pickRate * 100).toFixed(1)}%</p>
+                                        <p className="text-xs sm:text-sm text-gray-400">Pick Rate</p>
+                                        <p className="text-sm sm:text-base text-white font-semibold">{(champion.pickRate * 100).toFixed(1)}%</p>
                                     </div>
                                     <div className="text-center">
-                                        <p className="text-gray-400">Ban Rate</p>
-                                        <p className="text-white">{(champion.banRate * 100).toFixed(1)}%</p>
+                                        <p className="text-xs sm:text-sm text-gray-400">Ban Rate</p>
+                                        <p className="text-sm sm:text-base text-white font-semibold">{(champion.banRate * 100).toFixed(1)}%</p>
                                     </div>
                                 </div>
                             </Link>

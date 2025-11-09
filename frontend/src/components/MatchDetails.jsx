@@ -6,11 +6,12 @@ export default function MatchDetails({ match, player }) {
     const [activeTab, setActiveTab] = useState('overview');
     const [timelineData, setTimelineData] = useState(null);
     const [error, setError] = useState(null);
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
     useEffect(() => {
         async function fetchTimeline() {
             try {
-                const response = await fetch(`http://localhost:8000/timeline/${match.match_id}`);
+                const response = await fetch(`${API_URL}/timeline/${match.match_id}`);
                 const data = await response.json();
 
                 if (!response.ok) {

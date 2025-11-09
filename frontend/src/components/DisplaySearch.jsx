@@ -12,10 +12,11 @@ export default function DisplaySearch() {
     const [summStatData, setSummStatData] = useState(null);
     const [error, setError] = useState(null);
     const [games, setGames] = useState(10);
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
     async function fetchSummonerData(update = false) {
         try {
-            const summonerResponse = await fetch(`http://localhost:8000/summoner/${region}/${gameName}/${tag}${update ? '?update=true' : ''}`)
+            const summonerResponse = await fetch(`${API_URL}/summoner/${region}/${gameName}/${tag}${update ? '?update=true' : ''}`)
             const summonerData = await summonerResponse.json()
             if (!summonerResponse.ok) {
                 throw new Error(summonerData.detail || 'Failed to fetch summoner data')
@@ -29,7 +30,7 @@ export default function DisplaySearch() {
 
     async function fetchMatchHistory(region, puuid, games, update = false) {
         try{
-            const matchResponse = await fetch(`http://localhost:8000/match/${region}/${puuid}/${games}${update ? '?update=true' : ''}`)
+            const matchResponse = await fetch(`${API_URL}/match/${region}/${puuid}/${games}${update ? '?update=true' : ''}`)
             const matchData = await matchResponse.json()
             if (!matchResponse.ok) {
                 throw new Error(matchData.detail || 'Failed to fetch match history')
@@ -43,7 +44,7 @@ export default function DisplaySearch() {
 
     async function fetchSumStatData(puuid, update = false) {
         try{
-            const summStatResponse = await fetch(`http://localhost:8000/summoner/champstats/${puuid}${update ? '?update=true' : ''}`)
+            const summStatResponse = await fetch(`${API_URL}/summoner/champstats/${puuid}${update ? '?update=true' : ''}`)
             const summStatData = await summStatResponse.json()
             if (!summStatResponse.ok) {
                 throw new Error(summStatData.detail || 'Failed to fetch summoner stats')

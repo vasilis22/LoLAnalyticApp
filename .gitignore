@@ -3,3 +3,4 @@ backend/LoLAnalytic/
 matches/
 __pycache__/
 testinground.py
+.env

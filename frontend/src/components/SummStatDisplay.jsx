@@ -69,14 +69,14 @@ export default function SummStatDisplay({ summStatData }) {
     }
 
     return (
-        <div className="mt-8 max-w-4xl mx-auto">
-            <div className="bg-gray-700 p-6 rounded-t-lg shadow-xl">
-                <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-white font-medium text-sm">Most Played</h3>
+        <div className="mt-4 sm:mt-8 max-w-4xl mx-auto px-2 sm:px-0">
+            <div className="bg-gray-700 p-4 sm:p-6 rounded-t-lg shadow-xl">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-3 sm:mb-2 gap-2">
+                    <h3 className="text-white font-medium text-sm sm:text-base">Most Played</h3>
                     <select 
                         value={selectedSeason} 
                         onChange={(e) => setSelectedSeason(e.target.value)}
-                        className="bg-gray-700 border border-gray-600 text-white text-sm rounded px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="bg-gray-700 border border-gray-600 text-white text-xs sm:text-sm rounded px-2 sm:px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-auto"
                     >
                         {availableSeasons.map(season => (
                             <option key={season} value={season}>
@@ -85,7 +85,7 @@ export default function SummStatDisplay({ summStatData }) {
                         ))}
                     </select>
                 </div>
-                <div className="flex gap-4 overflow-x-auto">
+                <div className="flex gap-2 sm:gap-4 overflow-x-auto pb-2">
                     {mostPlayedNormal.length > 0 ? (
                         mostPlayedNormal.map((championData) => {
                             const modeData = championData.normal || {};
@@ -93,22 +93,22 @@ export default function SummStatDisplay({ summStatData }) {
                             const losses = total - wins;
                             
                             return (
-                                <div key={championData.champion} className="bg-gray-700 rounded-lg p-2 min-w-[120px]">
+                                <div key={championData.champion} className="bg-gray-800 rounded-lg p-2 min-w-[100px] sm:min-w-[120px] flex-shrink-0">
                                     <div className="flex justify-center mb-2">
                                         <img 
                                             src={championData.image} 
                                             alt={championData.champion}
-                                            className="w-16 h-16 rounded-full object-cover"
+                                            className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover"
                                         />
                                     </div>
                                     
                                     <div className="space-y-1 text-xs text-center">
                                         <div className="text-white font-medium">
                                             <span className="text-green-400">{wins}W</span>{' '}
-                                            <span className="text-red-400">{losses}L</span>{' '}
-                                            <span className="text-blue-400">{(winrate * 100).toFixed(0)}%</span>
+                                            <span className="text-red-400">{losses}L</span>
                                         </div>
-                                        <div className="text-gray-300">
+                                        <div className="text-blue-400">{(winrate * 100).toFixed(0)}%</div>
+                                        <div className="text-gray-300 text-xs">
                                             {kda.toFixed(2)} KDA
                                         </div>
                                     </div>
@@ -116,14 +116,14 @@ export default function SummStatDisplay({ summStatData }) {
                             );
                         })
                     ) : (
-                        <div className="text-gray-400 text-sm py-4">No normal game data</div>
+                        <div className="text-gray-400 text-xs sm:text-sm py-4">No normal game data</div>
                     )}
                 </div>
             </div>
 
-            <div className="bg-gray-700 p-6 shadow-xl border-t border-gray-600">
-                <h3 className="text-white font-medium mb-4 text-sm">Best Performance</h3>
-                <div className="flex gap-4 overflow-x-auto">
+            <div className="bg-gray-700 p-4 sm:p-6 shadow-xl border-t border-gray-600">
+                <h3 className="text-white font-medium mb-3 sm:mb-4 text-sm sm:text-base">Best Performance</h3>
+                <div className="flex gap-2 sm:gap-4 overflow-x-auto pb-2">
                     {bestPerformingNormal.length > 0 ? (
                         bestPerformingNormal.map((championData) => {
                             const modeData = championData.normal || {};
@@ -131,12 +131,12 @@ export default function SummStatDisplay({ summStatData }) {
                             const losses = total - wins;
                             
                             return (
-                                <div key={championData.champion} className="bg-gray-700 rounded-lg p-2 min-w-[120px]">
+                                <div key={championData.champion} className="bg-gray-800 rounded-lg p-2 min-w-[100px] sm:min-w-[120px] flex-shrink-0">
                                     <div className="flex justify-center mb-2">
                                         <img 
                                             src={championData.image} 
                                             alt={championData.champion}
-                                            className="w-16 h-16 rounded-full object-cover"
+                                            className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover"
                                         />
                                     </div>
                                     
@@ -159,9 +159,9 @@ export default function SummStatDisplay({ summStatData }) {
                 </div>
             </div>
 
-            <div className="bg-gray-700 p-6 rounded-b-lg shadow-xl border-t border-gray-600">
-                <h3 className="text-white font-medium mb-4 text-sm">Best Performance - Ranked</h3>
-                <div className="flex gap-4 overflow-x-auto">
+            <div className="bg-gray-700 p-3 sm:p-6 rounded-b-lg shadow-xl border-t border-gray-600">
+                <h3 className="text-white font-medium mb-3 sm:mb-4 text-xs sm:text-sm">Best Performance - Ranked</h3>
+                <div className="flex gap-2 sm:gap-4 overflow-x-auto">
                     {bestPerformingRanked.length > 0 ? (
                         bestPerformingRanked.map((championData) => {
                             const modeData = championData['420'] || {};
@@ -169,12 +169,12 @@ export default function SummStatDisplay({ summStatData }) {
                             const losses = total - wins;
                             
                             return (
-                                <div key={championData.champion} className="bg-gray-700 rounded-lg p-2 min-w-[120px]">
+                                <div key={championData.champion} className="bg-gray-700 rounded-lg p-2 min-w-[100px] sm:min-w-[120px]">
                                     <div className="flex justify-center mb-2">
                                         <img 
                                             src={championData.image} 
                                             alt={championData.champion}
-                                            className="w-16 h-16 rounded-full object-cover"
+                                            className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover"
                                         />
                                     </div>
 
@@ -192,7 +192,7 @@ export default function SummStatDisplay({ summStatData }) {
                             );
                         })
                     ) : (
-                        <div className="text-gray-400 text-sm py-4">No ranked game data</div>
+                        <div className="text-gray-400 text-xs sm:text-sm py-4">No ranked game data</div>
                     )}
                 </div>
             </div>

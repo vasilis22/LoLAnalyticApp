@@ -184,12 +184,12 @@ export default function Charts({match, timelineData, player }) {
 
     return (
         <div className="justify-center">
-            <div className="flex justify-center mb-4 gap-3">
+            <div className="flex flex-wrap justify-center mb-4 gap-2 sm:gap-3">
                 {Object.entries(CHARTS).map(([key, chart]) => (
                     <button
                         key={key}
                         onClick={() => setActiveChart(key)}
-                        className={`px-4 py-2 rounded ${
+                        className={`px-3 sm:px-4 py-2 rounded text-sm sm:text-base ${
                             activeChart === key 
                             ? 'bg-blue-500 text-white' 
                             : 'bg-gray-700 text-gray-300 hover:bg-blue-600'}`}
@@ -198,14 +198,14 @@ export default function Charts({match, timelineData, player }) {
                     </button>
                 ))}
             </div>
-            <div className="flex justify-between mb-4">
-                <div className="flex gap-2 mb-4">
+            <div className="flex flex-col sm:flex-row justify-between mb-4 gap-3">
+                <div className="flex gap-1 sm:gap-2 mb-2 sm:mb-4 overflow-x-auto">
                     {Object.values(allyTeam).map(participant => (
                         <img
                             key={participant.participantId}
                             src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${participant.champName}.png`}
                             alt={participant.champName}
-                            className={`w-13 h-13 cursor-pointer rounded-lg border-2 hover:border-blue-500 ${
+                            className={`w-10 h-10 sm:w-13 sm:h-13 flex-shrink-0 cursor-pointer rounded-lg border-2 hover:border-blue-500 ${
                                 selectedParticipantsId.has(participant.participantId)
                                     ? 'opacity-100'
                                     : 'opacity-50'
@@ -215,13 +215,13 @@ export default function Charts({match, timelineData, player }) {
                         />
                     ))}
                 </div>
-                <div className="flex gap-2 mb-4">
+                <div className="flex gap-1 sm:gap-2 mb-2 sm:mb-4 overflow-x-auto">
                     {Object.values(enemyTeam).map(participant => (
                         <img
                             key={participant.participantId}
                             src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${participant.champName}.png`}
                             alt={participant.champName}
-                            className={`w-13 h-13 cursor-pointer rounded-lg border-2 hover:border-blue-500 ${
+                            className={`w-10 h-10 sm:w-13 sm:h-13 flex-shrink-0 cursor-pointer rounded-lg border-2 hover:border-blue-500 ${
                                 selectedParticipantsId.has(participant.participantId)
                                     ? 'opacity-100'
                                     : 'opacity-50'
@@ -232,20 +232,22 @@ export default function Charts({match, timelineData, player }) {
                     ))}
                 </div>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center overflow-x-auto">
                 <LineChart
-                    width={800}
-                    height={400}
+                    width={Math.min(800, window.innerWidth - 40)}
+                    height={300}
                     data={prepareDataForSelected()}
-                    margin={{ top: 5, right: 30, left: 20, bottom: 20 }}
+                    margin={{ top: 5, right: 10, left: 10, bottom: 20 }}
                 >
                     <XAxis
                         stroke="#fff"
                         label={{ value: 'Minutes', position: 'bottom', fill: '#fff' }}
+                        tick={{ fontSize: 12 }}
                     />
                     <YAxis
                         stroke="#fff"
                         label={{ value: CHARTS[activeChart].title, angle: -90, position: 'left', fill: '#fff' }}
+                        tick={{ fontSize: 12 }}
                     />
                     <Tooltip
                         contentStyle={{ backgroundColor: '#1f2937', border: 'none' }}
@@ -253,6 +255,7 @@ export default function Charts({match, timelineData, player }) {
                     />
                     <Legend 
                         verticalAlign={'top'}
+                        wrapperStyle={{ fontSize: '12px' }}
                     />
                     {Array.from(selectedParticipantsId).map(participantId => {
                         const participant = allyTeam[participantId] || enemyTeam[participantId];

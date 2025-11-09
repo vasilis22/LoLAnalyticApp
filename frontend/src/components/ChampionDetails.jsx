@@ -3,6 +3,7 @@ import RunesDisplay from './RunesDisplay';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fetchLatestVersion } from '../utils/version';
+import ItemTooltip from './ItemTooltip';
 
 
 export default function ChampionDetails() {
@@ -10,10 +11,11 @@ export default function ChampionDetails() {
     const [championData, setChampionData] = useState(location.state?.championData || null);
     const { championId } = useParams();
     const [version, setVersion] = useState('15.13.1');
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
     async function fetchChampionData(championId) {
         try {
-            const response = await fetch(`http://localhost:8000/champions/statistics`);
+            const response = await fetch(`${API_URL}/champions/statistics`);
             if (!response.ok) {
                 throw new Error('Failed to fetch champion data');
             }
@@ -49,38 +51,38 @@ export default function ChampionDetails() {
     }
 
     return (
-        <div className="container mx-auto p-6 max-w-7xl">
+        <div className="container mx-auto p-3 sm:p-6 max-w-7xl">
             <div className="bg-gray-800 rounded-lg shadow-xl">
-                <div className="p-6 border-b border-gray-700">
-                    <h1 className="text-3xl font-bold text-white">{championData.name}</h1>
+                <div className="p-4 sm:p-6 border-b border-gray-700">
+                    <h1 className="text-2xl sm:text-3xl font-bold text-white">{championData.name}</h1>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-                    <div className="space-y-6">
-                        <div className="flex items-start space-x-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 p-3 sm:p-6">
+                    <div className="space-y-4 sm:space-y-6">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
                             <img 
                                 src={championData.image}
                                 alt={championData.name}
-                                className="w-32 h-32 rounded-lg"
+                                className="w-24 h-24 sm:w-32 sm:h-32 rounded-lg"
                             />
-                            <div className="space-y-2">
-                                <p className="text-gray-400 italic">{championData.title}</p>
-                                <div className="flex gap-2">
+                            <div className="space-y-2 text-center sm:text-left w-full">
+                                <p className="text-sm sm:text-base text-gray-400 italic">{championData.title}</p>
+                                <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                                     {championData.roles.map((role, index) => (
                                         <span 
                                             key={index}
-                                            className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300"
+                                            className="px-2 sm:px-3 py-1 bg-gray-700 rounded-full text-xs sm:text-sm text-gray-300"
                                         >
                                             {role}
                                         </span>
                                     ))}
                                 </div>
                                 <div className="mt-4">
-                                    <p className="text-gray-400">Win Rate</p>
-                                    <p className="text-2xl text-white">
+                                    <p className="text-sm sm:text-base text-gray-400">Win Rate</p>
+                                    <p className="text-xl sm:text-2xl text-white">
                                         {(championData.winRate * 100).toFixed(1)}%
                                     </p>
-                                    <p className="text-sm text-gray-500">
+                                    <p className="text-xs sm:text-sm text-gray-500">
                                         {championData.gamesPlayed} games
                                     </p>
                                 </div>
@@ -88,97 +90,83 @@ export default function ChampionDetails() {
                         </div>
                     </div>
 
-                    <div className="bg-gray-700 rounded-lg p-6">
+                    <div className="bg-gray-700 rounded-lg p-4 sm:p-6">
                         <RunesDisplay playerRunes={championData.mostUsedRunes[0]['rune_trees']['perks']}/>
                     </div>
                 </div>
 
-                <div className="border-t border-gray-700 p-6">
-                    <h2 className="text-xl font-bold text-white mb-6">Recommended Build</h2>
+                <div className="border-t border-gray-700 p-3 sm:p-6">
+                    <h2 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6">Recommended Build</h2>
                     
                     <div className="space-y-6">
-                        <div className="container items-start flex gap-6">
-                            <div>
-                                <h3 className="text-lg font-semibold text-white mb-3">Starter Item</h3>
-                                <div className="flex gap-4">
+                        <div className="container items-start flex flex-col sm:flex-row gap-4 sm:gap-6">
+                            <div className="w-full sm:w-auto">
+                                <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Starter Item</h3>
+                                <div className="flex gap-2 sm:gap-4">
                                     {championData.mostPickedStarter ? (
-                                        <div className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
-                                            <img 
-                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${championData.mostPickedStarter.id}.png`}
-                                                alt={`Starter Item ${championData.mostPickedStarter.id}`}
-                                                className="w-12 h-12 rounded"
-                                            />
-                                            <span className="text-sm text-gray-400 mt-1">
-                                                {((championData.mostPickedStarter.count / championData.gamesPlayed) * 100).toFixed(1)}%
-                                            </span>
-                                        </div>
+                                        <ItemTooltip
+                                            itemId={championData.mostPickedStarter.id}
+                                            version={version}
+                                            showPercentage={true}
+                                            percentage={`${((championData.mostPickedStarter.count / championData.gamesPlayed) * 100).toFixed(1)}%`}
+                                        />
                                     ) : (
-                                        <div className="text-gray-400 text-sm">No data available</div>
+                                        <div className="text-gray-400 text-xs sm:text-sm">No data available</div>
                                     )}
                                 </div>
                             </div>
 
-                            <div>
-                                <h3 className="text-lg font-semibold text-white mb-3">Core Items</h3>
-                                <div className="flex gap-4">
+                            <div className="w-full sm:w-auto">
+                                <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Core Items</h3>
+                                <div className="flex flex-wrap gap-2 sm:gap-4">
                                     {championData.coreItems && championData.coreItems.length > 0 ? (
                                         championData.coreItems.map((item, index) => (
-                                            <div key={index} className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
-                                                <img 
-                                                    src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item.id}.png`}
-                                                    alt={`Core Item ${item.id}`}
-                                                    className="w-12 h-12 rounded"
-                                                />
-                                                <span className="text-sm text-gray-400 mt-1">
-                                                    {((item.count / championData.gamesPlayed) * 100).toFixed(1)}%
-                                                </span>
-                                            </div>
+                                           <ItemTooltip 
+                                               key={index}
+                                               itemId={item.id} 
+                                               version={version}
+                                               showPercentage={true}
+                                               percentage={`${((item.count / championData.gamesPlayed) * 100).toFixed(1)}%`}
+                                           />
                                         ))
                                     ) : (
-                                        <div className="text-gray-400 text-sm">No data available</div>
+                                        <div className="text-gray-400 text-xs sm:text-sm">No data available</div>
                                     )}
                                 </div>
                             </div>
 
-                            <div>
-                                <h3 className="text-lg font-semibold text-white mb-3">Boots</h3>
-                                <div className="flex gap-4">
+                            <div className="w-full sm:w-auto">
+                                <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Boots</h3>
+                                <div className="flex gap-2 sm:gap-4">
                                     {championData.mostPickedBoot ? (
-                                        <div className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
-                                            <img 
-                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${championData.mostPickedBoot.id}.png`}
-                                                alt={`Boot ${championData.mostPickedBoot.id}`}
-                                                className="w-12 h-12 rounded"
-                                            />
-                                            <span className="text-sm text-gray-400 mt-1">
-                                                {((championData.mostPickedBoot.count / championData.gamesPlayed) * 100).toFixed(1)}%
-                                            </span>
-                                        </div>
+                                        <ItemTooltip
+                                            itemId={championData.mostPickedBoot.id}
+                                            version={version}
+                                            showPercentage={true}
+                                            percentage={`${((championData.mostPickedBoot.count / championData.gamesPlayed) * 100).toFixed(1)}%`}
+                                        />
                                     ) : (
-                                        <div className="text-gray-400 text-sm">No data available</div>
+                                        <div className="text-gray-400 text-xs sm:text-sm">No data available</div>
                                     )}
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <h3 className="text-lg font-semibold text-white mb-3">Other Build Options</h3>
-                            <div className="flex flex-wrap gap-4">
+                            <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Other Build Options</h3>
+                            <div className="flex flex-wrap gap-2 sm:gap-4">
                                 {championData.itemOptions && championData.itemOptions.length > 0 ? (
                                     championData.itemOptions.map((item, index) => (
-                                        <div key={index} className="flex flex-col items-center bg-gray-700 rounded-lg p-3">
-                                            <img 
-                                                src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item.id}.png`}
-                                                alt={`Option Item ${item.id}`}
-                                                className="w-12 h-12 rounded"
-                                            />
-                                            <span className="text-sm text-gray-400 mt-1">
-                                                {((item.count / championData.gamesPlayed) * 100).toFixed(1)}%
-                                            </span>
-                                        </div>
+                                        <ItemTooltip 
+                                            key={index}
+                                            itemId={item.id} 
+                                            version={version}
+                                            showPercentage={true}
+                                            percentage={`${((item.count / championData.gamesPlayed) * 100).toFixed(1)}%`}
+                                        />
                                     ))
                                 ) : (
-                                    <div className="text-gray-400 text-sm">No data available</div>
+                                    <div className="text-gray-400 text-xs sm:text-sm">No data available</div>
                                 )}
                             </div>
                         </div>

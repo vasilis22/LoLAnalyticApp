@@ -42,73 +42,77 @@ export default function SummonerDisplay({ summonerData, onUpdate}) {
     if (!summonerData) return null;
 
     return (
-        <div className="mt-8 p-6 bg-gray-700 rounded-lg shadow-xl max-w-4xl mx-auto text-white">
-            <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-600">
-                <h2 className="text-2xl font-bold">
+        <div className="mt-4 sm:mt-8 p-4 sm:p-6 bg-gray-700 rounded-lg shadow-xl max-w-4xl mx-auto text-white">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 sm:mb-6 pb-4 border-b border-gray-600 gap-3">
+                <h2 className="text-xl sm:text-2xl font-bold break-all">
                     {summonerData.game_name}#{summonerData.tagline}
                 </h2>
                 <button
                     onClick={onUpdate}
-                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm transition-colors"
+                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm transition-colors w-full sm:w-auto"
                 >
                     Update
                 </button>
             </div>
 
-            <div className="flex items-center gap-8">
-                <div className="flex flex-col items-center min-w-[200px]">
+            <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-8">
+                <div className="flex flex-col items-center w-full lg:w-auto lg:min-w-[200px]">
                     <img 
                         src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/profileicon/${summonerData.profile_icon_id}.png`}
                         alt="Summoner Icon"
-                        className="w-24 h-24 rounded-full border-4 border-gray-600"
+                        className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-gray-600"
                     />
-                    <p className="text-gray-300 mt-4">Level {summonerData.summoner_level}</p>
+                    <p className="text-sm sm:text-base text-gray-300 mt-2 sm:mt-4">Level {summonerData.summoner_level}</p>
                 </div>
 
-                <div className="flex flex-1 gap-8">
-                    <div className="flex-1 p-6 rounded min-w-[300px]">
-                        <h3 className="text-xl font-semibold mb-4">Ranked Solo</h3>
+                <div className="flex flex-col sm:flex-row flex-1 gap-4 sm:gap-8 w-full">
+                    <div className="flex-1 p-4 sm:p-6 rounded w-full">
+                        <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Ranked Solo</h3>
                         {summonerData.ranked_solo ? (
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                                 <img 
                                     src={getRankIcon(summonerData.ranked_solo.tier)}
                                     alt={`${summonerData.ranked_solo.tier} Rank`}
-                                    className="w-24 h-24"
+                                    className="w-20 h-20 sm:w-24 sm:h-24"
                                 />
-                                <div className="flex-1">
-                                    <p className="text-lg">{summonerData.ranked_solo.tier} {summonerData.ranked_solo.rank}</p>
-                                    <p className="text-gray-400">{summonerData.ranked_solo.leaguePoints} LP</p>
-                                    <p className="mt-2">
+                                <div className="flex-1 text-center sm:text-left">
+                                    <p className="text-base sm:text-lg font-semibold">{summonerData.ranked_solo.tier} {summonerData.ranked_solo.rank}</p>
+                                    <p className="text-sm sm:text-base text-gray-400">{summonerData.ranked_solo.leaguePoints} LP</p>
+                                    <p className="text-sm sm:text-base mt-2">
                                         {summonerData.ranked_solo.wins}W {summonerData.ranked_solo.losses}L
-                                        ({(summonerData.ranked_solo.wins / (summonerData.ranked_solo.wins + summonerData.ranked_solo.losses) * 100).toFixed(0)}%)
+                                        <span className="ml-1">
+                                            ({(summonerData.ranked_solo.wins / (summonerData.ranked_solo.wins + summonerData.ranked_solo.losses) * 100).toFixed(0)}%)
+                                        </span>
                                     </p>
                                 </div>
                             </div>
                         ) : (
-                            <p className="text-gray-400">Unranked</p>
+                            <p className="text-sm sm:text-base text-gray-400 text-center sm:text-left">Unranked</p>
                         )}
                     </div>
 
-                    <div className="flex-1 p-6 rounded min-w-[300px]">
-                        <h3 className="text-xl font-semibold mb-4">Ranked Flex</h3>
+                    <div className="flex-1 p-4 sm:p-6 rounded w-full">
+                        <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Ranked Flex</h3>
                         {summonerData.ranked_flex ? (
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                                 <img 
                                     src={getRankIcon(summonerData.ranked_flex.tier)}
                                     alt={`${summonerData.ranked_flex.tier} Rank`}
-                                    className="w-24 h-24"
+                                    className="w-20 h-20 sm:w-24 sm:h-24"
                                 />
-                                <div className="flex-1">
-                                    <p className="text-lg">{summonerData.ranked_flex.tier} {summonerData.ranked_flex.rank}</p>
-                                    <p className="text-gray-400">{summonerData.ranked_flex.leaguePoints} LP</p>
-                                    <p className="mt-2">
+                                <div className="flex-1 text-center sm:text-left">
+                                    <p className="text-base sm:text-lg font-semibold">{summonerData.ranked_flex.tier} {summonerData.ranked_flex.rank}</p>
+                                    <p className="text-sm sm:text-base text-gray-400">{summonerData.ranked_flex.leaguePoints} LP</p>
+                                    <p className="text-sm sm:text-base mt-2">
                                         {summonerData.ranked_flex.wins}W {summonerData.ranked_flex.losses}L
-                                        ({(summonerData.ranked_flex.wins / (summonerData.ranked_flex.wins + summonerData.ranked_flex.losses) * 100).toFixed(0)}%)
+                                        <span className="ml-1">
+                                            ({(summonerData.ranked_flex.wins / (summonerData.ranked_flex.wins + summonerData.ranked_flex.losses) * 100).toFixed(0)}%)
+                                        </span>
                                     </p>
                                 </div>
                             </div>
                         ) : (
-                            <p className="text-gray-400">Unranked</p>
+                            <p className="text-sm sm:text-base text-gray-400 text-center sm:text-left">Unranked</p>
                         )}
                     </div>
                 </div>

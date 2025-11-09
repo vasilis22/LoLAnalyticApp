@@ -1,5 +1,10 @@
 import psycopg2
 from psycopg2 import Error
+from dotenv import load_dotenv
+import os
+from services.database_con import get_db_connection
+
+load_dotenv()
 
 def init_database():
     conn = None
@@ -8,9 +13,9 @@ def init_database():
         conn = psycopg2.connect(
             database="postgres",
             user="postgres",
-            password="Lol4troll1!",
-            host="localhost",
-            port="5432"
+            password=os.getenv("DB_PASSWORD"),
+            host=os.getenv("DB_HOST"),
+            port=os.getenv("DB_PORT")
         )
         conn.autocommit = True
         cursor = conn.cursor()
@@ -24,13 +29,7 @@ def init_database():
         cursor.close()
         conn.close()
         
-        conn = psycopg2.connect(
-            database="lolanalytics",
-            user="postgres",
-            password="Lol4troll1!",
-            host="localhost",
-            port="5432"
-        )
+        conn = get_db_connection()
         cursor = conn.cursor()
         
         cursor.execute("""
