@@ -1,16 +1,8 @@
-import { use, useEffect } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { fetchLatestVersion } from '../utils/version';
-
-const STAT_SHARD_ICONS = {
-    5001: 'StatModsHealthPlusIcon',
-    5005: 'StatModsAttackSpeedIcon',
-    5007: 'StatModsCDRScalingIcon',
-    5008: 'StatModsAdaptiveForceIcon',
-    5010: 'StatModsMovementSpeedIcon',
-    5011: 'StatModsHealthScalingIcon',
-    50013: 'StatModsTencantIcon',
-};
+import RunesTooltip from './RunesTooltip';
+import { STAT_SHARD_INFO } from '../utils/runeConstants';
 
 export default function RunesDisplay({ playerRunes }) {
     const [primaryTree, setPrimaryTree] = useState(null);
@@ -57,7 +49,9 @@ export default function RunesDisplay({ playerRunes }) {
                         return {
                             id: rune.id,
                             icon: `https://ddragon.leagueoflegends.com/cdn/img/${rune.icon}`,
-                            name: rune.name
+                            name: rune.name,
+                            shortDescription: rune.shortDesc,
+                            longDescription: rune.longDesc
                         };
                     }
                 }
@@ -97,13 +91,7 @@ export default function RunesDisplay({ playerRunes }) {
                 </div>
                 <div className="flex flex-col gap-2">
                     {primaryTree?.runes.map((rune, index) => (
-                        <img
-                            key={index}
-                            src={rune?.icon}
-                            alt={rune?.name}
-                            className="w-8 h-8 rounded-full"
-                            title={rune?.name}
-                        />
+                        <RunesTooltip key={index} rune={rune} />
                     ))}
                 </div>
             </div>
@@ -126,13 +114,7 @@ export default function RunesDisplay({ playerRunes }) {
                     </div>
                     <div className="flex flex-col gap-2">
                         {secondaryTree?.runes.map((rune, index) => (
-                            <img
-                                key={index}
-                                src={rune?.icon}
-                                alt={rune?.name}
-                                className="w-8 h-8 rounded-full"
-                                title={rune?.name}
-                            />
+                            <RunesTooltip key={index} rune={rune} />
                         ))}
                     </div>
                 </div>
@@ -140,11 +122,9 @@ export default function RunesDisplay({ playerRunes }) {
                     <h4 className="text-lg font-semibold text-blue-400">Shards</h4>
                     <div className="flex gap-2">
                         {statPerksArray.map((shardId, index) => (
-                            <img
+                            <RunesTooltip
                                 key={index}
-                                src={`https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/${STAT_SHARD_ICONS[shardId]}.png`}
-                                alt={`Stat ${shardId}`}
-                                className="w-6 h-6 rounded-full"
+                                rune={STAT_SHARD_INFO[shardId]}
                             />
                         ))}
                     </div>

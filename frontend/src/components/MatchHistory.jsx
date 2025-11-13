@@ -1,33 +1,7 @@
 import { useState, useEffect } from 'react';
 import MatchDetails from './MatchDetails';
 import { fetchLatestVersion } from '../utils/version';
-
-const QUEUE_TYPES = {
-    0: "Custom Game",
-    72: "1v1 Snowdown",
-    73: "2v2 Snowdown",
-    75: "Hexakill",
-    76: "URF",
-    78: "One for All",
-    83: "Nexus Blitz",
-    400: "Draft",
-    420: "Ranked Solo",
-    440: "Ranked Flex",
-    450: "ARAM",
-    490: "Quickplay",
-    900: "ARURF",
-    1020: "One for All",
-    1300: "Nexus Blitz",
-    1400: "Ultimate Spellbook",
-    1700: "Arena",
-    1710: "Arena",
-    400: "Normal Draft",
-    420: "Ranked Solo/Duo",
-    430: "Normal Blind",
-    440: "Ranked Flex",
-    450: "ARAM",
-    700: "Clash",
-};
+import { QUEUE_TYPES } from '../utils/queueConstants';
 
 export default function MatchHistory({ matches, puuid, onIncrement }) {
     const [expandedMatches, setExpandedMatches] = useState(new Set());
