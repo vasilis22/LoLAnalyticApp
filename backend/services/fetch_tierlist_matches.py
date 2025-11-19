@@ -1,9 +1,9 @@
 import json
+import requests
 from psycopg2.extras import RealDictCursor
 from services.database_con import get_db_connection
 from config.settings import TIERS, DIVISIONS
-from services.riot_api_services import get_retry, get_riot_headers
-from services.ratecheck import ratecheck
+from services.riot_api_services import rgapi_background_request
 from services.validator import check_duration, get_match_patch_version, is_patch_older
 from services.patchtrack import update_patch_tracking
 from services.getnextdivisiontier import get_next_division_tier
@@ -30,20 +30,21 @@ def fetch_tierlist_matches(patch_version):
 
         print(f"Starting match collection for patch {patch_version}...")
         print(f"Starting from: {current_tier} {current_division}, page {page}, {matches_tracked} matches tracked")
-
-        headers = get_riot_headers()
-        rate_checker = ratecheck(rate=85, window=120)
         
         while matches_tracked < matches_to_track:
             while page <= 10:
                 print(f"Processing {current_tier} {current_division}, page {page}")
-                tier_url = f"https://eun1.api.riotgames.com/lol/league-exp/v4/entries/RANKED_SOLO_5x5/{current_tier}/{current_division}?page={page}"
-                response = get_retry(tier_url, headers=headers, retries=3, timeout=10, rate_checker=rate_checker)
                 
-                if not response or response.status_code != 200:
-                    print(f"Failed to fetch data for {current_tier} {current_division} page {page}: {response.status_code if response else 'No response'}")
- 
-                summoners = response.json()
+                tier_url = f"https://eun1.api.riotgames.com/lol/league-exp/v4/entries/RANKED_SOLO_5x5/{current_tier}/{current_division}?page={page}"
+                
+                try:
+                    response = rgapi_background_request(tier_url)
+                    summoners = response.json()
+                except requests.exceptions.Timeout as e:
+                    print(f"Temporary error fetching {current_tier} {current_division} page {page}: {e}. Skipping to next page.")
+                    page += 1
+                    continue 
+
                 if not summoners:
                     print(f"No more summoners in {current_tier} {current_division}, moving to next division")
                     break
@@ -57,25 +58,31 @@ def fetch_tierlist_matches(patch_version):
                         continue
                     
                     matchlist_url = f"https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?queue=420&type=ranked&start=0&count=100"
-                    matchlist_response = get_retry(matchlist_url, headers=headers, retries=3, timeout=10, rate_checker=rate_checker)
-
-                    if not matchlist_response or matchlist_response.status_code != 200:
+                    
+                    try:
+                        matchlist_response = rgapi_background_request(matchlist_url)
+                        match_ids = matchlist_response.json()
+                    except requests.exceptions.Timeout as e:
+                        print(f"Temporary error fetching match list for player {puuid}: {e}. Skipping player.")
+                        continue
+                    
+                    if not match_ids:
                         continue
 
-                    match_ids = matchlist_response.json()
                     player_matches_processed = 0
-                    
+
                     for match_id in match_ids:
                         if matches_tracked >= matches_to_track:
                             break
                             
                         match_url = f"https://europe.api.riotgames.com/lol/match/v5/matches/{match_id}"
-                        match_response = get_retry(match_url, headers=headers, retries=3, timeout=10, rate_checker=rate_checker)
-
-                        if not match_response or match_response.status_code != 200:
-                            continue
                         
-                        match_data = match_response.json()
+                        try:
+                            match_response = rgapi_background_request(match_url)
+                            match_data = match_response.json()
+                        except requests.exceptions.Timeout as e:
+                            print(f"Temporary error fetching match {match_id}: {e}. Skipping match.")
+                            continue
                         
                         match_patch = get_match_patch_version(match_data)
                         if is_patch_older(match_patch, patch_version):
@@ -143,6 +150,7 @@ def fetch_tierlist_matches(patch_version):
 
     except Exception as e:
         print(f"Error in fetch_tierlist_matches: {str(e)}")
+        return
         
     finally:
         conn.close()

@@ -15,9 +15,11 @@ DATABASE_CONFIG = {
     "port": os.getenv("DB_PORT")
 }
 
-# Rate limits
-RATE_LIMIT = 85
-REQUEST_WINDOW = 120
+# Both route and background must not exceed 100 requests combined
+ROUTES_REQUESTS_PER_TWO_MINUTES = 20
+BACKGROUND_REQUESTS_PER_TWO_MINUTES = 80
+
+WINDOW_SECONDS = 120
 
 # Game fetch settings
 TIERS = ["EMERALD", "DIAMOND"]

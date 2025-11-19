@@ -4,7 +4,8 @@ from fastapi import APIRouter, HTTPException
 from psycopg2.extras import RealDictCursor
 from services.database_con import get_db_connection
 from config.settings import REGION_MAPPING
-from services.riot_api_services import get_riot_headers
+from services.riot_api_services import rgapi_route_request, ServiceUnavailable
+from ratelimit import RateLimitException
 
 router = APIRouter()
 
@@ -24,14 +25,10 @@ def get_match_timeline(match_id: str):
                     raise HTTPException(status_code=400, detail="Invalid region specified")
                 
                 account_region = REGION_MAPPING[summoner_region]
-                headers = get_riot_headers()
 
                 timeline_url = f"https://{account_region}.api.riotgames.com/lol/match/v5/matches/{match_id}/timeline"
-                timeline_response = requests.get(timeline_url, headers=headers)
                 
-                if timeline_response.status_code != 200:
-                    raise HTTPException(status_code=timeline_response.status_code, detail="Error fetching match timeline data")
-                
+                timeline_response = rgapi_route_request(timeline_url)
                 timeline_data = timeline_response.json()
                 
                 cur.execute("""
@@ -42,6 +39,17 @@ def get_match_timeline(match_id: str):
                 
                 conn.commit()
                 return {"gameid": timeline_data["info"]["gameId"], "frames": timeline_data["info"]["frames"]}
-                
+            
+    except ServiceUnavailable:
+        raise HTTPException(status_code=503, detail="Riot API service is currently unavailable. Please try again later.")
+    except RateLimitException:
+        raise HTTPException(status_code=429, detail="Heavy traffic. Please try again later.")
+    except requests.exceptions.Timeout:
+        raise HTTPException(status_code=504, detail="Request timed out")
+    except requests.HTTPError as e:
+        status_code = e.response.status_code if e.response else 500
+        raise HTTPException(status_code=status_code, detail=f"HTTP error: {str(e)}")
+    except requests.exceptions.RequestException:
+        raise HTTPException(status_code=500, detail="Error fetching account data")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

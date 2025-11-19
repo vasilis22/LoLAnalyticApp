@@ -4,7 +4,8 @@ from fastapi import APIRouter, HTTPException
 from services.database_con import get_db_connection
 from psycopg2.extras import RealDictCursor
 from config.settings import REGION_MAPPING, CHAMPION_NAME_MAPPING
-from services.riot_api_services import get_riot_headers
+from services.riot_api_services import ServiceUnavailable, rgapi_route_request
+from ratelimit import RateLimitException
 
 router = APIRouter()
 
@@ -29,14 +30,10 @@ def get_match_history(summoner_region: str, puuid: str, count: int, update: bool
             raise HTTPException(status_code=400, detail="Invalid region specified")
         
         account_region = REGION_MAPPING[summoner_region]
-        headers = get_riot_headers()
 
         matchlist_url = f"https://{account_region}.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start=0&count=20"
-        matchlist_response = requests.get(matchlist_url, headers=headers)
-
-        if matchlist_response.status_code != 200:
-            raise HTTPException(status_code=matchlist_response.status_code, detail="Error fetching match history")
         
+        matchlist_response = rgapi_route_request(matchlist_url)
         match_ids = matchlist_response.json()
 
         with get_db_connection() as conn:
@@ -63,12 +60,10 @@ def get_match_history(summoner_region: str, puuid: str, count: int, update: bool
 
         for match_id in matches_to_process:
             match_url = f"https://{account_region}.api.riotgames.com/lol/match/v5/matches/{match_id}"
-            match_response = requests.get(match_url, headers=headers)
-
-            if match_response.status_code != 200:
-                raise HTTPException(status_code=match_response.status_code, detail="Error fetching match data")
             
+            match_response = rgapi_route_request(match_url)
             match_data = match_response.json()
+
             for participant in match_data["info"]["participants"]:
                 if participant["championName"] in CHAMPION_NAME_MAPPING:
                     participant["championName"] = CHAMPION_NAME_MAPPING[participant["championName"]]
@@ -121,6 +116,17 @@ def get_match_history(summoner_region: str, puuid: str, count: int, update: bool
                 """, (puuid, count))
                 matches = cur.fetchall()
                 return matches
-                    
+            
+    except ServiceUnavailable:
+        raise HTTPException(status_code=503, detail="Riot API service is currently unavailable. Please try again later.")
+    except RateLimitException:
+        raise HTTPException(status_code=429, detail="Heavy traffic. Please try again later.")
+    except requests.exceptions.Timeout:
+        raise HTTPException(status_code=504, detail="Request timed out")
+    except requests.HTTPError as e:
+        status_code = e.response.status_code if e.response else 500
+        raise HTTPException(status_code=status_code, detail=f"HTTP error: {str(e)}")
+    except requests.exceptions.RequestException:
+        raise HTTPException(status_code=500, detail="Error fetching account data")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

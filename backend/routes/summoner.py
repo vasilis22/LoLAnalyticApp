@@ -1,10 +1,11 @@
-import requests
 import json
+import requests
 from fastapi import APIRouter, HTTPException
 from psycopg2.extras import RealDictCursor
 from services.database_con import get_db_connection
 from config.settings import REGION_MAPPING
-from services.riot_api_services import get_riot_headers
+from services.riot_api_services import ServiceUnavailable, rgapi_route_request
+from ratelimit import RateLimitException
 
 router = APIRouter()
 
@@ -28,35 +29,27 @@ async def get_summoner_info(summoner_region: str, game_name: str, tagline: str, 
         
         account_region = REGION_MAPPING[summoner_region]
         
-        headers = get_riot_headers()
-        
         account_url = f"https://{account_region}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{game_name}/{tagline}"
-        account_response = requests.get(account_url, headers=headers)
         
-        if account_response.status_code != 200:
-            raise HTTPException(status_code=account_response.status_code, detail="Error fetching account data")
         
+        account_response = rgapi_route_request(account_url)
         account_data = account_response.json()
+
         puuid = account_data.get("puuid")
         correct_game_name = account_data.get("gameName", game_name)
         correct_tagline = account_data.get("tagLine", tagline)
         
         summoner_url = f"https://{summoner_region}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{puuid}"
-        summoner_response = requests.get(summoner_url, headers=headers)
         
-        if summoner_response.status_code != 200:
-            raise HTTPException(status_code=summoner_response.status_code, detail="Error fetching summoner data")
-        
+        summoner_response = rgapi_route_request(summoner_url)    
         summoner_data = summoner_response.json()
+
         profile_icon_id = summoner_data.get("profileIconId")
         summoner_level = summoner_data.get("summonerLevel")
 
         league_url = f"https://{summoner_region}.api.riotgames.com/lol/league/v4/entries/by-puuid/{puuid}"
-        league_response = requests.get(league_url, headers=headers)
-
-        if league_response.status_code != 200:
-            raise HTTPException(status_code=league_response.status_code, detail="Error fetching league data")
         
+        league_response = rgapi_route_request(league_url)
         league_data = league_response.json()
         
         ranked_data = {
@@ -110,6 +103,17 @@ async def get_summoner_info(summoner_region: str, game_name: str, tagline: str, 
             "ranked_flex": ranked_data["RANKED_FLEX_SR"],
             "puuid": puuid
         }
-
+    
+    except ServiceUnavailable:
+            raise HTTPException(status_code=503, detail="Riot API service is currently unavailable. Please try again later.")
+    except RateLimitException:
+        raise HTTPException(status_code=429, detail="Heavy traffic. Please try again later.")
+    except requests.exceptions.Timeout:
+        raise HTTPException(status_code=504, detail="Request timed out")
+    except requests.HTTPError as e:
+        status_code = e.response.status_code if e.response else 500
+        raise HTTPException(status_code=status_code, detail=f"HTTP error: {str(e)}")
+    except requests.exceptions.RequestException:
+        raise HTTPException(status_code=500, detail="Error fetching account data")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
