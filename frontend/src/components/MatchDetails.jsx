@@ -1,6 +1,7 @@
 import Overview from './Overview';
 import Charts from './Charts';
 import { useState, useEffect } from 'react';
+import ErrorMessage from './ErrorMessage';
 
 export default function MatchDetails({ match, player }) {
     const [activeTab, setActiveTab] = useState('overview');
@@ -15,12 +16,18 @@ export default function MatchDetails({ match, player }) {
                 const data = await response.json();
 
                 if (!response.ok) {
-                    throw new Error(data.detail || 'Failed to fetch timeline data');
+                    setError({
+                        status: response.status,
+                        message: data.detail || 'Failed to fetch timeline data'
+                    })
                 }
 
                 setTimelineData(data);
             } catch (err) {
-                setError(err.message);
+                setError({
+                    status: 500,
+                    message: err.message || 'Unexpected error while fetching timeline data',
+                });
             }
         }
 
@@ -31,6 +38,8 @@ export default function MatchDetails({ match, player }) {
         { id: 'overview', label: 'Overview' },
         { id: 'Charts', label: 'Charts' }
     ];
+
+    if (error) return <ErrorMessage message={error} />
 
     return (
         <div className="mt-2 p-4 bg-gray-800/50 rounded-lg">
@@ -49,14 +58,11 @@ export default function MatchDetails({ match, player }) {
                 ))}
             </div>
 
-            {error ? (
-                <div className="text-red-400">{error}</div>
-            ) : (
-                <div className="text-white">
-                    {activeTab === 'overview' && <Overview match={match} player={player} timelineData={timelineData} />}
-                    {activeTab === 'Charts' && <Charts match={match.match_data} timelineData={timelineData} player={player} />}
-                </div>
-            )}
+            <div className="text-white">
+                {activeTab === 'overview' && <Overview match={match} player={player} timelineData={timelineData} />}
+                {activeTab === 'Charts' && <Charts match={match.match_data} timelineData={timelineData} player={player} />}
+            </div>
+            
         </div>
     );
 }

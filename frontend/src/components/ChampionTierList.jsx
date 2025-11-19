@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchLatestVersion } from '../utils/version';
+import ErrorMessage from './ErrorMessage.jsx';
 
 export default function ChampionTierList() {
     const [champions, setChampions] = useState({});
@@ -34,12 +35,19 @@ export default function ChampionTierList() {
                 const data = await response.json();
                 
                 if (!response.ok) {
-                    throw new Error(data.detail || 'Failed to fetch champion data');
+                    setError({
+                        status: response.status,
+                        message: data.detail || 'Failed to fetch champion statistics'
+                    });
+                    return;
                 }
                 
                 setChampions(data.champions);
             } catch (err) {
-                setError(err.message);
+                setError({
+                    status: 500,
+                    message: err.message || 'Unexpected error while fetching champion statistics',
+                });
             }
         }
         
@@ -59,7 +67,7 @@ export default function ChampionTierList() {
         setSortedChampions(sorted);
     }, [champions, sortBy]);
 
-    if (error) return <div className="text-red-500 p-4">{error}</div>;
+    if (error) return <ErrorMessage message={error} />;
 
     return (
         <div className="bg-gray-600 min-h-screen text-white">

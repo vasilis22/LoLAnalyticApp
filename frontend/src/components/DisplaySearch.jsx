@@ -1,9 +1,9 @@
-import { use, useState } from 'react';
-import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
 import SummonerDisplay from './SummonerDisplay.jsx';
 import MatchHistory from './MatchHistory.jsx';
 import SummStatDisplay from './SummStatDisplay.jsx';
+import ErrorMessage from './ErrorMessage.jsx';
 
 export default function DisplaySearch() {
     const { region, gameName, tag } = useParams();
@@ -13,18 +13,27 @@ export default function DisplaySearch() {
     const [error, setError] = useState(null);
     const [games, setGames] = useState(10);
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const location = useLocation();
+    const searchId = location.state?.searchId;
 
     async function fetchSummonerData(update = false) {
         try {
             const summonerResponse = await fetch(`${API_URL}/summoner/${region}/${gameName}/${tag}${update ? '?update=true' : ''}`)
             const summonerData = await summonerResponse.json()
             if (!summonerResponse.ok) {
-                throw new Error(summonerData.detail || 'Failed to fetch summoner data')
+                setError({
+                    status: summonerResponse.status,
+                    message: summonerData.detail || 'Failed to fetch summoner data'
+                });
+                return;
             }
             setSummonerData(summonerData);
             return summonerData;
         } catch (error) {
-            setError(error.message)
+            setError({
+                status: 500,
+                message: error.message
+            });
         }
     }
 
@@ -33,12 +42,19 @@ export default function DisplaySearch() {
             const matchResponse = await fetch(`${API_URL}/match/${region}/${puuid}/${games}${update ? '?update=true' : ''}`)
             const matchData = await matchResponse.json()
             if (!matchResponse.ok) {
-                throw new Error(matchData.detail || 'Failed to fetch match history')
+                setError({
+                    status: matchResponse.status,
+                    message: matchData.detail || 'Failed to fetch match history'
+                });
+                return;
             }
             setMatchHistory(matchData);
         }
         catch (error) {
-            setError(error.message)
+            setError({
+                status: 500,
+                message: error.message
+            });
         }
     }
 
@@ -47,12 +63,19 @@ export default function DisplaySearch() {
             const summStatResponse = await fetch(`${API_URL}/summoner/champstats/${puuid}${update ? '?update=true' : ''}`)
             const summStatData = await summStatResponse.json()
             if (!summStatResponse.ok) {
-                throw new Error(summStatData.detail || 'Failed to fetch summoner stats')
+                setError({
+                    status: summStatResponse.status,
+                    message: summStatData.detail || 'Failed to fetch summoner stats'
+                });
+                return;
             }
             setSummStatData(summStatData);
         }
         catch (error) {
-            setError(error.message)
+            setError({
+                status: 500,
+                message: error.message
+            });
         }
     }
 
@@ -67,7 +90,10 @@ export default function DisplaySearch() {
                 ]);
             }
         } catch (error) {
-            setError(error.message);
+            setError({
+                status: 500,
+                message: error.message
+            });
         }
     }
 
@@ -79,7 +105,7 @@ export default function DisplaySearch() {
         setGames(10);
         
         fetchAllData(false, 10);
-    }, [region, gameName, tag]);
+    }, [region, gameName, tag, searchId]);
 
     useEffect(() => {
         if (summonerData?.puuid && games > 10) {
@@ -91,7 +117,7 @@ export default function DisplaySearch() {
         setGames(prevGames => prevGames + 10);
     }
 
-    if (error) return <div className="text-red-500">{error}</div>;
+    if (error) return <ErrorMessage message={error} />;
 
     return (
         <>

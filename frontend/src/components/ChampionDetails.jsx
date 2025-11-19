@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fetchLatestVersion } from '../utils/version';
 import ItemTooltip from './ItemTooltip';
+import ErrorMessage from './ErrorMessage.jsx';
 
 
 export default function ChampionDetails() {
@@ -12,18 +13,26 @@ export default function ChampionDetails() {
     const { championId } = useParams();
     const [version, setVersion] = useState('15.13.1');
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const [error, setError] = useState(null);
 
     async function fetchChampionData(championId) {
         try {
             const response = await fetch(`${API_URL}/champions/statistics`);
-            if (!response.ok) {
-                throw new Error('Failed to fetch champion data');
-            }
             const data = await response.json();
+
+            if (!response.ok) {
+                setError({
+                    status: response.status,
+                    message: data.detail || 'Failed to fetch champion statistics'
+                });
+                return;
+            }
             setChampionData(data.champions[championId]);
         } catch (error) {
-            console.error('Error fetching champion data:', error);
-            return null;
+            setError({
+                status: 500,
+                message: error.message || 'Failed to fetch champion statistics'
+            })
         }
     }
 
@@ -39,18 +48,9 @@ export default function ChampionDetails() {
         fetchChampionData(championId);
     }
 
-    if (!championData) {
-        return (
-            <div className="container mx-auto p-6">
-                <div className="bg-gray-800 rounded-lg shadow-xl p-6">
-                    <h1 className="text-3xl font-bold text-white">Champion not found</h1>
-                    <p className="text-gray-400">Please select a valid champion.</p>
-                </div>
-            </div>
-        );
-    }
+    if (error) return <ErrorMessage message={error}/>
 
-    return (
+    if (championData) return (
         <div className="container mx-auto p-3 sm:p-6 max-w-7xl">
             <div className="bg-gray-800 rounded-lg shadow-xl">
                 <div className="p-4 sm:p-6 border-b border-gray-700">

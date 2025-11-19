@@ -93,7 +93,7 @@ export default function SummStatDisplay({ summStatData }) {
                             const losses = total - wins;
                             
                             return (
-                                <div key={championData.champion} className="bg-gray-800 rounded-lg p-2 min-w-[100px] sm:min-w-[120px] flex-shrink-0">
+                                <div key={championData.champion} className="rounded-lg p-2 min-w-[100px] sm:min-w-[120px] flex-shrink-0">
                                     <div className="flex justify-center mb-2">
                                         <img 
                                             src={championData.image} 
@@ -131,7 +131,7 @@ export default function SummStatDisplay({ summStatData }) {
                             const losses = total - wins;
                             
                             return (
-                                <div key={championData.champion} className="bg-gray-800 rounded-lg p-2 min-w-[100px] sm:min-w-[120px] flex-shrink-0">
+                                <div key={championData.champion} className="rounded-lg p-2 min-w-[100px] sm:min-w-[120px] flex-shrink-0">
                                     <div className="flex justify-center mb-2">
                                         <img 
                                             src={championData.image} 
