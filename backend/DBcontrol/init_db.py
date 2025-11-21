@@ -20,11 +20,11 @@ def init_database():
         conn.autocommit = True
         cursor = conn.cursor()
         
-        cursor.execute("SELECT 1 FROM pg_catalog.pg_database WHERE datname = 'lolanalytics'")
+        cursor.execute(f"SELECT 1 FROM pg_catalog.pg_database WHERE datname = '{os.getenv('DB_NAME')}'")
         exists = cursor.fetchone()
         if not exists:
-            cursor.execute("CREATE DATABASE lolanalytics")
-            print("Database 'lolanalytics' created successfully")
+            cursor.execute(f"CREATE DATABASE {os.getenv('DB_NAME')}")
+            print(f"Database '{os.getenv('DB_NAME')}' created successfully")
             
         cursor.close()
         conn.close()
