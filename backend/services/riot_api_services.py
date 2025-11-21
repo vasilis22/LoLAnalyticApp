@@ -25,7 +25,7 @@ def rgapi_request(url, retries, timeout):
             print(f"Rate limit exceeded. Retrying after {retry_after} seconds.")
             time.sleep(retry_after)
             continue
-        elif response.status_code == 500:
+        elif response.status_code in [500, 502, 504]:
             if attempt < retries - 1:
                 print(f"Attempt {attempt + 1} for {url} failed with 500 Internal Server Error.")
                 time.sleep(2 ** (attempt + 1))
