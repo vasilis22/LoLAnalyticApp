@@ -3,7 +3,7 @@ import MatchDetails from './MatchDetails';
 import { fetchLatestVersion } from '../utils/version';
 import { QUEUE_TYPES } from '../utils/queueConstants';
 
-export default function MatchHistory({ matches, puuid, onIncrement }) {
+export default function MatchHistory({ matches, puuid, onIncrement, onQueueChange, queue_id }) {
     const [expandedMatches, setExpandedMatches] = useState(new Set());
     const [version, setVersion] = useState('15.13.1');
 
@@ -26,16 +26,28 @@ export default function MatchHistory({ matches, puuid, onIncrement }) {
         setExpandedMatches(newSet);
     }
 
-    if (!matches || matches.length === 0) {
-        return <div className="text-center text-gray-500">No matches found.</div>;
-    }
-
-    console.log("Matches:", matches);
-
     return (
         <div>
             <div className="mt-4 sm:mt-8 flex flex-col gap-3 sm:gap-4 max-w-5xl mx-auto px-2 sm:px-0">
-                {matches.map((match) => {
+                <div className="mb-4 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                    <select
+                        className="bg-gray-700 text-white rounded p-2 text-sm sm:text-base w-full sm:w-auto"
+                        value={queue_id}
+                        onChange={(e) => onQueueChange(Number(e.target.value))}
+                    >
+                        {Object.entries(QUEUE_TYPES).map(([id, name]) => (
+                            <option key={id} value={Number(id)}>
+                                {name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+
+                {(!matches || matches.length === 0) && (
+                    <div className="text-center text-gray-500">No matches found.</div>
+                )}
+
+                {matches && matches.length > 0 && matches.map((match) => {
                     const player = match.match_data["info"]["participants"][match.player_index];
                     const isWin = player.win;
                     const gameDurationMinutes = Math.floor(match.game_duration / 60);

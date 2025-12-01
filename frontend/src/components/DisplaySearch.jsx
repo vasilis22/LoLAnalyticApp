@@ -12,6 +12,7 @@ export default function DisplaySearch() {
     const [summStatData, setSummStatData] = useState(null);
     const [error, setError] = useState(null);
     const [games, setGames] = useState(10);
+    const [queue_id, setQueueId] = useState(420);
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
     const location = useLocation();
     const searchId = location.state?.searchId;
@@ -39,7 +40,15 @@ export default function DisplaySearch() {
 
     async function fetchMatchHistory(region, puuid, games, update = false) {
         try{
-            const matchResponse = await fetch(`${API_URL}/match/${region}/${puuid}/${games}${update ? '?update=true' : ''}`)
+            const params = new URLSearchParams();
+            if (update) {
+                params.append('update', 'true');
+            }
+            if (queue_id) {
+                params.append('queue_id', queue_id);
+            }
+            const url = `${API_URL}/match/${region}/${puuid}/${games}?${params.toString()}`;
+            const matchResponse = await fetch(url)
             const matchData = await matchResponse.json()
             if (!matchResponse.ok) {
                 setError({
@@ -113,6 +122,12 @@ export default function DisplaySearch() {
         }
     }, [games, summonerData?.puuid, region]);
 
+    useEffect(() => {
+        if (summonerData?.puuid) {
+            fetchMatchHistory(region, summonerData.puuid, games);
+        }
+    }, [queue_id]);
+
     const incrementGames = () => {
         setGames(prevGames => prevGames + 10);
     }
@@ -126,7 +141,7 @@ export default function DisplaySearch() {
                 onUpdate={() => fetchAllData(true)}
             />
             <SummStatDisplay summStatData={summStatData} />
-            <MatchHistory matches={matchHistory} puuid={summonerData?.puuid} onIncrement={incrementGames} />
+            <MatchHistory matches={matchHistory} puuid={summonerData?.puuid} onIncrement={incrementGames} onQueueChange={setQueueId} queue_id={queue_id} />
         </>
     )
 }
