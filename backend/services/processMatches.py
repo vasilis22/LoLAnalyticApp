@@ -66,39 +66,22 @@ class ChampionStatsProcessor:
             if won:
                 stats.wins += 1
                 perks = participant["perks"]
-                stat_perks_array = [
-                    perks['statPerks']['defense'],
-                    perks['statPerks']['flex'],
-                    perks['statPerks']['offense']
-                ]
-
-                cleared_runes = {
-                    'primary_style': perks['styles'][0]['style'],
-                    'primary_selections': [selection['perk'] for selection in perks['styles'][0]['selections']],
-                    'secondary_style': perks['styles'][1]['style'],
-                    'secondary_selections': [selection['perk'] for selection in perks['styles'][1]['selections']],
-                    'stat_perks': perks['statPerks']
+                primary = perks["styles"][0]
+                secondary = perks["styles"][1]
+                normalized = {
+                    "primary": primary["style"],
+                    "primary_selections": [s["perk"] for s in primary["selections"]],
+                    "secondary": secondary["style"],
+                    "secondary_selections": [s["perk"] for s in secondary["selections"]],
+                    "stat_perks": perks["statPerks"]
                 }
 
-                rune_key = (
-                    cleared_runes['primary_style'],
-                    tuple(cleared_runes['primary_selections']),
-                    cleared_runes['secondary_style'],
-                    tuple(cleared_runes['secondary_selections']),
-                    tuple(stat_perks_array)
-                )
+                rune_key = json.dumps(normalized, sort_keys=True, separators=(',', ':'))
 
                 if rune_key not in stats.runes:
                     stats.runes[rune_key] = {
                         "count": 1,
-
                         "perks": participant["perks"]
-
-                        #"primary_style": cleared_runes['primary_style'],
-                        #"primary_selections": cleared_runes['primary_selections'],
-                        #"secondary_style": cleared_runes['secondary_style'],
-                        #"secondary_selections": cleared_runes['secondary_selections'],
-                        #"stat_perks": cleared_runes['stat_perks']
                     }
                 else:
                     stats.runes[rune_key]["count"] += 1
